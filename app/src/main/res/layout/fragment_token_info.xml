@@ -1,0 +1,435 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="899dp"
+        android:background="#F6F6F7"
+        tools:context="net.vite.wallet.exchange.TokenInfoFragment">
+
+
+    <ImageView
+            android:id="@+id/tokenIcoin"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="11dp"
+            android:src="@mipmap/bugcoin_buyin_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/tokenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="#24272B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tokenIcoin"
+            app:layout_constraintStart_toEndOf="@+id/tokenIcoin"
+            app:layout_constraintTop_toTopOf="@+id/tokenIcoin"
+            tools:text="ETH" />
+
+    <TextView
+            android:id="@+id/tokenBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="#993E4A59"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tokenName"
+            app:layout_constraintStart_toEndOf="@+id/tokenName"
+            app:layout_constraintTop_toTopOf="@+id/tokenName"
+            tools:text="(ETH Coin)" />
+
+    <View
+            android:id="@+id/view14"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#D3DFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tokenIcoin" />
+
+    <TextView
+            android:id="@+id/tokenIdTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/detail_token_id"
+            android:textColor="#993E4A59"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tokenIcoin"
+            app:layout_constraintTop_toBottomOf="@+id/view14" />
+
+    <TextView
+            android:id="@+id/tokenIdValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:textAlignment="viewStart"
+            android:textColor="#3E4A59"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tokenIdTxt"
+            app:layout_constraintTop_toBottomOf="@+id/tokenIdTxt"
+            tools:text="tti_5649544520544f4b454e6e40" />
+
+    <View
+            android:id="@+id/view15"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#D3DFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tokenIdValue" />
+
+    <TextView
+            android:id="@+id/totalSupplyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/total_supply"
+            android:textColor="#993E4A59"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tokenIcoin"
+            app:layout_constraintTop_toBottomOf="@+id/view15" />
+
+    <TextView
+            android:id="@+id/totalSupplyValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="#3E4A59"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/totalSupplyTxt"
+            app:layout_constraintTop_toBottomOf="@+id/totalSupplyTxt"
+            tools:text="tti_5649544520544f4b454e6e40" />
+
+    <View
+            android:id="@+id/view16"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#D3DFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalSupplyValue" />
+
+    <TextView
+            android:id="@+id/tokenTypeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/token_type"
+            android:textColor="#993E4A59"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tokenIcoin"
+            app:layout_constraintTop_toBottomOf="@+id/view16" />
+
+    <TextView
+            android:id="@+id/tokenTypeValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="#3E4A59"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tokenTypeTxt"
+            app:layout_constraintTop_toBottomOf="@+id/tokenTypeTxt"
+            tools:text="tti_5649544520544f4b454e6e40" />
+
+    <View
+            android:id="@+id/view17"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#D3DFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tokenTypeValue" />
+
+    <TextView
+            android:id="@+id/crossChainGatewayTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/crosschain_gateway"
+            android:textColor="#993E4A59"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tokenIcoin"
+            app:layout_constraintTop_toBottomOf="@+id/view17" />
+
+    <TextView
+            android:id="@+id/crossChainGatewayValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="#3E4A59"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/crossChainGatewayTxt"
+            app:layout_constraintTop_toBottomOf="@+id/crossChainGatewayTxt"
+            tools:text="tti_5649544520544f4b454e6e40" />
+
+    <View
+            android:id="@+id/view18"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#D3DFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/crossChainGatewayValue" />
+
+    <TextView
+            android:id="@+id/officialSiteTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/official_net_title"
+            android:textColor="#993E4A59"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tokenIcoin"
+            app:layout_constraintTop_toBottomOf="@+id/view18" />
+
+    <TextView
+            android:id="@+id/officialSiteValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#007AFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/officialSiteTxt"
+            app:layout_constraintTop_toBottomOf="@+id/officialSiteTxt"
+            tools:text="https//vite.org/" />
+
+    <View
+            android:id="@+id/view19"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#D3DFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/officialSiteValue" />
+
+    <TextView
+            android:id="@+id/whitePaperTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/white_paper_title"
+            android:textColor="#993E4A59"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tokenIcoin"
+            app:layout_constraintTop_toBottomOf="@+id/view19" />
+
+    <TextView
+            android:id="@+id/whitePaperValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#007AFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/whitePaperTxt"
+            app:layout_constraintTop_toBottomOf="@+id/whitePaperTxt"
+            tools:text="https//vite.org/" />
+
+    <View
+            android:id="@+id/view20"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#D3DFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/whitePaperValue" />
+
+    <TextView
+            android:id="@+id/browserTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/browser"
+            android:textColor="#993E4A59"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tokenIcoin"
+            app:layout_constraintTop_toBottomOf="@+id/view20" />
+
+    <TextView
+            android:id="@+id/browserValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#007AFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/browserTxt"
+            app:layout_constraintTop_toBottomOf="@+id/browserTxt"
+            tools:text="https//vite.org/" />
+
+    <View
+            android:id="@+id/view21"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#D3DFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/browserValue" />
+
+    <TextView
+            android:id="@+id/githubTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/github_title"
+            android:textColor="#993E4A59"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tokenIcoin"
+            app:layout_constraintTop_toBottomOf="@+id/view21" />
+
+    <TextView
+            android:id="@+id/githubValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#007AFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/githubTxt"
+            app:layout_constraintTop_toBottomOf="@+id/githubTxt"
+            tools:text="https//vite.org/" />
+
+    <View
+            android:id="@+id/view22"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#D3DFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/githubValue" />
+
+    <TextView
+            android:id="@+id/socialMediaTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/social_medium_title"
+            android:textColor="#993E4A59"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tokenIcoin"
+            app:layout_constraintTop_toBottomOf="@+id/view22" />
+
+    <TextView
+            android:id="@+id/overviewTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/intro"
+            android:textColor="#993E4A59"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tokenIcoin"
+            app:layout_constraintTop_toBottomOf="@+id/view23" />
+
+    <View
+            android:id="@+id/view23"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#D3DFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/twitterImg" />
+
+    <ImageView
+            android:id="@+id/twitterImg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="12dp"
+            android:src="@mipmap/kline_token_info_twitter"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/socialMediaTxt"
+            app:layout_constraintTop_toBottomOf="@+id/socialMediaTxt" />
+
+    <ImageView
+            android:id="@+id/facebookImg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/kline_token_info_facebook"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/twitterImg"
+            app:layout_constraintTop_toTopOf="@+id/twitterImg" />
+
+    <ImageView
+            android:id="@+id/telegramImg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/kline_token_info_telegram"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/facebookImg"
+            app:layout_constraintTop_toTopOf="@+id/facebookImg" />
+
+    <ImageView
+            android:id="@+id/redditImg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/kline_token_info_reddit"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/telegramImg"
+            app:layout_constraintTop_toTopOf="@+id/telegramImg" />
+
+    <ImageView
+            android:id="@+id/discordImg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/kline_token_info_discord"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/redditImg"
+            app:layout_constraintTop_toTopOf="@+id/redditImg" />
+
+    <TextView
+            android:id="@+id/overviewValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/overviewTxt"
+            app:layout_constraintTop_toBottomOf="@+id/overviewTxt"
+            tools:text="Vite Labs官方网关，负责BTC、ETH、GRIN四种代币跨链服务Vite Labs官方网关，种代币跨链服务Vite Labs官方网关，负责BTC、ETH、GRIN四种代币跨链服务" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

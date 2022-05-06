@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/vote_big_white_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <net.vite.wallet.ui.widget.BackButton
+        android:id="@+id/backIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/fullscreen_top_margin"
+        android:src="@drawable/ic_arrow_back_grey_28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tokenSymbolTxt"
+        style="@style/TopMainTitle"
+        android:layout_marginTop="19dp"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backIcon"
+        tools:text="VCP" />
+
+
+    <net.vite.wallet.widget.TokenIconWidget
+        android:id="@+id/tokenWidget"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backIcon" />
+
+
+    <TextView
+        android:id="@+id/tokenNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="#ff3e4a59"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tokenSymbolTxt"
+        app:layout_constraintTop_toBottomOf="@+id/tokenSymbolTxt"
+        tools:text="Vite Test Token" />
+
+    <net.vite.wallet.widget.BalanceDetailWidget
+        android:id="@+id/balanceDetailWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tokenNameTxt" />
+
+    <net.vite.wallet.widget.BalanceDetailExtraFuncWidget
+        android:id="@+id/exchangeViteWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/balanceDetailWidget" />
+
+
+    <net.vite.wallet.widget.TxListEthWidget
+        android:id="@+id/txListWidget"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exchangeViteWidget" />
+</androidx.constraintlayout.widget.ConstraintLayout>

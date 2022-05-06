@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+    <TextView
+        android:id="@+id/pairFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="#ff24272b"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ETH" />
+
+    <TextView
+            android:id="@+id/pairSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4d3e4a59"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/pairFirst"
+            app:layout_constraintStart_toEndOf="@+id/pairFirst"
+            app:layout_constraintTop_toTopOf="@+id/pairFirst"
+            tools:text="/ETH" />
+
+    <ImageView
+            android:id="@+id/miningImg"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="2dp"
+            android:src="@mipmap/mining_all_icon_small"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/pairSecond"
+            app:layout_constraintStart_toEndOf="@+id/pairSecond"
+            tools:visibility="visible" />
+
+    <TextView
+            android:id="@+id/miningRate"
+            android:layout_width="14dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:textAlignment="viewStart"
+            android:textColor="#007AFF"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/miningImg"
+            app:layout_constraintStart_toStartOf="@+id/miningImg"
+            tools:ignore="RtlCompat"
+            tools:text="3"
+            tools:visibility="visible" />
+
+    <ImageView
+            android:id="@+id/zeroFeeIcon"
+            android:layout_width="28dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp"
+            android:src="@mipmap/trade_0fee"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/miningImg"
+            app:layout_constraintTop_toTopOf="@+id/miningRate"
+            tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:paddingBottom="2dp"
+        android:textAlignment="viewStart"
+        android:textColor="#ff24272b"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="13.00" />
+
+
+    <TextView
+        android:id="@+id/priceChangePercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/operatorName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="-1.22%" />
+
+    <TextView
+        android:id="@+id/operatorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:textColor="#4d3e4a59"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ViteLabs" />
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:background="#d3dfef"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/operatorName"
+            app:layout_constraintStart_toStartOf="@+id/pairFirst" />
+</androidx.constraintlayout.widget.ConstraintLayout>

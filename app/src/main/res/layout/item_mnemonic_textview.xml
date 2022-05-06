@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="26dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/mnemonicTxt"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/white_rect"
+        android:gravity="center"
+        android:textColor="#ff3e4a59"
+        tools:text="1234" />
+
+</RelativeLayout>

@@ -1,0 +1,655 @@
+<resources>
+    <string name="language">中文</string>
+    <string name="create_account">Create Account</string>
+    <string name="recover_account">Import Account</string>
+    <string name="account_name_tag">Account Name</string>
+    <string name="please_input_password_tag">Please input password</string>
+    <string name="login">Login</string>
+    <string name="create_wallet_account">Create Account</string>
+    <string name="repeat_input_txt">Please input your password again</string>
+    <string name="create">Create</string>
+    <string name="please_input_mnemonic">Please input your seed phrase</string>
+    <string name="password_not_equal">Please enter the same password!</string>
+    <string name="backup_mnemonic">Backup Seed Phrase</string>
+    <string name="memorized_mnemonic">Backed up</string>
+    <string name="regenerate_mnemonic">Regenerate</string>
+    <string name="me_tag">Me</string>
+    <string name="manage_wallet">Wallet Management</string>
+    <string name="tx_record_tag">Transaction History</string>
+    <string name="get_quota_tag">Get Quota</string>
+    <string name="using_setup">Settings</string>
+    <string name="reward_query">Reward Enquiry</string>
+    <string name="about_us">About Us</string>
+    <string name="copy_success">Successfully copied!</string>
+    <string name="password_error">Wrong password!</string>
+    <string name="acc_name_can_not_blank">User name cannot be blank</string>
+    <string name="recover_success">import success</string>
+    <string name="undefined_error">Unknown error</string>
+    <string name="error_mnemonic">Incorrect seed phrase!</string>
+    <string name="already_exist_same_account">The seed phrase you input has already had an account name "%1$s" on
+        current
+        device, are you sure you would like to overwrite existed account
+    </string>
+    <string name="cancel">Cancel</string>
+    <string name="replace">Replace</string>
+    <string name="account_name_duplicate">The account name has already existed</string>
+    <string name="address_manage">Address Management</string>
+    <string name="eth_address_manage">My ETH address</string>
+    <string name="address_list">Addresses</string>
+    <string name="add_address">Add Address</string>
+    <string name="addr_list_infor_text">An account can only generate maximum 100 addresses!</string>
+    <string name="choose_wallet_account">Select wallet account</string>
+    <string name="switch_to_12">Switch to 12 mnemonic words</string>
+    <string name="switch_to_24">Switch to 24 mnemonic words</string>
+    <string name="logoutandswitch">Logout/switch wallet</string>
+    <string name="receive_token">Receive</string>
+    <string name="transfer_token">Send</string>
+    <string name="my_address">Address</string>
+    <string name="my_acc_balance">Balance</string>
+    <string name="receive_address">Recipient Address</string>
+    <string name="money_amount">Amount</string>
+    <string name="pledge_amount_min_134_vite">Please input amount, minimum 134 VITE</string>
+    <string name="pledge_amount_must_bigger_134">Stake amount should not be less than 134</string>
+    <string name="remark_memo">Memo</string>
+    <string name="input_address_not_valid">Wrong address, please check the format</string>
+    <string name="please_input_correct_amount">Please input correct amount</string>
+    <string name="balance_not_enough">Insufficient Balance</string>
+    <string name="this_token_max_input_number_decimal">%1$s supports up to maximum %2$d decimal digits</string>
+    <string name="remark_text_too_long">The length of notes has reached limitations</string>
+    <string name="pay">Payment</string>
+    <string name="confirm">Confirm</string>
+    <string name="confirm_pay">Confirm</string>
+    <string name="viteaddress_digits">vite_1234567890abcdef</string>
+    <string name="quota_not_enough">Insufficient Quota</string>
+    <string name="get_quota_title">Get Quota</string>
+    <string name="run_pow">Computing PoW to Secure Quota for this Transaction…</string>
+    <string name="pledge_vite">Stake VITE</string>
+    <string name="transfer_token_success">Success</string>
+    <string name="quota_benifit_address">Quota Beneficiary</string>
+    <string name="pledge_time">Lock period</string>
+    <string name="about_3_day">Approx 3 days</string>
+    <string name="confirm_pledge">Submit to lock</string>
+    <string name="pledge_quota_success">Success</string>
+    <string name="empty_tx_list">Empty</string>
+    <string name="tx_type_register">Registration</string>
+    <string name="tx_type_register_update">Update Registration</string>
+    <string name="tx_type_cancel_register">Revoke Registration</string>
+    <string name="tx_type_extract_reward">Retrieve Rewards</string>
+    <string name="tx_type_vote">Voting</string>
+    <string name="tx_type_cancel_vote">Revoke Voting</string>
+    <string name="tx_type_pledge_quota">Get TPS quota</string>
+    <string name="tx_type_cancel_pledge">Withdrawal of staking quota</string>
+    <string name="tx_type_mintage">Token Issuance</string>
+    <string name="tx_type_cancel_mintage">Withdrawal of staking tokens</string>
+    <string name="scan">Scan</string>
+    <string name="wallet_name_tag">Account Name</string>
+    <string name="failed">Failed</string>
+    <string name="complete">Done</string>
+    <string name="extract_mnemonic">Export Seed Phrase</string>
+    <string name="current_sb_height">Current Height</string>
+    <string name="version">Version</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="vite_org">Vite.org</string>
+    <string name="vite_net">Vite.net</string>
+    <string name="geting">Loading</string>
+    <string name="pledge_record">Locking Record</string>
+    <string name="my_pledge_list">Locking Record</string>
+    <string name="withdrawTime_suffix">Time available to unlock</string>
+    <string name="assign_token">Input Amount</string>
+    <string name="input_money_amount">Input Amount</string>
+    <string name="change_success">Success</string>
+    <string name="net_work_error">Something went wrong with network, please try again later</string>
+    <string name="vm_id_collsion">An ID conflict occurs, please re-submit later</string>
+    <string name="vm_method_not_found">Built-in contract method not exist, please try again later(-35006)</string>
+    <string name="tx_send_too_frequent">Transactions are sent too frequent, please try again later</string>
+    <string name="need_reveive_a_tx_before_send">You cannot make any transfer until you receive a transaction.</string>
+    <string name="need_reveive_a_tx_before_vote">You cannot vote until you receive a transaction.</string>
+    <string name="invalid_sb_height">Snapshot block height is illegal, please try again later</string>
+    <string name="verify_failed_by">System verify failed, please try again later</string>
+    <string name="backup_wallet">Backup Wallet Account</string>
+    <string name="share_qr_code">Share QR code</string>
+    <string name="confirm_menmonic">Confirm</string>
+    <string name="input_mnemonic_in_order">Please select Mnemonic Words in correct order.</string>
+    <string name="check_mnemonic_failed">Incorrect seed phrase!</string>
+    <string name="input_password_to_open_app">Auto-Lock</string>
+    <string name="backup_later">backup later</string>
+    <string name="back_regenerate_mnemonic_alert">This action will regenerate seed phrase, ready to go back?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="forum">Official Forum</string>
+    <string name="password_must_at_least_8_char">Password must be at least 8 characters</string>
+    <string name="change_name_title">Edit Name</string>
+    <string name="update">update</string>
+    <string name="check_update">Check for Updates</string>
+    <string name="this_is_laster_version">This is the latest version</string>
+    <string name="my_vote">My Voting</string>
+    <string name="recall">Revoke</string>
+    <string name="candidate_sbp_list">Candidate Nodes</string>
+    <string name="empty_vote_info">No Vote</string>
+    <string name="last_turn_vote_num">Votes</string>
+    <string name="snapshot_addr">Address</string>
+    <string name="vote">Vote</string>
+    <string name="search_sbp_hint">Search by name or address</string>
+    <string name="candidate_valid">Active</string>
+    <string name="candidate_invalid">Inactive</string>
+    <string name="unknown">Unknown</string>
+    <string name="voteing">Voting in progress</string>
+    <string name="vote_success">Successful Vote</string>
+    <string name="vote_invalid">Invalid Vote</string>
+    <string name="node_name_tag">Node Name</string>
+    <string name="vote_req_send_success">Voting request has successfully sent</string>
+    <string name="vote_to_same_sbp">You have already voted for this node</string>
+    <string name="make_sure_replace_vote_node">You have voted for %1$s, are you sure to overwrite the result of current
+        voting?
+    </string>
+    <string name="recall_vote">Revoke Voting</string>
+    <string name="recalling_vote">Under Revoking</string>
+    <string name="recall_vote_req_send_success">Revoking request has successfully sent</string>
+    <string name="my_vote_num">My Votes</string>
+    <string name="tx_send_success">Success</string>
+    <string name="share">share</string>
+    <string name="downloading">downloading</string>
+    <string name="contract_address">Address</string>
+    <string name="contract_tx_title">Transactions</string>
+    <string name="warning_of_jump_to_third">Skip to the third party page. Your use of the third party page will apply to
+        the user agreement and privacy policy of the third party application. Vite Labs will not assume any
+        responsibility.
+    </string>
+    <string name="nut_discover">Discovery</string>
+    <string name="nut_airdrop_can_get">Pick up Now</string>
+    <string name="nut_help">help</string>
+    <string name="nut_opreation_center_title">Event Center</string>
+    <string name="nut_operation_activity_empty">No Event</string>
+    <string name="nut_game_title">VITE Games</string>
+    <string name="nut_new_title">VITE News</string>
+    <string name="nut_why_need_phone_state">To avoid cheating, we have to collect some of your device
+        parameters. Please go to the system settings to open the relevant permissions and try again.
+    </string>
+    <string name="nut_google_net_work_error">Unable to access Google server, Please try again later.</string>
+    <string name="nut_register_device_failed">Register failed.</string>
+    <string name="nut_check_google">
+        \n1. Please install Vite App via APK from Google Play Store (If you encounter troubles like failing to override
+        the former installation, please backup your mnemonic words and reinstall from Google Play Store after
+        uninstalling current version of this App ).
+        \n\n2. Please ensure your Google Services Framework is available and up to date.\n\n(%1$s)
+    </string>
+    <string name="use_password">Use password</string>
+    <string name="fingerprint_not_recognized">Fingerprint not recognized. Try again</string>
+    <string name="fingerprint_auth">Fingerprint authentication</string>
+    <string name="use_fp">Use fingerprint payment</string>
+    <string name="not_support_fp">Your device does not support fingerprint authentication</string>
+    <string name="please_add_fp_in_system">Please add your fingerprint in the system setting of your phone.</string>
+    <string name="check_identity">Verification</string>
+    <string name="nut_official_txt">Vite</string>
+    <string name="remark_contract_invalid">The destination address you transfer to is a contract, the note must be
+        written with legal hexadecimal characters
+    </string>
+    <string name="contacts">Contacts</string>
+    <string name="menmonic_tag">Mnemonic Words</string>
+    <string name="currency_unit">Currency</string>
+    <string name="search_token_hint">Please input token name or contract address</string>
+    <string name="vite_net_title">VITE Network</string>
+    <string name="eth_net_title">ETH Network</string>
+    <string name="default_address">Default</string>
+    <string name="unname">Untitled</string>
+    <string name="change_address_name_title">Edit Address Alias</string>
+    <string name="address_name_title_tag">name</string>
+    <string name="address_name_can_not_blank">Address name cannot be empty</string>
+    <string name="transfer_token_with_coin">%1$s Send</string>
+    <string name="eth_gas_tag">Gas Fee</string>
+    <string name="slow_tag">Slow</string>
+    <string name="quick_tag">Fast</string>
+    <string name="eth_transfer_req_commited">Transfer request successfully sent, await for confirmation on ethereum
+        net
+    </string>
+    <string name="add_your_first_contact">Add your first contact</string>
+    <string name="add">Add</string>
+    <string name="all">All</string>
+    <string name="name">Name</string>
+    <string name="inputAddress">Please input address</string>
+    <string name="delete_contact">delete</string>
+    <string name="save">Save</string>
+    <string name="confirm_delete_contact">Are you sure to delete this address</string>
+    <string name="name_must_not_be_blank">Name cannot be empty</string>
+    <string name="already_exist_same_contact">Same address named (%1$s) exits, ready to overwrite?</string>
+    <string name="add_contact_success">Successfully Added</string>
+    <string name="add_contact">New Contact</string>
+    <string name="edit_contact">Edit Contact</string>
+    <string name="none_contact_platform">No %1$s address yet</string>
+    <string name="vite_contact_address">VITE Contacts</string>
+    <string name="eth_contact_address">ETH Contacts</string>
+    <string name="grin_contact_address">GRIN Contacts</string>
+    <string name="cannot_find_token">No such token found</string>
+    <string name="please_send_me_this">Scan and send %1$s</string>
+
+    <string name="nut_winners">Winners</string>
+    <string name="view_creation_record">Check Genesis Block Records</string>
+    <string name="my_eth_address">ETH Address</string>
+    <string name="my_vite_address">VITE Address</string>
+    <string name="net_error_view_info">Click to check account details</string>
+    <string name="remember_check1">I understand if I lose the mnemonic words, I would never find back my assets.
+    </string>
+    <string name="remember_check2">I understand if I forget or lose the mnemonic words, nobody can help to recover.
+    </string>
+    <string name="remember_check3">I have already read, understood and I agree to the Terms and Conditions.</string>
+    <string name="user_term">Terms and Conditions</string>
+    <string name="you_must_check_all">Please read and tick the attentions</string>
+    <string name="convert_vite">VITE Conversion</string>
+    <string name="convert_vite_record">Conversion History</string>
+    <string name="convert_tag">Convert</string>
+    <string name="convert_failed_by_bind">Convert Failed（By Bind）</string>
+    <string name="convert_all">All</string>
+    <string name="info4convert">You can convert ERC20 VITE into VITE at Vite Pre-Mainnet through VITE conversion.
+        During conversion, your ERC20 VITE will be transferred to Ethereum black hole address:
+        0x1111111111111111111111111111111111111111, and you will receive the same amount of VITE in your Vite address
+        after the transaction to Ethereum black hole address has completed. During the conversion, fee of transaction to
+        the Ethereum black hole address come from your current ETH address. After submitting the conversion, please wait
+        at least 30 confirmations in Ethereum network, you can find the transaction history in conversion history.
+    </string>
+    <string name="quick_understand_exchage">Understand VITE Conversion</string>
+    <string name="i_see">I know</string>
+    <string name="update_your_os">Please update your android operation system.</string>
+    <string name="token_detail">Token Details</string>
+    <string name="not_support_your_device">Temporarily does not support your device.</string>
+    <string name="detail_token_id">Token ID</string>
+    <string name="detail_token_name">Token Name</string>
+    <string name="detail_gateway">Forge Gateway</string>
+    <string name="detail_total">Total Issuance</string>
+    <string name="detail_can_issue">Yes</string>
+    <string name="detail_can_not_issue">No</string>
+    <string name="detail_token_overview">Description</string>
+    <string name="languageTitle">Language</string>
+    <string name="lang_chinese">中文</string>
+    <string name="lang_english">English</string>
+    <string name="crosschain_charge">Cross-Chain Deposit</string>
+    <string name="crosschain_withdraw">Cross-Chain Withdraw</string>
+    <string name="crosschain_charge_by_vite">Deposit from Vite Wallet</string>
+    <string name="crosschain_charge_record">Deposit History</string>
+    <string name="crosschain_charge_address">Deposit Address</string>
+    <string name="crosschain_charge_scan_qrcode">Please scan the address QR code</string>
+    <string name="crosschain_about_deposit_title">About Cross-Chain Deposit</string>
+    <string name="crosschain_deposit_what_is_by_vite">Making a cross-chain deposit allows %1$s to be mapped into the
+        Vite network.
+        After that, you will also be able to make a cross-chain deposit. %2$s balance in your Vite wallet will be
+        reduced accordingly when you make a cross-chain deposit from your Vite wallet.
+    </string>
+
+    <string name="crosschain_tx_record_tag">Deposit History</string>
+    <string name="crosschain_opposite_processing">%1$s Chain Unconfirmed</string>
+    <string name="crosschain_opposite_confirmed">Received by Gateway</string>
+    <string name="crosschain_tot_processing">VITE Chain Unconfirmed</string>
+    <string name="crosschain_tot_confirmed">Confirmed</string>
+    <string name="crosschain_deposit_amount_hint">Deposit at least %1$s</string>
+    <string name="deposit">Deposit</string>
+    <string name="deposit_all">All</string>
+    <string name="deposit_amount_too_low">The deposit amount cannot be less than %1$s</string>
+    <string name="crosschain_gw_meta_closed">Function shut down by gateway</string>
+    <string name="crosschain_gw_meta_maintain">Function in maintenance</string>
+    <string name="crosschain_gw_meta_unknown">The channel is in the wrong state</string>
+    <string name="crosschain_withdraw_record">Withdraw History</string>
+    <string name="crosschain_withdraw_fee">Fee</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="withdraw_amount_too_low">The withdraw amount cannot be less than %1$s</string>
+    <string name="withdraw_amount_too_high">Amount exceeds the %1$s-%2$s limit, please contact gateway@vite.org</string>
+    <string name="crosschain_withdraw_amount_hint">Withdraw at least %1$s%2$s</string>
+    <string name="request_server_error">Request failed, please try again later. \n%1$s</string>
+    <string name="crosschain_withdraw_fee_what_is_no_fee">This fee is charged by the gateway </string>
+    <string name="crosschain_withdraw_fee_what_is">This fee is charged by the gateway\nFee of single cross-chain withdrawal: </string>
+    <string name="crosschain_tot_exceed_the_limit">Exceed the limit</string>
+    <string name="crosschain_wrong_withdraw_address">Wrong withdraw address</string>
+    <string name="crosschain_withdraw_tx_record_tag">Withdraw History</string>
+    <string name="notice">Notice</string>
+
+    <string name="crosschain_below_minimum">Too less Amount</string>
+    <string name="crosschain_deposit_failed">Deposit Failed</string>
+    <string name="http_service_error">
+        Service exception(%1$s), please try again later.
+    </string>
+    <string name="net_work_timeout">Connection timed out, please try again later</string>
+    <string name="wc_connecting">ViteConnect Connected</string>
+    <string name="wc_connecting_hint">You have no transaction yet</string>
+    <string name="wc_connected">You are making changes on ViteX &amp; Web Wallet</string>
+    <string name="wc_connected_hint">Please confirm transaction information below</string>
+    <string name="warm_notice">Notice</string>
+    <string name="vitebifrost_connected_qr_notice_content">Please confirm the following link\n%1$s</string>
+    <string name="wallet_connect_in">ViteConnect Connected</string>
+    <string name="wc_kill_confirm_msg">Make sure to logout ViteConnect?</string>
+    <string name="dex_sell">Sell</string>
+    <string name="dex_buy">Buy</string>
+    <string name="vitebirost_already_connected_change_address">ViteConnect is connected, switch address will break
+        network connection. Make sure to switch address
+    </string>
+    <string name="vitebifrost_connected_address_not_same">The address you scanned now is not consistent with the one on
+        web platform. Continue login with App address?
+    </string>
+    <string name="wc_changeaddr_notice">ViteConnect is connected, switch address will break network connection. Make
+        sure to switch address
+    </string>
+    <string name="mnemonic_not_backup">Mnemonic Words Unbacked Up</string>
+    <string name="please_input_password_to_backup">Please enter password to back up the Mnemonic Words.</string>
+    <string name="temprory_not_backup">Back Up Later</string>
+    <string name="goto_backup">Back Up Now</string>
+
+    <string name="retrieve_quota">Unlock</string>
+    <string name="retrieve_pledge_viteing">Unlocking</string>
+    <string name="gas_not_enough">ETH balance is less than Gas</string>
+    <string name="button_ok">OK</string>
+    <string name="my_vite_contacts_tag">VITE Contact Address</string>
+    <string name="my_vite_address_tag">My VITE Address</string>
+    <string name="my_eth_contacts_tag">ETH Contact Address</string>
+    <string name="my_eth_address_tag">My ETH Address</string>
+    <string name="quota_is_congestion">The network is currently in Dynamic Quota mode. This means your Quota Limit has
+        been reduced and you can send fewer transactions per second. Do you still want to send a transaction now?
+    </string>
+    <string name="tx_congestion">Transact Now</string>
+    <string name="tx_later">Transact Later</string>
+    <string name="dialog_pledge_quota_notice">Please confirm that you’d like to get quota by staking 134 VITE from
+        current address. You can withdraw the staked amount from the Stake History section 3 days later.
+    </string>
+    <string name="dialog_pledge_quota_hint">
+        You can also get quota for any other address by %1$s.
+    </string>
+    <string name="click_here">click here</string>
+    <string name="dialog_pledge_quota_title">Instantly Getting Quota</string>
+    <string name="acquired_staking">Locked Amount</string>
+    <string name="quota_cost_tag">Quota</string>
+    <string name="title_already_pledge">Locked</string>
+    <string name="title_unreceived">Unreceived</string>
+    <string name="unreceived_quota_cost">Unreceived(%1$d Quota)</string>
+    <string name="quota_avaliable_limit">Quota Available/Quota Limit</string>
+    <string name="benefit_address">Beneficiary</string>
+    <string name="ut_cost_in_powdialog">This Transaction costs %1$s Quota</string>
+    <string name="tx_already_sent">Transaction Sent</string>
+    <string name="how_to_skip_quota_dialog">You may withdraw your staked VITE after 3 days. If the quota you received
+        from staking is sufficient for a transaction, you can skip this step of PoW.
+    </string>
+    <string name="pledge_to_speedup">Stake to Speed</string>
+    <string name="pow_cost_time">
+        You spent %1$sS in this PoW computation, and secured and used %2$sUT
+    </string>
+
+    <string name="fast_buy_coin">Instant Purchase</string>
+    <string name="bugcoin_buyvite">Buy VITE</string>
+    <string name="bugcoin_record">Purchase History</string>
+    <string name="buy_coin_buy">Buy</string>
+    <string name="buy_coin_price">Rate：1 VITE = %1$s ETH</string>
+    <string name="bugcoin_failed">Purchase Failed(%1$s)</string>
+    <string name="buy_coin_exceed_quota_max">The amount you entered is invalid. A single transaction should be at least
+        10 VITE and at most 10,000 VITE, and the daily transaction limit is 500,000 VITE.
+    </string>
+    <string name="buy_coin_price_record">Rate：%1$s ETH</string>
+    <string name="crosschain_main_notice">
+        This Service is provided by %1$s. Vite Platform assumes no responsibility for the activities performed by %1$s
+        and
+        does not play a role in the relationship between %1$s and users of Vite Platform.\n\nBy using services from
+        %1$s,
+        you agree to be bound by %1$s %2$s.If you do not agree to these terms, please refrain from using services from
+        %1$s.
+    </string>
+
+    <string name="crosschain_main_notice_official">
+        This Service is provided by %1$s.By using services from
+        %1$s,
+        you agree to be bound by %1$s %2$s.If you do not agree to these terms, please refrain from using services from
+        %1$s.
+    </string>
+
+    <string name="crosschain_term_link">Terms of Service.</string>
+    <string name="crosschain_contact_us">
+        In case of problems with verification or payment processing, please contact %1$s support team at %2$s
+    </string>
+    <string name="crosschain_next_notice">
+        By clicking Next, you agree with the %2$s of %1$s Company.
+    </string>
+    <string name="next">Next</string>
+    <string name="get_support">Get Support</string>
+    <string name="buy_coin_max_limit">Single Transaction Limit：%1$s-%2$s VITE</string>
+    <string name="buy_coin_max_limit_oneday">Daily Transaction Limit：%1$s VITE；Unused Daily Limit：%2$s VITE</string>
+    <string name="buy_coin_vite_amount_hint">%1$s-%2$s</string>
+    <string name="close">Close</string>
+    <string name="import_notice">Important Notice</string>
+    <string name="crosschain_deposit_labelDesc">Please do use %1$s together with the Deposit Address, or you will lose the token(s).
+    </string>
+    <string name="buy_coin_exceed_daily_quota_max">The amount limitation has been exceeded, please try again tomorrow
+    </string>
+    <string name="crosschain_charge_scan_qrcode_desc">Please scan the %1$s code</string>
+    <string name="tx_confirm">Transaction Confirmation</string>
+    <string name="write_to_paper">Write down mnemonic words on a piece of paper, then keep it in a safe place.</string>
+    <string name="user_another_to_backup">Scan the QR code below using the Vite wallet installed on another device.。</string>
+    <string name="backup_known_first">Caution! Loss of mnemonic words will result in loss of all digital assets in the wallet.</string>
+    <string name="backup_known_second">Importing mnemonic words is the only way to retrieve an account after deleting or reinstalling the App.</string>
+    <string name="backup_known_third">Please store your mnemonic words in a safe place.</string>
+    <string name="address">Address</string>
+    <string name="sign_transaction">Transactions Signed</string>
+    <string name="autoSignTransaction">Auto Sign</string>
+    <string name="please_confirm_to_gen_account">Confirm account creation with the following mnemonic words?</string>
+    <string name="wait_sign">Awaiting Signature</string>
+    <string name="sign_processing">Signing</string>
+    <string name="success">Success</string>
+    <string name="password_confirm">Password</string>
+    <string name="crosschain_token">Cross-Chain</string>
+    <string name="raw_token">Native</string>
+    <string name="official_net_title">Website</string>
+    <string name="white_paper_title">White paper</string>
+    <string name="token_type">Token Type</string>
+    <string name="github_title">Github</string>
+    <string name="social_medium_title">Social Media</string>
+    <string name="gateway_info_activity_title">Gateway Details</string>
+
+    <string name="gateway_name_title">Gateway Name</string>
+    <string name="gateway_official_web">Gateway Official Site</string>
+    <string name="gateway_overview">Gateway Introduction</string>
+    <string name="commit_ticket">Customer Service</string>
+    <string name="gateway_policy_title">Service Terms</string>
+    <string name="gateway_link_title">Gateway Link</string>
+    <string name="wallet_assets">Wallet Asset</string>
+    <string name="available">Available:</string>
+
+    <string name="withdraw_to_wallet">Withdraw</string>
+
+    <string name="transfer">Transfer</string>
+    <string name="transferTitle">Transfer</string>
+    <string name="from">From</string>
+    <string name="wallet_account">Main Wallet</string>
+    <string name="to">To</string>
+    <string name="exchange_account">Trading Wallet</string>
+    <string name="amount">Amount</string>
+    <string name="please_input_transfer_amount">Please enter the transfer amount</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="all_balance">Total Balance</string>
+    <string name="exchange_balance_not_enough">Insufficient exchange balance</string>
+    <string name="explorer">Explorer</string>
+    <string name="exchange_tag">Dex</string>
+    <string name="exchange_hangqing">Markets</string>
+    <string name="goto_vitex_exchange">ViteX Trading Guide</string>
+    <string name="transactions">Transaction</string>
+    <string name="we_advice_backup">We recommend backing up mnemonics in the following ways</string>
+    <string name="exchange_fav">Favorites</string>
+    <string name="newest_price">Last Price</string>
+    <string name="change_price_percent">Change</string>
+    <string name="search_exchange_pair">Search</string>
+    <string name="search_history">Search History</string>
+    <string name="switch_market_pair">Exchange</string>
+    <string name="operator_name_tag">Operator</string>
+    <string name="eth_send_last_failed">Network failure, please check the transaction history before trying again.</string>
+    <string name="log_back_txt">Upload Log</string>
+    <string name="delete_account">Delete Current Account</string>
+    <string name="invite_cost_hint">。</string>
+    <string name="fill_invite_code">Invitation Code(Optional)</string>
+    <string name="why_fill_invite_code">Enter invitation code or scan invitation QR code to enjoy 10% off trading fees and premiere mining</string>
+    <string name="invite_friend_to_mining">Mining Referrals</string>
+    <string name="invite_code_error">Wrong Invitation Code</string>
+    <string name="delete_account_hint">You can only recover your account by mnemonic word after deleting an account, do you confirm to delete this account?</string>
+    <string name="send_file">Send Transaction File</string>
+    <string name="fees">Fees</string>
+    <string name="eth_transfer_type">Transfer</string>
+    <string name="eth_miner_fee">Gas Fee</string>
+    <string name="detail">Details</string>
+    <string name="fromAddress">Sending Address</string>
+    <string name="transactionHash">Transaction Hash</string>
+    <string name="block">Block</string>
+    <string name="see_eth_on_block_exploer">View More Details on Etherscan</string>
+    <string name="add_address_dialog_message">Bulk generate a specified number of addresses</string>
+    <string name="add_address_dialog_hint">Input a number between 1 and 100</string>
+    <string name="add_address_toast_exist">Address already exists</string>
+    <string name="about_focus_wechat">Scan QR code to follow Vite WeChat Official Account.</string>
+    <string name="add_address_over_limit">Add up to maximum 100 addresses!</string>
+    <string name="order">Order book</string>
+    <string name="recently_traded">Last Trades</string>
+    <string name="token">Token</string>
+    <string name="operactor">Operator</string>
+    <string name="exchange_buy">Buy</string>
+    <string name="exchange_sell">Sell</string>
+    <string name="operator_address">Operator address</string>
+    <string name="intro">Introduction</string>
+    <string name="trade_pair">Trading pair</string>
+    <string name="total_supply">Total Issuance</string>
+    <string name="crosschain_gateway">Cross-Chain gateway</string>
+    <string name="browser">Explorer</string>
+    <string name="kline_time_interval_minute">1m</string>
+    <string name="kline_time_interval_minute30">30m</string>
+    <string name="kline_time_interval_hour">1H</string>
+    <string name="kline_time_interval_hour2">2H</string>
+    <string name="kline_time_interval_hour4">4H</string>
+    <string name="kline_time_interval_hour6">6H</string>
+    <string name="kline_time_interval_hour12">12H</string>
+    <string name="kline_time_interval_day">1D</string>
+    <string name="kline_time_interval_week">1W</string>
+    <string name="coin2coin">Spot</string>
+    <string name="mining">Mining</string>
+    <string name="bonus">Dividend</string>
+    <string name="limit_commission">Limit Order</string>
+    <string name="buyPrice">Price</string>
+    <string name="buyAmount">Amount</string>
+    <string name="sellPrice">Price</string>
+    <string name="sellAmount">Amount</string>
+    <string name="price">Price</string>
+    <string name="current_commission">Open Orders</string>
+    <string name="history_commission">History</string>
+    <string name="openVip">Become a VIP</string>
+    <string name="cancelVip">Cancel VIP</string>
+    <string name="buy">Buy</string>
+    <string name="sell">Sell</string>
+    <string name="quantity_is">Amt.: </string>
+    <string name="price_is">Price: </string>
+    <string name="deal_is">Filled: </string>
+    <string name="av_price_is">Avg.: </string>
+    <string name="can_find_order">Can\'t find this order</string>
+    <string name="trade_warning">The current trading pair is %1$s, Cryptocurrency investment is subject to high market risk and price volatility. Please carefully evaluate your capability of handling potential risks and make prudent trading decisions."</string>
+    <string name="wallet">Wallet</string>
+    <string name="tickers">Markets</string>
+    <string name="exchange">Trade</string>
+    <string name="nut">Discover</string>
+    <string name="exchange_balance_lower_than_min">Total value must be at least %1$s %2$s</string>
+    <string name="deal_amount">Total：</string>
+    <string name="can_buy">Max Buy：</string>
+    <string name="can_sell">Max Sell：</string>
+    <string name="create_api">Create API</string>
+    <string name="cant_cancel_vip">The staking is less than 30 days and cannot be retrieved</string>
+    <string name="exchange_balance">Exchange Available Balance</string>
+    <string name="vip_stake_amount">Staking Amount for Becoming a VIP</string>
+    <string name="open_vip_notice">VIP enjoy the privileges of 0.1% trading fee discount. Stake 10,000 VITE to become a VIP(Minimum Staking Duration: 30 days)</string>
+    <string name="vip_amount_not_enough">Insufficient exchange balance, stake 10,000 VITE to become a VIP</string>
+
+    <string name="transfer_type">Transaction Type</string>
+    <string name="response">Response</string>
+    <string name="request">Request</string>
+    <string name="see_on_vite_block_exploer">View More Details on Vite Explorer</string>
+    <string name="contract_call_success">Call Contract Succeeded</string>
+    <string name="contract_call_failed">Call Contract Failed</string>
+    <string name="contract">Call</string>
+    <string name="contract_call_pending">Waiting for Smart Contract Response</string>
+    <string name="transfer_failed">Transaction Failed</string>
+    <string name="transfer_success">Transaction Completed</string>
+    <string name="mining_notice_sell">Eligible for mining when price is less than %1$s</string>
+    <string name="mining_notice_buy">Eligible for mining when price is greater than %1$s</string>
+    <string name="dont_tell_me_again_24h">Do not ask again in 24 hours</string>
+    <string name="anonymous_operator">Anonymous</string>
+    <string name="withdraw_amount">Withdrawal Amount</string>
+    <string name="crosschain_withdraw_withdraw_amount_limit_title">Limit of cross-chain withdrawal</string>
+    <string name="crosschain_withdraw_withdraw_amount_limit_content">Min amount of single cross-chain withdrawal: %1$s %2$s\nMax amount of single cross-chain withdrawal: %3$s %4$s</string>
+    <string name="trade_suspended">Trading Suspended</string>
+    <string name="cant_send_zero">The amount has to be positive</string>
+    <string name="need_storage_permission">Storage permission required</string>
+    <string name="token_symbol">Token Symbol</string>
+    <string name="please_input_token_name">Please input token name</string>
+    <string name="dex_tab_fund_account_title">Main</string>
+    <string name="dex_tab_dex_account_title">Trading</string>
+    <string name="dex_assets_header_show_micro_balance">Hide small Balances</string>
+    <string name="dex_assets_button0">Transfer</string>
+    <string name="dex_assets_button1">Deposit</string>
+    <string name="dex_assets_button2">Withdraw</string>
+    <string name="dex_all_assets_title">Total Value (BTC)</string>
+    <string name="dex_assets_title">Value(BTC)</string>
+    <string name="dex_tab_title">Dex Assets</string>
+    <string name="asset_detail_title">Balance</string>
+    <string name="all_assets_tab">Total</string>
+    <string name="internal_transfer_record_tag">Transfer History</string>
+    <string name="transfer_in">Transfer-In</string>
+    <string name="transfer_out">Transfer-Out</string>
+    <string name="bottom_asset_title">Asset</string>
+    <string name="dex_detail_group_button_deposit">Deposit</string>
+    <string name="dex_asset_detail_quota_key">Staked for Quota</string>
+    <string name="dex_asset_detail_quota_sbp_key">Staked for SBP</string>
+    <string name="dex_asset_detail_quota_full_node_key">Staked for Full Node</string>
+    <string name="dex_token_detail_deposit">Deposit</string>
+    <string name="dex_token_detail_withdraw">Withdraw</string>
+    <string name="dex_token_detail_transfer">Transfer</string>
+    <string name="dex_token_detail_inner_transfer">Send</string>
+    <string name="dex_avaliable_balance">Available</string>
+    <string name="dex_order_locked_balance">In order</string>
+    <string name="dex_token_detail_exchange">Trade</string>
+    <string name="dex_vip_lock">VIP Locked</string>
+    <string name="dex_mine_lock">Staked</string>
+    <string name="dex_unlocking">Retrieving</string>
+    <string name="dex_dividen_lock">Staked</string>
+    <string name="choose_exchange_pair">Select Trading Pair</string>
+    <string name="grin_is_removed">Grin wallet temporarily unavailable. Access your account on another Grin supported wallet app with your Recovery Phrase.</string>
+    <string name="grin_net_title">GRIN Network</string>x
+    <string name="quota_not_enough_messgage">We notice you have no VITE locked for Quota. Please lock VITE or if you prefer, you can run POW to get Quota.</string>
+    <string name="go_to_get_quota">Lock VITE</string>
+    <string name="not_to_get_quota">Run POW</string>
+    <string name="quota_exceed_limit_message">Only %1$d transactions can be made per day per address without staking VITE. Your address has exhausted all %1$d transactions. Please go to the quota page and stake your VITE to perform more transactions.</string>
+    <string name="vite_node_setting">%1$s Node Setting</string>
+    <string name="node_setting_entry_title">Node Settings</string>
+    <string name="add_node_title">Please enter a valid node address</string>
+    <string name="invalid_node">invalid node</string>
+    <string name="choose_mainnet_title">Select Network</string>
+    <string name="crosschain_deposit_byother_hint3">Please select the correct mainnet or you will be unable to retrieve any lost tokens.</string>
+    <string name="add_custom_node_btn">Add Custom Node</string>
+    <string name="delete">delete</string>
+    <string name="modify_passphrase">Modify password</string>
+    <string name="my_acc_balance_in_quota">Wallet Balance</string>
+    <string name="gas_info">This is an estimated gas fee according to the current network traffic. The actual cost may differ.</string>
+    <string name="crosschain_deposit_byother_hint">
+        Only %2$s can be deposited to the address below, the minimum deposit is %1$s. Deposits less than %1$s will be locked and unrecoverable.
+    </string>
+    <string name="crosschain_deposit_confirm_hint">
+        Account balances will update after %1$s confirmations.Please be patient.
+    </string>
+    <string name="pow_setting_entry_title">PoW Settings</string>
+    <string name="add_a_valid_pow_url_title">Please enter a valid PoW URL</string>
+    <string name="title_trade_history_details_tab">Orders</string>
+    <string name="open_orders">Open Orders</string>
+    <string name="history_orders">Order History</string>
+    <string name="title_order_filter">Order Filter</string>
+    <string name="filter_date_title">Date</string>
+    <string name="order_filter_data_all">All</string>
+    <string name="filter_coin_title">Pair</string>
+    <string name="filter_trade_type">Type</string>
+    <string name="filter_status_title">Status</string>
+    <string name="clear">Clear</string>
+    <string name="order_filter_data_1_day">1 Day</string>
+    <string name="order_filter_data_1_week">1 Week</string>
+    <string name="order_filter_data_1_month">1 Month</string>
+    <string name="order_filter_data_3_months">3 Months</string>
+    <string name="order_filter_type_buy">Buy</string>
+    <string name="order_filter_type_sell">Sell</string>
+    <string name="order_filter_status_ongoing">Ongoing</string>
+    <string name="order_filter_status_completed">Completed</string>
+    <string name="order_filter_status_cancelled">Cancelled</string>
+    <string name="order_filter_status_failed">Failed</string>
+    <string name="order_filter_status_cancelling">Cancelling</string>
+    <string name="order_filter_status_empty"> </string>
+    <string name="security_setup">Security</string>
+</resources>

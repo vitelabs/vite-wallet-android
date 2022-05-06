@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        tools:context=".account.register.CreateAccountActivity">
+
+
+        <net.vite.wallet.ui.widget.BackButton
+            android:id="@+id/backIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/fullscreen_top_margin"
+            android:src="@drawable/ic_arrow_back_grey_28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewtitle"
+            style="@style/TopMainTitleWithBack"
+            android:text="@string/create_wallet_account"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/toAddrEditTxtCLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewtitle">
+
+            <EditText
+                android:id="@+id/toAddrEditTxtC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/account_name_tag"
+                android:imeActionLabel="@string/confirm"
+                android:imeOptions="actionNext"
+                android:paddingTop="20dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordEditTxtLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            app:counterEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toAddrEditTxtCLayout"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/passwordEditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/please_input_password_tag"
+                android:imeActionLabel="@string/confirm"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:paddingTop="20dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/repeatPasswordEditTxtLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            app:counterEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordEditTxtLayout"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/repeatPasswordEditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/repeat_input_txt"
+                android:imeActionLabel="@string/confirm"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingTop="20dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/whyFillInviteCodeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/why_fill_invite_code"
+            android:textColor="#ff3e4a59"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/repeatPasswordEditTxtLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fillInviteCodeC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="24dp"
+            app:counterEnabled="true"
+            app:errorEnabled="true"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/whyFillInviteCodeText">
+
+            <net.vite.wallet.ui.widget.RightDrawableEditText
+                android:id="@+id/fillInviteCodeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="none"
+                android:inputType="number"
+                android:drawableEnd="@mipmap/scan"
+                android:drawablePadding="6dp"
+                android:hint="@string/fill_invite_code"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/moneyAmountEditTxt"
+                android:textColor="#ff24272b" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/remember3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="@+id/repeatPasswordEditTxtLayout"
+            app:layout_constraintTop_toBottomOf="@+id/fillInviteCodeC" />
+
+        <TextView
+            android:id="@+id/remember3txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:textColor="#3E4A59"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/remember3"
+            app:layout_constraintEnd_toEndOf="@+id/repeatPasswordEditTxtLayout"
+            app:layout_constraintStart_toEndOf="@+id/remember3"
+            app:layout_constraintTop_toTopOf="@+id/remember3"
+            tools:text="@string/remember_check3" />
+
+
+        <TextView
+            android:id="@+id/createAccBtn"
+            style="@style/BlueBottomBigBtn"
+            android:layout_marginTop="77dp"
+            android:text="@string/create"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/remember3txt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

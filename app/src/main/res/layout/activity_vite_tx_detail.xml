@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="net.vite.wallet.balance.ethtxlist.EthTxDetailActivity">
+
+    <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="142dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/vote_big_white_bg"
+            app:layout_constraintBottom_toTopOf="@+id/seeDetail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    <net.vite.wallet.ui.widget.BackButton
+            android:id="@+id/backIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/fullscreen_top_margin"
+            android:src="@drawable/ic_arrow_back_grey_28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/TopMainTitle"
+            android:layout_marginTop="19dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/detail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backIcon"
+            tools:text="@string/detail" />
+
+    <ImageView
+            android:id="@+id/transferResultImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView5"
+            app:srcCompat="@mipmap/transfer_pending_icon" />
+
+    <TextView
+            android:id="@+id/transferResultTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="--"
+            android:textColor="#3E4A59"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/transferResultImg"
+            app:layout_constraintStart_toStartOf="@+id/transferResultImg"
+            app:layout_constraintTop_toBottomOf="@+id/transferResultImg" />
+
+    <TextView
+            android:id="@+id/transactionTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/transferResultTxt"
+            app:layout_constraintStart_toStartOf="@+id/transferResultTxt"
+            app:layout_constraintTop_toBottomOf="@+id/transferResultTxt"
+            tools:text="2020 02 02 11:11:11" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="0dp"
+            android:layout_height="156dp"
+            android:layout_marginTop="10dp"
+            android:background="#F1F8FF"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/transactionTime">
+
+        <TextView
+                android:id="@+id/toAddressTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/receive_address"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="收款地址" />
+
+        <TextView
+                android:id="@+id/fromAddressTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/fromAddress"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/middleDashLine"
+                tools:text="收款地址" />
+
+        <TextView
+                android:id="@+id/toAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/view1"
+                app:layout_constraintStart_toStartOf="@+id/toAddressTxt"
+                app:layout_constraintTop_toBottomOf="@+id/toAddressTxt"
+                tools:text="vite_06226977d97363a" />
+
+        <TextView
+                android:id="@+id/fromAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="@+id/toAddressTxt"
+                app:layout_constraintTop_toBottomOf="@+id/fromAddressTxt"
+                tools:text="vite_06226977d97363a" />
+
+        <View
+                android:id="@+id/view1"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="#E5E5EA"
+                app:layout_constraintBottom_toBottomOf="@+id/middleDashLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+                android:id="@+id/pasteAddrTo"
+                android:layout_width="28dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/middleDashLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/paste_grey" />
+
+        <ImageView
+                android:id="@+id/middleDashLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@mipmap/dash_line_vote"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+                android:id="@+id/view2"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="#E5E5EA"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/middleDashLine" />
+
+        <ImageView
+                android:id="@+id/pasteAddrFrom"
+                android:layout_width="28dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@+id/middleDashLine"
+                app:srcCompat="@mipmap/paste_grey" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/money_amount"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+            tools:text="金额" />
+
+    <TextView
+            android:id="@+id/tokenName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/amount"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+            tools:text="ETH" />
+
+    <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tokenName1"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+            tools:text="0.003" />
+
+    <TextView
+            android:id="@+id/tranferType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tokenName1"
+            app:layout_constraintTop_toTopOf="@+id/textView42"
+            tools:text="0.003" />
+
+    <TextView
+            android:id="@+id/hash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/pasteHash"
+            app:layout_constraintEnd_toStartOf="@+id/view13"
+            app:layout_constraintStart_toEndOf="@+id/textView43"
+            app:layout_constraintTop_toTopOf="@+id/view13"
+            tools:text="0.003" />
+
+    <TextView
+            android:id="@+id/block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/textView44"
+            tools:text="0.003" />
+
+    <TextView
+            android:id="@+id/momo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="24dp"
+            android:ellipsize="end"
+            android:textAlignment="viewStart"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/seeDetail"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/momoTxt"
+            app:layout_constraintTop_toBottomOf="@+id/momoTxt"
+            tools:text="123" />
+
+    <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/transfer_type"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+    <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/transactionHash"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView42"
+            tools:text="交易号" />
+
+    <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/block"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView43"
+            tools:text="区块" />
+
+    <TextView
+            android:id="@+id/momoTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/remark_memo"
+            android:textColor="#B33E4A59"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView44"
+            tools:text="备注" />
+
+    <ImageView
+            android:id="@+id/pasteHash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView43"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/textView43"
+            app:srcCompat="@mipmap/paste_grey" />
+
+    <View
+            android:id="@+id/view13"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="2dp"
+            android:background="#E5E5EA"
+            app:layout_constraintBottom_toBottomOf="@+id/pasteHash"
+            app:layout_constraintEnd_toStartOf="@+id/pasteHash"
+            app:layout_constraintTop_toTopOf="@+id/pasteHash" />
+
+    <TextView
+            android:id="@+id/seeDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/see_on_vite_block_exploer"
+            android:textColor="#007AFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

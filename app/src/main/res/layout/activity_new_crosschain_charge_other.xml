@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".balance.txsend.ViteTxActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <net.vite.wallet.ui.widget.BackButton
+            android:id="@+id/backIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/fullscreen_top_margin"
+            android:src="@drawable/ic_arrow_back_grey_28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewtitle"
+            style="@style/TopMainTitleWithBack"
+            android:text="@string/crosschain_charge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+        <TextView
+            android:id="@+id/overchainChargeRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crosschain_charge_record"
+            android:textColor="#ff007aff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/backIcon"
+            app:layout_constraintEnd_toEndOf="@+id/tokenWidget"
+            app:layout_constraintTop_toTopOf="@+id/backIcon" />
+
+        <ImageView
+            android:id="@+id/tokenWidget"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="24dp"
+            android:src="@mipmap/crosschain_charge_rt_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewtitle" />
+
+        <ProgressBar
+            android:id="@+id/cycleProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="3dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/primary_blue_rect_4_addr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chooseMainNetContentContainer">
+
+
+            <ImageView
+                android:id="@+id/pasteAddr"
+                android:layout_width="28dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="24dp"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/chargeAddressTag"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chargeAddressTag"
+                app:srcCompat="@mipmap/paste_grey" />
+
+            <TextView
+                android:id="@+id/chargeAddressTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/crosschain_charge_address"
+                android:textColor="#b43e4a59"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/chargeTargetAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="#b424272b"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/chargeAddressTag"
+                app:layout_constraintTop_toBottomOf="@+id/chargeAddressTag"
+                tools:text="vite_980b2ac5cff8f8c4d1cc28117b02ac12dd9902afc12517dd2f" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/crosschain_charge_scan_qrcode"
+            android:textColor="#ff24272b"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <ImageView
+            android:id="@+id/qrImg"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+
+            android:layout_marginTop="29dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            app:srcCompat="@mipmap/container_rect" />
+
+
+        <net.vite.wallet.widget.TokenIconWidget
+            android:id="@+id/logoImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/qrImg"
+            app:layout_constraintEnd_toEndOf="@+id/qrImg"
+            app:layout_constraintStart_toStartOf="@+id/qrImg"
+            app:layout_constraintTop_toTopOf="@+id/qrImg" />
+
+        <ImageView
+            android:id="@+id/blueCycle"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/hint_blue_cycle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewtitle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/descContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/qrImg">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/viewLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/primary_blue_rect_4_addr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/pasteAddrLabel"
+                    android:layout_width="28dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="24dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/chargeAddressTagLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/chargeAddressTagLabel"
+                    app:srcCompat="@mipmap/paste_grey" />
+
+                <TextView
+                    android:id="@+id/chargeAddressTagLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/crosschain_charge_address"
+                    android:textColor="#b43e4a59"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/chargeTargetAddressLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="#b424272b"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/chargeAddressTagLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/chargeAddressTagLabel"
+                    tools:text="vite_980b2ac5cff8f8c4d1cc28117b02ac12dd9902afc12517dd2f" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView10Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/crosschain_charge_scan_qrcode_desc"
+                android:textColor="#ff24272b"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewLabel" />
+
+            <ImageView
+                android:id="@+id/qrImgLabel"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+
+                android:layout_marginTop="29dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10Label"
+                app:srcCompat="@mipmap/container_rect" />
+
+
+            <net.vite.wallet.widget.TokenIconWidget
+                android:id="@+id/logoImgLabel"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/qrImgLabel"
+                app:layout_constraintEnd_toEndOf="@+id/qrImgLabel"
+                app:layout_constraintStart_toStartOf="@+id/qrImgLabel"
+                app:layout_constraintTop_toTopOf="@+id/qrImgLabel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <HorizontalScrollView
+            android:id="@+id/chooseMainNetContentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chooseMainNetTitle" />
+
+
+        <TextView
+            android:id="@+id/hintText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="#cc3e4a59"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/blueCycle"
+            app:layout_constraintTop_toBottomOf="@+id/textViewtitle"
+            tools:text="@string/crosschain_deposit_byother_hint" />
+
+        <TextView
+            android:id="@+id/hintText2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="#cc3e4a59"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/blueCycle"
+            app:layout_constraintTop_toBottomOf="@+id/hintText"
+            tools:text="@string/crosschain_deposit_byother_hint" />
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/hint_blue_cycle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hintText" />
+
+        <TextView
+            android:id="@+id/hintText3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/crosschain_deposit_byother_hint3"
+            android:textColor="#cc3e4a59"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/blueCycle"
+            app:layout_constraintTop_toBottomOf="@+id/hintText2" />
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/hint_blue_cycle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hintText2" />
+
+        <TextView
+            android:id="@+id/chooseMainNetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/choose_mainnet_title"
+            android:textColor="#FF3E4A59"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hintText3" />
+
+
+        <LinearLayout
+            android:id="@+id/depositByVite"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/white_semicircle_rect"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:translationZ="5dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@mipmap/deposit_by_other_exchange" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/crosschain_charge_by_vite"
+                android:textColor="#ff007aff"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

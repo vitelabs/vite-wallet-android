@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_margin">28dp</dimen>
+    <dimen name="fullscreen_top_margin">38dp</dimen>
+    <dimen name="fullscreen_title_top_margin">52dp</dimen>
+    <dimen name="half_padding">4dp</dimen>
+</resources>

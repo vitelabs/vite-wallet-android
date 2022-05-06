@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F6F6F7"
+        tools:context="net.vite.wallet.exchange.RecentTransactionsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:name="net.vite.wallet.exchange.RecentTransactionsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context="net.vite.wallet.exchange.RecentTransactionsFragment"
+            tools:listitem="@layout/item_recent_transactions" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

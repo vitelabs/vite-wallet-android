@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="356dp">
+
+    <ImageView
+        android:id="@+id/airdropbg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/airdrop_big_bg" />
+
+
+    <TextView
+        android:id="@+id/totalClaimAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/get_airdrop_hit_bg"
+        android:gravity="center"
+        android:paddingStart="34dp"
+        android:paddingEnd="16dp"
+        android:textColor="#ffffffff"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBenefit"
+        app:layout_constraintStart_toStartOf="@+id/viewBenefit"
+        app:layout_constraintTop_toTopOf="@+id/viewBenefit"
+        tools:text="累计收益12000"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/viewBenefit"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="11dp"
+        android:src="@mipmap/ic_airdrop_benefit"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/airdropAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/getAirDropIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_airdrop_get_it" />
+
+    <TextView
+        android:id="@+id/airdropAmount"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/getAirDropIcon"
+        app:layout_constraintEnd_toEndOf="@+id/getAirDropIcon"
+        app:layout_constraintStart_toStartOf="@+id/getAirDropIcon"
+        app:layout_constraintTop_toTopOf="@+id/getAirDropIcon"
+        tools:text="999\nVITE" />
+
+    <TextView
+        android:id="@+id/iconTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/airdropAmount"
+        app:layout_constraintStart_toStartOf="@+id/airdropAmount"
+        app:layout_constraintTop_toBottomOf="@+id/airdropAmount"
+        tools:text="@string/nut_airdrop_can_get" />
+
+
+    <ImageView
+        android:id="@+id/viewWinners"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="28dp"
+        android:src="@mipmap/ic_airdrop_vpower_up"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/airdropHelp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/nut_winners"
+        android:textColor="#ffffffff"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/viewWinners"
+        app:layout_constraintStart_toStartOf="@id/viewWinners"
+        app:layout_constraintTop_toBottomOf="@+id/viewWinners" />
+
+
+    <ImageView
+        android:id="@+id/airdropHelp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="29dp"
+        android:src="@mipmap/ic_airdrop_help"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/nut_help"
+        android:textColor="#ffffffff"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/airdropHelp"
+        app:layout_constraintStart_toStartOf="@+id/airdropHelp"
+        app:layout_constraintTop_toBottomOf="@+id/airdropHelp" />
+
+
+    <ProgressBar
+        android:id="@+id/receiveProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

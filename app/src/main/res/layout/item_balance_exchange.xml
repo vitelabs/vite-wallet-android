@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="24dp"
+    android:layout_marginBottom="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/rightLine"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#ff007aff"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <net.vite.wallet.widget.TokenIconWidget
+            android:id="@+id/tokenWidget"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toEndOf="@id/rightLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tokenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="#ff24272b"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tokenWidget"
+            app:layout_constraintStart_toEndOf="@+id/tokenWidget"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Vite" />
+
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/more"
+            app:layout_constraintBottom_toBottomOf="@+id/tokenWidget"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tokenWidget" />
+
+        <ImageView
+            android:id="@+id/middleDashLine"
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:src="@mipmap/buy_coin_dash_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tokenWidget" />
+
+        <TextView
+            android:id="@+id/availableBalanceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/available_balance"
+            android:textColor="#723E4A59"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tokenWidget"
+            app:layout_constraintTop_toBottomOf="@+id/middleDashLine" />
+
+        <TextView
+            android:id="@+id/totalBalanceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_balance"
+            android:textColor="#723E4A59"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/availableBalanceTxt"
+            app:layout_constraintTop_toTopOf="@+id/availableBalanceTxt" />
+
+        <TextView
+            android:id="@+id/availableBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="0"
+            android:textColor="#ff24272b"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/availableBalanceTxt"
+            app:layout_constraintTop_toBottomOf="@+id/availableBalanceTxt"
+            tools:text="¥800.00" />
+
+        <TextView
+            android:id="@+id/totalBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="0"
+            android:textColor="#ff24272b"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/totalBalanceTxt"
+            app:layout_constraintTop_toBottomOf="@+id/availableBalanceTxt"
+            tools:text="¥800.00" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/availableBalance" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

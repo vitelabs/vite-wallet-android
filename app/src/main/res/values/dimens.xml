@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="trade_title_width">110dp</dimen>
+    <dimen name="trade_icon_margin_big">12dp</dimen>
+    <dimen name="trade_icon_margin_small">6dp</dimen>
+</resources>

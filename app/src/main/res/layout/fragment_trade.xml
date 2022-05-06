@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context="net.vite.wallet.trade.TradeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tools:context="net.vite.wallet.trade.TradeFragment">
+
+            <TextView
+                android:id="@+id/coin2coin"
+                android:layout_width="@dimen/trade_title_width"
+                android:layout_height="30dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/trade_button_bg"
+                android:gravity="center"
+                android:text="@string/coin2coin"
+                android:textAlignment="center"
+                android:textColor="#007AFF"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mining"
+                android:layout_width="@dimen/trade_title_width"
+                android:layout_height="30dp"
+                android:background="@drawable/trade_button_bg_grey"
+                android:gravity="center"
+                android:text="@string/mining"
+                android:textAlignment="center"
+                android:textColor="#b23E4A59"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/bonus"
+                app:layout_constraintStart_toEndOf="@+id/coin2coin"
+                app:layout_constraintTop_toTopOf="@+id/coin2coin" />
+
+            <TextView
+                android:id="@+id/bonus"
+                android:layout_width="@dimen/trade_title_width"
+                android:layout_height="30dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/trade_button_bg_grey"
+                android:gravity="center"
+                android:text="@string/bonus"
+                android:textAlignment="center"
+                android:textColor="#b23E4A59"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/coin2coin" />
+
+            <TextView
+                android:id="@+id/tradeTokenName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#24272B"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/coin2coin"
+                tools:text="BTCCC-000" />
+
+            <TextView
+                android:id="@+id/quoteTokenName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#24272B"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tradeTokenName"
+                app:layout_constraintStart_toEndOf="@+id/tradeTokenName"
+                app:layout_constraintTop_toTopOf="@+id/tradeTokenName"
+                tools:text="/USDT-000" />
+
+            <ImageView
+                android:id="@+id/miningImg"
+                android:layout_width="24dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="6dp"
+                android:src="@mipmap/mining_all_icon_small"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/quoteTokenName"
+                app:layout_constraintStart_toEndOf="@+id/quoteTokenName"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/miningRate"
+                android:layout_width="14dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:padding="0dp"
+                android:textAlignment="viewStart"
+                android:textColor="#007AFF"
+                android:textSize="11sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/miningImg"
+                app:layout_constraintStart_toStartOf="@+id/miningImg"
+                tools:ignore="RtlCompat"
+                tools:text="3"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:background="#D3DFEF"
+                app:layout_constraintBottom_toBottomOf="@+id/quoteTokenName"
+                app:layout_constraintStart_toEndOf="@+id/miningImg"
+                app:layout_constraintTop_toTopOf="@+id/quoteTokenName" />
+
+            <ImageView
+                android:id="@+id/switchPair"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="1dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/kline_pull"
+                app:layout_constraintBottom_toBottomOf="@+id/quoteTokenName"
+                app:layout_constraintStart_toEndOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="@+id/quoteTokenName" />
+
+            <ImageView
+                android:id="@+id/zeroFeeIcon"
+                android:layout_width="28dp"
+                android:layout_height="14dp"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/trade_0fee"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/tradeTokenName"
+                app:layout_constraintTop_toBottomOf="@+id/tradeTokenName"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#01D764"
+                app:layout_constraintStart_toEndOf="@+id/zeroFeeIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tradeTokenName"
+                tools:text="+0.34%" />
+
+            <ImageView
+                android:id="@+id/favImg"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="12dp"
+                android:src="@mipmap/kline_unfavourite"
+                app:layout_constraintBottom_toTopOf="@+id/textView40"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tradeTokenName" />
+
+            <ImageView
+                android:id="@+id/klineImg"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="@dimen/trade_icon_margin_small"
+                android:src="@drawable/trade_kline"
+                app:layout_constraintBottom_toBottomOf="@+id/favImg"
+                app:layout_constraintEnd_toStartOf="@+id/favImg"
+                app:layout_constraintTop_toTopOf="@+id/favImg" />
+
+            <ImageView
+                android:id="@+id/operatorImg"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="@dimen/trade_icon_margin_big"
+                app:layout_constraintBottom_toBottomOf="@+id/favImg"
+                app:layout_constraintEnd_toStartOf="@+id/klineImg"
+                app:layout_constraintTop_toTopOf="@+id/favImg"
+                tools:src="@mipmap/grin_state_vite_router" />
+
+            <RadioGroup
+                android:id="@+id/buySellRadioGroup"
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/radiobutton_background_unchecked_buy"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/tradeTokenName"
+                app:layout_constraintTop_toBottomOf="@+id/textView40">
+
+                <RadioButton
+                    android:id="@+id/radioButtonBuy"
+                    android:layout_width="88dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/comment_stu_bg_buy"
+                    android:button="@null"
+                    android:checked="true"
+                    android:text="@string/exchange_buy"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/comment_stu_tv_bg" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonSell"
+                    android:layout_width="88dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/comment_stu_bg_sell"
+                    android:button="@null"
+                    android:text="@string/exchange_sell"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/comment_stu_tv_bg" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/limit_commission"
+                android:textColor="#B33E4A59"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/buySellRadioGroup"
+                app:layout_constraintTop_toBottomOf="@+id/buySellRadioGroup" />
+
+            <ImageView
+                android:id="@+id/priceMin"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/trade_button_bg_grey_rect_left"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toStartOf="@+id/textView49"
+                app:layout_constraintTop_toBottomOf="@+id/textView49"
+                app:srcCompat="@mipmap/trade_reduction" />
+
+            <ImageView
+                android:id="@+id/amountMin"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/trade_button_bg_grey_rect_left"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toStartOf="@+id/priceMin"
+                app:layout_constraintTop_toBottomOf="@+id/buyValueTxt"
+                app:srcCompat="@mipmap/trade_reduction" />
+
+            <ImageView
+                android:id="@+id/priceAdd"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/trade_button_bg_grey_rect_right"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toEndOf="@+id/buyPriceEdt"
+                app:layout_constraintTop_toTopOf="@+id/priceMin"
+                app:srcCompat="@mipmap/trade_increase" />
+
+            <ImageView
+                android:id="@+id/amountAdd"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/trade_button_bg_grey_rect_right"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toEndOf="@+id/buyPriceEdt"
+                app:layout_constraintTop_toTopOf="@+id/amountMin"
+                app:srcCompat="@mipmap/trade_increase" />
+
+            <TextView
+                android:id="@+id/miningNotice"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@mipmap/trade_mining_notice"
+                android:paddingStart="12dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="18dp"
+                android:textColor="#733E4A59"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/buyPriceEdt"
+                app:layout_constraintEnd_toStartOf="@+id/priceAdd"
+                app:layout_constraintStart_toEndOf="@+id/priceMin"
+                tools:text="买入价大于XXX1111时满足挂单挖矿条件买入价大于XXX1111时满足挂单挖矿条"
+                tools:visibility="gone" />
+
+            <EditText
+                android:id="@+id/buyPriceEdt"
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                android:background="@drawable/trade_button_bg_grey_rect"
+                android:ems="10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/buyPrice"
+                android:inputType="numberDecimal"
+                android:padding="2dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/priceMin"
+                app:layout_constraintTop_toTopOf="@+id/priceMin" />
+
+            <EditText
+                android:id="@+id/buyAmountEdt"
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                android:background="@drawable/trade_button_bg_grey_rect"
+                android:ems="10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/buyAmount"
+                android:inputType="numberDecimal"
+                android:padding="2dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/amountMin"
+                app:layout_constraintTop_toTopOf="@+id/amountMin" />
+
+            <TextView
+                android:id="@+id/buyValueTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginTop="8dp"
+                android:textColor="#733E4A59"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/priceMin"
+                app:layout_constraintTop_toBottomOf="@+id/priceMin"
+                tools:text="~800" />
+
+            <TextView
+                android:id="@+id/currentPriceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginTop="4dp"
+                android:textColor="#733E4A59"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/currentPrice"
+                app:layout_constraintTop_toBottomOf="@+id/currentPrice"
+                tools:text="~800" />
+
+            <TextView
+                android:id="@+id/percent1"
+                android:layout_width="38dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/trade_button_bg_grey"
+                android:gravity="center"
+                android:text="25%"
+                android:textAlignment="center"
+                android:textColor="#733E4A59"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/amountMin"
+                app:layout_constraintTop_toBottomOf="@+id/amountMin" />
+
+            <TextView
+                android:id="@+id/percent2"
+                android:layout_width="38dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/trade_button_bg_grey"
+                android:gravity="center"
+                android:text="50%"
+                android:textAlignment="center"
+                android:textColor="#733E4A59"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/percent1"
+                app:layout_constraintTop_toTopOf="@+id/percent1" />
+
+            <TextView
+                android:id="@+id/percent3"
+                android:layout_width="38dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/trade_button_bg_grey"
+                android:gravity="center"
+                android:text="75%"
+                android:textAlignment="center"
+                android:textColor="#733E4A59"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/percent2"
+                app:layout_constraintTop_toTopOf="@+id/percent2" />
+
+            <TextView
+                android:id="@+id/percent4"
+                android:layout_width="38dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/trade_button_bg_grey"
+                android:gravity="center"
+                android:text="100%"
+                android:textAlignment="center"
+                android:textColor="#733E4A59"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/percent3"
+                app:layout_constraintTop_toTopOf="@+id/percent3" />
+
+            <TextView
+                android:id="@+id/availableCoin"
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="2dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#733E4A59"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/internal_transfer"
+                app:layout_constraintStart_toStartOf="@+id/percent1"
+                app:layout_constraintTop_toBottomOf="@+id/percent1"
+                tools:text="可用btc" />
+
+            <TextView
+                android:id="@+id/canbuyCoin"
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#733E4A59"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/internal_transfer"
+                app:layout_constraintStart_toStartOf="@+id/percent1"
+                app:layout_constraintTop_toBottomOf="@+id/availableCoin"
+                tools:text="可买eth" />
+
+            <TextView
+                android:id="@+id/openVip"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/openVip"
+                android:textColor="#007AFF"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/canbuyCoin"
+                app:layout_constraintTop_toBottomOf="@+id/canbuyCoin" />
+
+            <ImageView
+                android:id="@+id/vipIconImg"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/openVip"
+                app:layout_constraintStart_toEndOf="@+id/openVip"
+                app:layout_constraintTop_toTopOf="@+id/openVip"
+                app:srcCompat="@mipmap/vip_icon_grey" />
+
+            <TextView
+                android:id="@+id/sellCoinTxt"
+                android:layout_width="164dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/radiobutton_background_checked_sell"
+                android:gravity="center"
+                android:text="@string/exchange_sell"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/buySellRadioGroup"
+                app:layout_constraintStart_toStartOf="@+id/buySellRadioGroup"
+                app:layout_constraintTop_toBottomOf="@+id/openVip" />
+
+            <TextView
+                android:id="@+id/buyCoinTxt"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/radiobutton_background_checked_buy"
+                android:gravity="center"
+                android:text="@string/exchange_buy"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/buySellRadioGroup"
+                app:layout_constraintStart_toStartOf="@+id/buySellRadioGroup"
+                app:layout_constraintTop_toBottomOf="@+id/openVip" />
+
+            <TextView
+                android:id="@+id/tradeSuspended"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/radiobutton_background_trade_suspended"
+                android:gravity="center"
+                android:text="@string/trade_suspended"
+                android:textAlignment="center"
+                android:textColor="@drawable/comment_stu_tv_bg"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/buySellRadioGroup"
+                app:layout_constraintStart_toStartOf="@+id/buySellRadioGroup"
+                app:layout_constraintTop_toBottomOf="@+id/openVip" />
+
+            <ImageView
+                android:id="@+id/internal_transfer"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/transfer_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/availableCoin"
+                app:layout_constraintEnd_toEndOf="@+id/percent4"
+                app:layout_constraintTop_toTopOf="@+id/availableCoin" />
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginStart="18dp"
+                android:text="@string/price"
+                android:textColor="#4D3E4A59"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/buySellRadioGroup"
+                app:layout_constraintTop_toTopOf="@+id/buySellRadioGroup" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/amount"
+                android:textColor="#4D3E4A59"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/buySellRadioGroup" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar0"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthSellBg0"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg0"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/depthSellBg0"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1ae5494d"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+            <View
+                android:id="@+id/depthSellBg0Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar1"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthSellBg1"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg1"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/depthSellBg1"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1ae5494d"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthSellBg0" />
+
+            <View
+                android:id="@+id/depthSellBg1Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthSellBg0" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar2"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthSellBg2"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg2"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/depthSellBg2"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1ae5494d"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthSellBg1" />
+
+            <View
+                android:id="@+id/depthSellBg2Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthSellBg1" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar3"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthSellBg3"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg3"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/depthSellBg3"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1ae5494d"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthSellBg2" />
+
+            <View
+                android:id="@+id/depthSellBg3Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthSellBg2" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar4"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthSellBg4"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg4"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar5"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthSellBg5"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg5"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/depthSellBg4"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1ae5494d"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthSellBg3" />
+
+            <View
+                android:id="@+id/depthSellBg5"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1ae5494d"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthSellBg4" />
+
+            <View
+                android:id="@+id/depthSellBg4Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthSellBg3" />
+
+            <View
+                android:id="@+id/depthSellBg5Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthSellBg4" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar6"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthBuyBg0"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg0"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/depthBuyBg0"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1a01d764"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/currentPriceValue" />
+
+            <View
+                android:id="@+id/depthBuyBg0Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/currentPriceValue" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar7"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthBuyBg1"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg1"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/depthBuyBg1"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1a01d764"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthBuyBg0" />
+
+            <View
+                android:id="@+id/depthBuyBg1Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthBuyBg0" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar8"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthBuyBg2"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg2"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/depthBuyBg2"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1a01d764"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthBuyBg1" />
+
+            <View
+                android:id="@+id/depthBuyBg2Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthBuyBg1" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar9"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthBuyBg3"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg3"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/depthBuyBg3"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1a01d764"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthBuyBg2" />
+
+            <View
+                android:id="@+id/depthBuyBg3Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthBuyBg2" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar10"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthBuyBg4"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg4"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/sellMyAvatar11"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/depthBuyBg5"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg5"
+                app:srcCompat="@mipmap/my_order_avatar2"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/depthBuyBg4"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1a01d764"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthBuyBg3" />
+
+            <View
+                android:id="@+id/depthBuyBg5"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                android:background="#1a01d764"
+                android:scaleX="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthBuyBg4" />
+
+            <View
+                android:id="@+id/depthBuyBg4Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthBuyBg3" />
+
+            <View
+                android:id="@+id/depthBuyBg5Clicker"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/depthBuyBg4" />
+
+            <TextView
+                android:id="@+id/currentPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginTop="12dp"
+                android:textColor="#24272B"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg4"
+                app:layout_constraintTop_toBottomOf="@+id/depthSellBg5"
+                tools:text="0.123" />
+
+            <TextView
+                android:id="@+id/sellPrice0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#E5494D"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthSellBg1"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg0"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/sellPrice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#E5494D"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthSellBg2"
+                app:layout_constraintStart_toStartOf="@+id/sellPrice0"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg1"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/sellPrice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#E5494D"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthSellBg3"
+                app:layout_constraintStart_toStartOf="@+id/sellPrice1"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg2"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/sellPrice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#E5494D"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthSellBg4"
+                app:layout_constraintStart_toStartOf="@+id/sellPrice2"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg3"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/sellPrice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#E5494D"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/depthSellBg4"
+                app:layout_constraintStart_toStartOf="@+id/sellPrice3"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg4"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/sellPrice5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#E5494D"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/depthSellBg5"
+                app:layout_constraintStart_toStartOf="@+id/sellPrice3"
+                app:layout_constraintTop_toTopOf="@+id/depthSellBg5"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/buyPrice0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#00D764"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthBuyBg1"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg0"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/buyPrice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#00D764"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthBuyBg2"
+                app:layout_constraintStart_toStartOf="@+id/buyPrice0"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg1"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/buyPrice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#00D764"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthBuyBg3"
+                app:layout_constraintStart_toStartOf="@+id/buyPrice1"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg2"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/buyPrice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#00D764"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthBuyBg4"
+                app:layout_constraintStart_toStartOf="@+id/buyPrice2"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg3"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/buyPrice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#00D764"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/depthBuyBg4"
+                app:layout_constraintStart_toStartOf="@+id/buyPrice3"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg4"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/buyPrice5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="#00D764"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/depthBuyBg5"
+                app:layout_constraintStart_toStartOf="@+id/buyPrice3"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg5"
+                tools:text="0.00021233" />
+
+            <TextView
+                android:id="@+id/sellAmount0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/sellPrice0"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/sellPrice0"
+                tools:text="11,320.605339" />
+
+            <TextView
+                android:id="@+id/sellAmount1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/sellPrice1"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/sellPrice1"
+                tools:text="11,320.605339" />
+
+            <TextView
+                android:id="@+id/sellAmount2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/sellPrice2"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/sellPrice2"
+                tools:text="11,320.605339" />
+
+            <TextView
+                android:id="@+id/sellAmount3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/sellPrice3"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/sellPrice3"
+                tools:text="11,320.605339" />
+
+            <TextView
+                android:id="@+id/sellAmount4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/sellPrice4"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/sellPrice4"
+                tools:text="11,320.605339" />
+
+            <TextView
+                android:id="@+id/sellAmount5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/sellPrice5"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/sellPrice5"
+                tools:text="11,320.605339" />
+
+            <TextView
+                android:id="@+id/buyAmount0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthBuyBg1"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg0"
+                tools:text="11,320.605339" />
+
+            <TextView
+                android:id="@+id/buyAmount1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthBuyBg2"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg1"
+                tools:text="11,320.605339" />
+
+            <TextView
+                android:id="@+id/buyAmount2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthBuyBg3"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg2"
+                tools:text="11,320.605339" />
+
+            <TextView
+                android:id="@+id/buyAmount3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/depthBuyBg4"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg3"
+                tools:text="11,320.605339" />
+
+            <TextView
+                android:id="@+id/buyAmount4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/depthBuyBg4"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg4"
+                tools:text="11,320.605339" />
+
+            <TextView
+                android:id="@+id/buyAmount5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#5E6875"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/depthBuyBg5"
+                app:layout_constraintEnd_toEndOf="@+id/depthSellBg0"
+                app:layout_constraintTop_toTopOf="@+id/depthBuyBg5"
+                tools:text="11,320.605339" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="16dp"
+                android:background="#fff3f5f9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/depthBuyBg5" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/current_commission"
+                android:textColor="#3E4A59"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line" />
+
+            <TextView
+                android:id="@+id/historyOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/history_commission"
+                app:layout_constraintBottom_toBottomOf="@+id/textView36"
+                app:layout_constraintEnd_toStartOf="@+id/imageView8"
+                app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:src="@mipmap/enter_item_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/textView36"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/openOrders"
+                android:name="net.vite.wallet.trade.TradeFragment"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="12dp"
+                app:layoutManager="LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36"
+                tools:context="net.vite.wallet.trade.TradeFragment"
+                tools:listitem="@layout/open_order" />
+
+            <ImageView
+                android:id="@+id/emptyImg"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36"
+                app:layout_constraintVertical_bias="0.36"
+                app:srcCompat="@mipmap/tx_list_empty_icon" />
+
+
+            <TextView
+                android:id="@+id/emptyTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/empty_tx_list"
+                android:textColor="#733e4a59"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emptyImg" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/emptyGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="emptyImg,emptyTxt"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rootContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="gone">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

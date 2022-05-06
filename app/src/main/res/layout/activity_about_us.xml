@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:paddingBottom="24dp"
+    tools:context=".balance.txsend.ViteTxActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".setup.AboutUsActivity">
+
+        <net.vite.wallet.ui.widget.BackButton
+            android:id="@+id/backIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/fullscreen_top_margin"
+            android:src="@drawable/ic_arrow_back_grey_28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backIcon"
+            app:srcCompat="@mipmap/main_icon" />
+
+        <TextView
+            android:id="@+id/versionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="V I T E"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView11"
+            app:layout_constraintStart_toStartOf="@+id/imageView11"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/current_sb_height"
+            android:textColor="#ff24272b"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/versionName" />
+
+        <TextView
+            android:id="@+id/currentSbHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@string/geting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="24dp"
+            android:background="#ffd3dfef"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <TextView
+            android:id="@+id/versionTag"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:gravity="center_vertical"
+            android:text="@string/check_update"
+            android:textColor="#ff24272b"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/line2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line1" />
+
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="13dp"
+            android:layout_marginEnd="24dp"
+            android:scaleType="center"
+            app:layout_constraintBottom_toTopOf="@+id/versionTag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/versionTag"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="24dp"
+            android:background="#ffd3dfef"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="24dp"
+            android:background="#ffd3dfef"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line2" />
+
+        <TextView
+            android:id="@+id/contactUs"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:gravity="center_vertical"
+            android:text="@string/contact_us"
+            android:textColor="#ff24272b"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/line3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line2" />
+
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="13dp"
+            android:layout_marginEnd="24dp"
+            android:scaleType="center"
+            app:layout_constraintBottom_toTopOf="@+id/line3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line2"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+
+        <ImageView
+            android:id="@+id/github"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/medium"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/discord"
+            app:srcCompat="@mipmap/github" />
+
+        <ImageView
+            android:id="@+id/medium"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/discord"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/github"
+            app:layout_constraintTop_toTopOf="@+id/discord"
+            app:srcCompat="@mipmap/about_medium" />
+
+        <ImageView
+            android:id="@+id/reddit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/youtube"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/github"
+            app:srcCompat="@mipmap/reddit" />
+
+        <ImageView
+            android:id="@+id/youtube"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/forum"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/reddit"
+            app:layout_constraintTop_toTopOf="@+id/reddit"
+            app:srcCompat="@mipmap/youtube" />
+
+
+        <ImageView
+            android:id="@+id/forum"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/bitcointalk"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/youtube"
+            app:layout_constraintTop_toTopOf="@+id/reddit"
+            app:srcCompat="@mipmap/about_forum" />
+
+        <ImageView
+            android:id="@+id/bitcointalk"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/facebook"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/forum"
+            app:layout_constraintTop_toTopOf="@+id/reddit"
+            app:srcCompat="@mipmap/bitcointalk" />
+
+        <ImageView
+            android:id="@+id/facebook"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bitcointalk"
+            app:layout_constraintTop_toTopOf="@+id/reddit"
+            app:srcCompat="@mipmap/facebook" />
+
+        <ImageView
+            android:id="@+id/discord"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/twitter"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/medium"
+            app:layout_constraintTop_toTopOf="@+id/twitter"
+            app:srcCompat="@mipmap/discord" />
+
+        <ImageView
+            android:id="@+id/twitter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/telegram"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/discord"
+            app:layout_constraintTop_toTopOf="@+id/telegram"
+            app:srcCompat="@mipmap/twitter" />
+
+        <ImageView
+            android:id="@+id/telegram"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="34dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/twitter"
+            app:layout_constraintTop_toBottomOf="@+id/line3"
+            app:srcCompat="@mipmap/telegram" />
+
+        <TextView
+            android:id="@+id/viteOrg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vite_org"
+            android:textColor="#ff007aff"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/viteBlog"
+            app:layout_constraintEnd_toStartOf="@+id/viteNet"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/viteNet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vite_net"
+            android:textColor="#ff007aff"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/viteOrg"
+            app:layout_constraintEnd_toStartOf="@+id/viteBlog"
+            app:layout_constraintStart_toEndOf="@+id/viteOrg"
+            app:layout_constraintTop_toTopOf="@+id/viteBlog" />
+
+        <TextView
+            android:id="@+id/viteBlog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Vite.wiki"
+            android:textColor="#ff007aff"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/viteNet"
+            app:layout_constraintTop_toBottomOf="@+id/facebook" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

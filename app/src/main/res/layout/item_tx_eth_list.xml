@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="4dp">
+
+
+    <ImageView
+            android:id="@+id/txTypeIcon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/tx_mintage" />
+
+
+    <TextView
+            android:id="@+id/txTypeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/tx_type_register"
+            android:textColor="#ff77808a"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txTypeIcon"
+            app:layout_constraintStart_toEndOf="@+id/txTypeIcon"
+            app:layout_constraintTop_toTopOf="@+id/txTypeIcon" />
+
+    <TextView
+            android:id="@+id/txAddr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:background="#fff3f5f9"
+            android:ellipsize="middle"
+            android:paddingLeft="6dp"
+            android:paddingTop="2dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="2dp"
+            android:singleLine="true"
+            android:textColor="#733e4a59"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txTypeTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txTypeTxt"
+            app:layout_constraintTop_toTopOf="@+id/txTypeTxt"
+            tools:text="vite_328aecc858abe80f4d9530cfdf15536082e51f4ef8cb870f33" />
+
+
+    <TextView
+            android:id="@+id/txTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:textColor="#993E4A59"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/txTypeIcon"
+            app:layout_constraintTop_toBottomOf="@+id/txAmount"
+            tools:text="2018.09.01" />
+
+    <TextView
+            android:id="@+id/txTokenSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/txAddr"
+            app:layout_constraintTop_toBottomOf="@+id/txAddr"
+            tools:text="VITE" />
+
+    <TextView
+            android:id="@+id/txAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="end"
+            android:lines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/txTokenSymbol"
+            app:layout_constraintEnd_toStartOf="@+id/txTokenSymbol"
+            app:layout_constraintTop_toTopOf="@+id/txTokenSymbol"
+            tools:text="80000000000000000003.123456" />
+
+    <TextView
+            android:id="@+id/txFee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:lines="1"
+            android:textColor="#4D3E4A59"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txTimestamp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txTimestamp"
+            tools:text="矿工费用 12.000375122" />
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#d3dfef"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+            android:id="@+id/errorTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transfer_failed"
+            android:textColor="#FF0008"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txAmount" />
+</androidx.constraintlayout.widget.ConstraintLayout>

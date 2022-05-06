@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vite_token_rect">
+
+    <net.vite.wallet.ui.widget.BackButton
+        android:id="@+id/backIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/fullscreen_top_margin"
+        android:src="@drawable/ic_arrow_back_white_28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/white_big_rec"
+        android:elevation="4dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/walletName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textColor="#ff000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="XXXX的钱包" />
+
+
+        <TextView
+            android:id="@+id/addressTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#fff3f5f9"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="3dp"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="53dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/walletName"
+            tools:text="零用钱\nvite_980b2ac5cff8f8c4d1cc28117b02ac12dd9902afc12517dd2" />
+
+        <ImageView
+            android:id="@+id/copyAddrBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/addressTxt"
+            app:layout_constraintEnd_toEndOf="@+id/addressTxt"
+            app:layout_constraintTop_toTopOf="@+id/addressTxt"
+            app:srcCompat="@mipmap/paste_grey" />
+
+        <ImageView
+            android:id="@+id/qrImg"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="29dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/givenAmount"
+            app:srcCompat="@mipmap/container_rect" />
+
+
+        <net.vite.wallet.widget.TokenIconWidget
+            android:id="@+id/logoImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/qrImg"
+            app:layout_constraintEnd_toEndOf="@+id/qrImg"
+            app:layout_constraintStart_toStartOf="@+id/qrImg"
+            app:layout_constraintTop_toTopOf="@+id/qrImg" />
+
+        <TextView
+            android:id="@+id/givenAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:textColor="#ff24272b"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/walletName"
+            app:layout_constraintStart_toStartOf="@+id/walletName"
+            app:layout_constraintTop_toBottomOf="@+id/addressTxt"
+            tools:text="10000 VCP" />
+
+        <TextView
+            android:id="@+id/assignMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/assign_token"
+            android:textColor="#ff007aff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qrImg" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/remarkEditTxtC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assignMoney">
+
+            <net.vite.wallet.ui.widget.RightTextEditText
+                android:id="@+id/remarkEditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="none"
+                    android:hint="@string/remark_memo"
+                android:imeActionLabel="@string/complete"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textColor="#ff24272b" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/shareBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backIcon"
+        app:srcCompat="@mipmap/share" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:gravity="center"
+        android:text="Vite Wallet"
+        android:textColor="#8affffff"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="10dp"
+        android:src="@mipmap/qrshare_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

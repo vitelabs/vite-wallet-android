@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/walletTab"
+        android:icon="@drawable/bottom_wallet_selector"
+        android:title="@string/wallet"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/nutTab"
+        android:icon="@drawable/bottom_nut_selector"
+        android:title="@string/nut"
+        tools:ignore="MenuTitle" />
+    <item
+        android:id="@+id/marketTab"
+        android:icon="@drawable/bottom_market_selector"
+        android:title="@string/tickers"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/buyCoinTab"
+        android:icon="@drawable/bottom_trade_selector"
+        android:title="@string/exchange"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/assetTab"
+        android:icon="@drawable/bottom_dex_selector"
+        android:title="@string/bottom_asset_title"
+        tools:ignore="MenuTitle" />
+</menu>

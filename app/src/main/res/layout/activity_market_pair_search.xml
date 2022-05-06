@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="46dp"
+        android:src="@mipmap/exchange_find"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@null"
+        android:hint="@string/search_exchange_pair"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/searchIcon"
+        app:layout_constraintEnd_toStartOf="@+id/cancelButton"
+        app:layout_constraintStart_toEndOf="@+id/searchIcon"
+        app:layout_constraintTop_toTopOf="@+id/searchIcon" />
+
+    <TextView
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="@string/cancel"
+        android:textColor="#733e4a59"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/searchIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchIcon" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="14dp"
+        android:background="#ffd3dfef"
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/market_shortcut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/line">
+
+        <TextView
+            android:id="@+id/shortcutBtc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BTC-000"
+            app:layout_constraintEnd_toStartOf="@+id/shortcutEth"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shortcutEth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ETH-000"
+            app:layout_constraintEnd_toStartOf="@+id/shortcutUSDT"
+            app:layout_constraintStart_toEndOf="@+id/shortcutBtc"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shortcutUSDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USDT-000"
+            app:layout_constraintEnd_toStartOf="@+id/shortcutVite"
+            app:layout_constraintStart_toEndOf="@+id/shortcutEth"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shortcutVite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VITE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/shortcutUSDT"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/searchHistoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/search_history"
+        android:textColor="#ff3e4a59"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/market_shortcut" />
+
+    <ImageView
+        android:id="@+id/searchHistoryClearImg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="24dp"
+        android:src="@mipmap/clear_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/searchHistoryText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchHistoryText" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/searchHistoryGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="searchHistoryClearImg,searchHistoryText" />
+
+    <ImageView
+        android:id="@+id/emptyImg"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@mipmap/empty_in_tokendetail_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/emptyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/empty_tx_list"
+        android:textColor="#733e4a59"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/emptyImg"
+        app:layout_constraintStart_toStartOf="@+id/emptyImg"
+        app:layout_constraintTop_toBottomOf="@+id/emptyImg" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/emptyGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="emptyTxt,emptyImg" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/searchHistoryText"
+        tools:itemCount="25"
+        tools:listitem="@layout/item_market_pair_search" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

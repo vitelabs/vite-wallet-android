@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">中文</string>
+    <string name="create_account">계정 만들기</string>
+    <string name="recover_account">계정 가져오기</string>
+    <string name="account_name_tag">계정 이름</string>
+    <string name="please_input_password_tag">비밀번호를 입력하세요</string>
+    <string name="login">로그인</string>
+    <string name="create_wallet_account">계정 만들기</string>
+    <string name="repeat_input_txt">비밀번호를 다시 입력해주세요.</string>
+    <string name="create">만들기</string>
+    <string name="please_input_mnemonic">시드 문구를 입력해주세요</string>
+    <string name="password_not_equal">동일한 비밀번호를 입력해주세요!</string>
+    <string name="backup_mnemonic">시드문구 백업하기</string>
+    <string name="memorized_mnemonic">백업 완료</string>
+    <string name="regenerate_mnemonic">다시 생성하기</string>
+    <string name="me_tag">Me</string>
+    <string name="manage_wallet">지갑 관리</string>
+    <string name="tx_record_tag">거래 내역</string>
+    <string name="get_quota_tag">쿼타 얻기</string>
+    <string name="using_setup">설정</string>
+    <string name="reward_query">보상 문의</string>
+    <string name="about_us">회사 소개</string>
+    <string name="copy_success">성공적으로 복사되었습니다</string>
+    <string name="password_error">잘못된 비밀번호입니다</string>
+    <string name="acc_name_can_not_blank">사용자 이름은 비워둘 수 없습니다</string>
+    <string name="recover_success">가져오기 성공</string>
+    <string name="undefined_error">알 수 없는 오류</string>
+    <string name="error_mnemonic">잘못된 시드문구입니다</string>
+    <string name="already_exist_same_account">입력하신 시드문구로 이미
+         에         장치에
+   %1$s 이름으로 계정이 존재합니다.
+계정에 중복으로 입력하는게 맞으신가요?
+    </string>
+    <string name="cancel">취소</string>
+    <string name="replace">바꾸기</string>
+    <string name="account_name_duplicate">이 계정 이름은 이미 사용중입니다</string>
+    <string name="address_manage">주소 관리</string>
+    <string name="eth_address_manage">나의 이더리움 주소</string>
+    <string name="address_list">주소</string>
+    <string name="add_address">주소 추가하기</string>
+    <string name="addr_list_infor_text">한 계정으로 최대 100개의 주소만 생성 가능합니다</string>
+    <string name="choose_wallet_account">지갑 계정 선택</string>
+    <string name="switch_to_12">12개의 니모닉 단어로 전환하기</string>
+    <string name="switch_to_24">24개의 니모닉 단어로 전환하기</string>
+    <string name="logoutandswitch">로그아웃/지갑 변경</string>
+    <string name="receive_token">입금하기</string>
+    <string name="transfer_token">보내기</string>
+    <string name="my_address">주소</string>
+    <string name="my_acc_balance">잔액</string>
+    <string name="receive_address">입금 주소</string>
+    <string name="money_amount">수량</string>
+    <string name="pledge_amount_min_134_vite">최소 134 VITE의 수량을 적어주세요</string>
+    <string name="pledge_amount_must_bigger_134">134 VITE 이상부터 스테이킹이 가능합니다.</string>
+    <string name="remark_memo">메모</string>
+    <string name="input_address_not_valid">잘못된 주소입니다. 다시 확인해주세요</string>
+    <string name="please_input_correct_amount">알맞은 수량을 입력하세요</string>
+    <string name="balance_not_enough">잔액 부족</string>
+    <string name="this_token_max_input_number_decimal">%1$s는 최대 %2$d십진수를 지원합니다</string>
+    <string name="remark_text_too_long">노트 길이의 최대치입니다</string>
+    <string name="pay">결제</string>
+    <string name="confirm">확인</string>
+    <string name="confirm_pay">확인</string>
+    <string name="viteaddress_digits">vite_1234567890abcdef</string>
+    <string name="quota_not_enough">쿼타 부족</string>
+    <string name="get_quota_title">쿼타 얻기</string>
+    <string name="run_pow">이 거래에 대한 쿼타를 확보하기 위해 PoW 계산 중…</string>
+    <string name="pledge_vite">VITE 스테이킹하기</string>
+    <string name="transfer_token_success">성공</string>
+    <string name="quota_benifit_address">쿼타 수령인</string>
+    <string name="pledge_time">락업 기간</string>
+    <string name="about_3_day">약 3일</string>
+    <string name="confirm_pledge">락업 확인하기</string>
+    <string name="pledge_quota_success">성공</string>
+    <string name="empty_tx_list">비어 있음</string>
+    <string name="tx_type_register">등록</string>
+    <string name="tx_type_register_update">등록 업데이트</string>
+    <string name="tx_type_cancel_register">등록 철회</string>
+    <string name="tx_type_extract_reward">보상 찾기</string>
+    <string name="tx_type_vote">투표</string>
+    <string name="tx_type_cancel_vote">투표 철회</string>
+    <string name="tx_type_pledge_quota">TPS 쿼타 얻기</string>
+    <string name="tx_type_cancel_pledge">스테이킹 쿼타 출금</string>
+    <string name="tx_type_mintage">토큰 발행</string>
+    <string name="tx_type_cancel_mintage">스테이킹 토큰 출금</string>
+    <string name="scan">스캔하기</string>
+    <string name="wallet_name_tag">계정 이름</string>
+    <string name="failed">실패</string>
+    <string name="complete">완료</string>
+    <string name="extract_mnemonic">시드 문구 내보내기</string>
+    <string name="current_sb_height">현재 높이</string>
+    <string name="version">버전</string>
+    <string name="contact_us">문의하기</string>
+    <string name="vite_org">Vite.org</string>
+    <string name="vite_net">Vite.net</string>
+    <string name="geting">로딩 중</string>
+    <string name="pledge_record">락업 기록</string>
+    <string name="my_pledge_list">락업 기록</string>
+    <string name="withdrawTime_suffix">락업해제 가능시간</string>
+    <string name="assign_token">수량 입력</string>
+    <string name="input_money_amount">수량 입력</string>
+    <string name="change_success">성공</string>
+    <string name="net_work_error">오류가 발생했습니다. 나중에 다시 시도해주세요</string>
+    <string name="vm_id_collsion"> ID 충돌이 발생했습니다. 다시 시도해주세요</string>
+    <string name="vm_method_not_found">빌트인 컨트렉트 방법이 존재하지 않습니다. 나중에 다시 시도해주세요(-35006)</string>
+    <string name="tx_send_too_frequent">다량의 거래가 요청되었습니다. 나중에 다시 시도해주세요</string>
+    <string name="need_reveive_a_tx_before_send">거래가 입금되기 전까지 전송할 수 없습니다</string>
+    <string name="need_reveive_a_tx_before_vote">거래가 입금되기 전까지 투표할 수 없습니다</string>
+    <string name="invalid_sb_height">스냅샷 블록 높이가 잘못되었습니다. 나중에 다시 시도해주세요</string>
+    <string name="verify_failed_by">시스템 확인에 실패했습니다. 나중에 다시 시도해주세요</string>
+    <string name="backup_wallet">지갑계정 백업</string>
+    <string name="share_qr_code">QR 코드 공유하기</string>
+    <string name="confirm_menmonic">확인</string>
+    <string name="input_mnemonic_in_order">시드 문구를 순서대로 클릭해주세요</string>
+    <string name="check_mnemonic_failed">잘못된 시드 문구입니다</string>
+    <string name="input_password_to_open_app">비밀번호로 잠금해제</string>
+    <string name="backup_later">나중에 백업하기</string>
+    <string name="back_regenerate_mnemonic_alert">\"네\"를 누르시면 새로운 시드 문구를 생성합니다. 뒤로 돌아가시겠습니까?</string>
+    <string name="yes">네</string>
+    <string name="no">아니오</string>
+    <string name="forum">공식 포럼</string>
+    <string name="password_must_at_least_8_char">비밀번호는 8글자 이상이어야 합니다</string>
+    <string name="change_name_title">이름 편집</string>
+    <string name="update">업데이트</string>
+    <string name="check_update">업데이트 확인</string>
+    <string name="this_is_laster_version">최신 버전입니다</string>
+    <string name="my_vote">나의 투표</string>
+    <string name="recall">철회</string>
+    <string name="candidate_sbp_list">노드 후보</string>
+    <string name="empty_vote_info">투표 없음</string>
+    <string name="last_turn_vote_num">투표</string>
+    <string name="snapshot_addr">주소</string>
+    <string name="vote">투표</string>
+    <string name="search_sbp_hint">이름 또는 주소로 검색</string>
+    <string name="candidate_valid">활성화</string>
+    <string name="candidate_invalid">비활성화</string>
+    <string name="unknown">알 수 없음</string>
+    <string name="voteing">투표 진행 중</string>
+    <string name="vote_success">완료된 투표</string>
+    <string name="vote_invalid">유효하지 않은 투표</string>
+    <string name="node_name_tag">노드 이름</string>
+    <string name="vote_req_send_success">투표 요청이 성공적으로 보내졌습니다</string>
+    <string name="vote_to_same_sbp">이미 해당 노드에 투표하셨습니다</string>
+    <string name="make_sure_replace_vote_node">%1$s에 투표하셨습니다.
+        현재 투표 결과를 덮어쓰시겠습니까?
+    </string>
+    <string name="recall_vote">투표 철회</string>
+    <string name="recalling_vote">철회 중</string>
+    <string name="recall_vote_req_send_success">요청 철회가 성공적으로 보내졌습니다</string>
+    <string name="my_vote_num">나의 투표</string>
+    <string name="tx_send_success">성공</string>
+    <string name="share">공유하기</string>
+    <string name="downloading">다운로드 중</string>
+    <string name="contract_address">주소</string>
+    <string name="contract_tx_title">거래내역</string>
+    <string name="warning_of_jump_to_third">타 페이지로 넘어갑니다. 타 페이지 사용은
+        해당 페이지의 사용자 동의 및 개인정보 보호정책 적용됩니다. Vite Labs는 이에 대해 어떠한 책임도 지지 않습니다.
+        
+    </string>
+    <string name="nut_discover">탐색하기</string>
+    <string name="nut_airdrop_can_get">지금 선택하기</string>
+    <string name="nut_help">도움말</string>
+    <string name="nut_opreation_center_title">이벤트센터</string>
+    <string name="nut_operation_activity_empty">이벤트 없음</string>
+    <string name="nut_game_title">VITE 게임</string>
+    <string name="nut_new_title">VITE 뉴스</string>
+    <string name="nut_why_need_phone_state">정보보안을 위해, 귀하의 기기 장치         변수를 수집합니다.
+시스템 설정에 가서 관련 접근을 허용하시고 다시 시도해주세요.
+    </string>
+    <string name="nut_google_net_work_error">구글서버에 접근 할 수 없습니다. 나중에 다시 시도 해주세요</string>
+    <string name="nut_register_device_failed">등록 실패</string>
+    <string name="nut_check_google">        \n\1. Google Play 스토어의 APK를 통해 Vite 앱을 설치하세요. (불러오기에 실패할 경우
+        이 앱의 현재 버전을 삭제 후
+        니모닉 단어를 백업하고, Google Play 스토어에서 다시 설치하세요).
+        \n\n2. Google 서비스 프레임워크를 사용이 가능한 최신 상태인지 확인하세요.\n\n(%1$s)
+    </string>
+    <string name="use_password">비밀번호를 사용해주세요</string>
+    <string name="fingerprint_not_recognized">지문인식에 실패했습니다. 다시 시도해주세요</string>
+    <string name="fingerprint_auth">지문 인식</string>
+    <string name="use_fp">지문인식으로 결제하기</string>
+    <string name="not_support_fp">귀하의 기기 장치가 지문인식을 지원하지 않습니</string>
+    <string name="please_add_fp_in_system">핸드폰 시스템 설정에서 귀하의 지문을 등록해주세요</string>
+    <string name="check_identity">확인</string>
+    <string name="nut_official_txt">Vite</string>
+    <string name="remark_contract_invalid">전송이 될 주소는 컨트렉트입니다. 메모는
+        유효한 16 진수 문자로 작성되어야합니다.
+    </string>
+    <string name="contacts">연락처</string>
+    <string name="menmonic_tag">니모닉 단어</string>
+    <string name="currency_unit">통화</string>
+    <string name="search_token_hint">토큰 이름 혹은 컨트렉트 주소를 입력해주세요</string>
+    <string name="vite_net_title">VITE 네트워크</string>
+    <string name="eth_net_title">이더리움 네트워크</string>
+    <string name="default_address">기본값</string>
+    <string name="unname">제목없음</string>
+    <string name="change_address_name_title">주소 명칭 수정</string>
+    <string name="address_name_title_tag">이름</string>
+    <string name="address_name_can_not_blank">주소 이름칸은 비워 둘 수 없습니다</string>
+    <string name="transfer_token_with_coin">%1$s 전송하기</string>
+    <string name="eth_gas_tag">가스 수수료</string>
+    <string name="slow_tag">느리게</string>
+    <string name="quick_tag">빠르게</string>
+    <string name="eth_transfer_req_commited">전송 요청이 성공적으로 보내졌습니다. 이더리움         넷 확인을 기다리고 있습니다.
+    </string>
+    <string name="add_your_first_contact">첫 연락처 추가</string>
+    <string name="add">추가하기</string>
+    <string name="all">전체</string>
+    <string name="name">이름</string>
+    <string name="inputAddress">주소를 입력하세요</string>
+    <string name="delete_contact">삭제하기</string>
+    <string name="save">저장하기</string>
+    <string name="confirm_delete_contact">이 주소를 삭제할까요?</string>
+    <string name="name_must_not_be_blank">이름은 필수 정보입니다</string>
+    <string name="already_exist_same_contact">동일한 주소 이름(%1$s)이 존재합니다. 덮어쓰겠습니까?</string>
+    <string name="add_contact_success">성공적으로 추가되었습니다</string>
+    <string name="add_contact">새 연락처</string>
+    <string name="edit_contact">연락처 수정</string>
+    <string name="none_contact_platform">%1$s주소가 없습니다</string>
+    <string name="vite_contact_address">VITE 연락처</string>
+    <string name="eth_contact_address">이더리움 연락처</string>
+    <string name="grin_contact_address">GRIN 연락처</string>
+    <string name="cannot_find_token">검색한 토큰을 찾지 못했습니다</string>
+    <string name="please_send_me_this">스캔하고 %1$s보내기</string>
+    <string name="gas_info">귀하의 계정으로 남은 가스 수수료를 돌려드립니다</string>
+    <string name="nut_winners">승자</string>
+    <string name="view_creation_record">제네시스 블록 기록을 확인해주세요</string>
+    <string name="my_eth_address">이더리움 주소</string>
+    <string name="my_vite_address">VITE 주소</string>
+    <string name="net_error_view_info">계정 세부정보 클릭해서 확인하기</string>
+    <string name="remember_check1">니모닉 단어를 잃어 버리면 내 자산을 찾을 수 없다는 것을 이해했습니다.
+    </string>
+    <string name="remember_check2">니모닉 단어를 잃어 버리면 아무도 복구를 도와줄 수 없다는 것을 이해했습니다.
+    </string>
+    <string name="remember_check3">이용 약관을 읽고 이해했으며 이에 동의합니다.</string>
+    <string name="user_term">이용 약관</string>
+    <string name="you_must_check_all">주의 사항을 읽고 체크하세요</string>
+    <string name="convert_vite">VITE 전환</string>
+    <string name="convert_vite_record">전환 내역</string>
+    <string name="convert_tag">전환하기</string>
+    <string name="convert_failed_by_bind">전환 실패(Bind)</string>
+    <string name="convert_all">전체</string>
+    <string name="info4convert">VITE 변환을 통해 Vite 이전 메인넷에서 ERC20 VITE를 VITE로 전환할수 있습니다.
+        변환하는 동안 ERC20 VITE는 이더리움 블랙홀 주소로 전송됩니다:
+        0x1111111111111111111111111111111111111111, 그리고 이더리움 블랙홀 주소로의 거래가 완료된 후
+        Vite 주소로 동일한 양의 VITE를 받게됩니다. 전환하는 동안
+        이더리움 블랙홀 주소의 거래 수수료는 현재 ETH 주소에서 가져옵니다. 전환을 제출한 후, 잠시 기다려주세요.
+        이더리움 네트워크에서 최소 30건의 확인이 이루어지면 전환 내역에서 거래 내역을 찾을 수 있습니다.
+    </string>
+    <string name="quick_understand_exchage">VITE 전환을 이해했습니다.</string>
+    <string name="i_see">알고 있습니다.</string>
+    <string name="update_your_os">안드로이드 운영 시스템을 업데이트 해주세요.</string>
+    <string name="token_detail">토큰 상세정보</string>
+    <string name="not_support_your_device">일시적으로 귀하의 기기장치를 지원하지 않습니다</string>
+    <string name="detail_token_id">토큰 ID</string>
+    <string name="detail_token_name">토큰 이름</string>
+    <string name="detail_gateway">게이트웨이 구축</string>
+    <string name="detail_total">전체 발행</string>
+    <string name="detail_can_issue">네</string>
+    <string name="detail_can_not_issue">아니오</string>
+    <string name="detail_token_overview">설명</string>
+    <string name="languageTitle">언어</string>
+    <string name="lang_chinese">中文</string>
+    <string name="lang_english">English</string>
+    <string name="crosschain_charge">크로스체인 입금</string>
+    <string name="crosschain_withdraw">크로스체인 출금</string>
+    <string name="crosschain_charge_by_vite">Vite 지갑으로 부터 입금하기</string>
+    <string name="crosschain_charge_record">입금 내역</string>
+    <string name="crosschain_charge_address">입금 주소</string>
+    <string name="crosschain_charge_scan_qrcode">주소 QR코드를 스캔해주세요</string>
+    <string name="crosschain_about_deposit_title">크로스체인 입금에 대하여</string>
+    <string name="crosschain_deposit_what_is_by_vite">크로스체인 입금은 %1$s를
+          Vite 네트워크에 매핑되도록 합니다.
+        그 후, 크로스체인 입금이 가능합니다. Vite 지갑의 %2$s잔액은
+        Vite 지갑에서 크로스체인 입금 할 때, 그에 상응하여 감소될 것입니다.
+    </string>
+    <string name="crosschain_tx_record_tag">입금 내역</string>
+    <string name="crosschain_opposite_processing">%1$s 체인이 확인되지 않았습니다</string>
+    <string name="crosschain_opposite_confirmed">게이트웨이를 통해 입금됨</string>
+    <string name="crosschain_tot_processing">VITE 체인이 확인되지 않았습니다 </string>
+    <string name="crosschain_tot_confirmed">확인됨</string>
+    <string name="crosschain_deposit_amount_hint">최소 입금 가능금액은 %1$s 입니다</string>
+    <string name="deposit">입금하기</string>
+    <string name="deposit_all">전체</string>
+    <string name="deposit_amount_too_low">스테이킹 수량은 %1$s보다 커야 합니다</string>
+    <string name="crosschain_gw_meta_closed">게이트웨이에 의해 기능 종료됨</string>
+    <string name="crosschain_gw_meta_maintain">기능 보수 중</string>
+    <string name="crosschain_gw_meta_unknown">채널이 잘못된 상태에 있습니다</string>
+    <string name="crosschain_withdraw_record">출금 내역</string>
+    <string name="crosschain_withdraw_fee">수수료</string>
+    <string name="withdraw">출금하기</string>
+    <string name="withdraw_amount_too_low">출금 수량은 %1$s보다 커야 합니다</string>
+    <string name="withdraw_amount_too_high">총 수량이 %1$s-%2$s한도를 초과합니다. gateway@vite.org로 연락주세요.</string>
+    <string name="crosschain_withdraw_amount_hint">최소 %1$s%2$s 출금하기</string>
+    <string name="request_server_error">요청에 실패했습니다. 나중에 다시 시도해주세요.\n%1$s</string>
+    <string name="crosschain_withdraw_fee_what_is_no_fee">게이트웨이에 의해 수수료가 청구되었습니다. </string>
+    <string name="crosschain_withdraw_fee_what_is">게이트웨이에 의해 수수료가 청구되었습니다.\n단일 크로스체인 출금 수수료: </string>
+    <string name="crosschain_tot_exceed_the_limit">한도 초과</string>
+    <string name="crosschain_wrong_withdraw_address">잘못된 출금 주소</string>
+    <string name="crosschain_withdraw_tx_record_tag">출금 내역</string>
+    <string name="notice">공지</string>
+    <string name="crosschain_deposit_byother_hint">        아래 주소에 의해 %2$s만 허용됩니다. 최소 금액은 %1$s보다 커야 합니다.
+    </string>
+    <string name="crosschain_deposit_confirm_hint">        이 과정은 %1$s확인이 필요합니다. 기다려주세요.
+    </string>
+    <string name="crosschain_below_minimum">금액이 너무 적습니다</string>
+    <string name="crosschain_deposit_failed">입금 실패</string>
+    <string name="http_service_error">        서비스 예외(%1$s). 잠시 후 다시 시도해주세요.
+    </string>
+    <string name="net_work_timeout">연결 시간을 초과했습니다. 나중에 다시 시도해주세요.</string>
+    <string name="wc_connecting">Vite커넥트 연결됨</string>
+    <string name="wc_connecting_hint">거래 내역이 없습니다</string>
+    <string name="wc_connected">ViteX 웹지갑에서 교환하고 있습니다. &amp; 웹지갑</string>
+    <string name="wc_connected_hint">아래 거래 정보를 확인해주세요</string>
+    <string name="warm_notice">공지</string>
+    <string name="vitebifrost_connected_qr_notice_content">다음 링크를 확인해주세요\n%1$s</string>
+    <string name="wallet_connect_in">Vite커넥트 연결됨</string>
+    <string name="wc_kill_confirm_msg">Vite커넥트에서 로그아웃 하시겠습니까?</string>
+    <string name="dex_sell">매도</string>
+    <string name="dex_buy">매수</string>
+    <string name="vitebirost_already_connected_change_address">Vite커넥트가 연결되었습니다. 주소를 변경하면
+        네트워크 연결이 해지됩니다. 주소를 변경 해주세요.
+    </string>
+    <string name="vitebifrost_connected_address_not_same">스캔된 주소는
+         웹 플랫폼 주소와 일치하지 않습니다. 어플 주소를 통해 로그인하시겠습니까?
+    </string>
+    <string name="wc_changeaddr_notice">Vite커넥트가 연결되었습니다. 주소를 변경하면 네트워크 연결이 해지됩니다.
+        주소를 변경 해주세요.
+    </string>
+    <string name="mnemonic_not_backup">니모닉 단어가 백업되지 않았습니다</string>
+    <string name="please_input_password_to_backup">니모닉 단어 백업을 위해 비밀번호를 입력해주세요</string>
+    <string name="temprory_not_backup">나중에 백업하기</string>
+    <string name="goto_backup">지금 백업하기</string>
+    <string name="retrieve_quota">출금하기</string>
+    <string name="retrieve_pledge_viteing">출금중</string>
+    <string name="gas_not_enough">이더리움 잔액이 가스 수수료보다 적습니다</string>
+    <string name="button_ok">확인</string>
+    <string name="my_vite_contacts_tag">VITE 연락처 주소</string>
+    <string name="my_vite_address_tag">나의 VITE 주소</string>
+    <string name="my_eth_contacts_tag">이더리움 연락처 주소</string>
+    <string name="my_eth_address_tag">나의 이더리움 주소</string>
+    <string name="quota_is_congestion">현재 네트워크는 다이나믹 쿼타 모드입니다. 즉 쿼타 한도가 감소되었고, 초당 더 적은 거래만 가능합니다.
+        거래를 계속 하시겠습니까?
+    </string>
+    <string name="tx_congestion">지금 거래하기</string>
+    <string name="tx_later">나중에 거래하기</string>
+    <string name="dialog_pledge_quota_notice">현재 주소에서 134VITE 스테이킹을 통해 쿼타를 얻는다는 것을 확인해주세요.
+          스테이킹 거래내역에서 스테이킹 3일 후부터 출금이 가능합니다.
+    </string>
+    <string name="dialog_pledge_quota_hint">        다른 주소에서도 쿼타를 %1$s까지 얻을 수 있습니다.
+    </string>
+    <string name="click_here">여기를 클릭하세요</string>
+    <string name="dialog_pledge_quota_title">쿼타 바로 얻기</string>
+    <string name="acquired_staking">락업 수량</string>
+    <string name="quota_cost_tag">쿼타</string>
+    <string name="title_already_pledge">스테이킹됨</string>
+    <string name="title_unreceived">미입금</string>
+    <string name="unreceived_quota_cost">미입금(%1$d UT)</string>
+    <string name="quota_avaliable_limit">가능한 쿼타/쿼타 제한</string>
+    <string name="benefit_address">수령인</string>
+    <string name="ut_cost_in_powdialog">거래 비용은 %1$s UT 입니다</string>
+    <string name="tx_already_sent">거래 전송됨</string>
+    <string name="how_to_skip_quota_dialog">스테이킹 된 VITE는 3일 후에 인출이 가능합니다.
+        스테이킹으로 받은 쿼타가 충분하다면, PoW 단계를 건너뛸 수 있습니다.
+    </string>
+    <string name="pledge_to_speedup">속도 향상을 위해 스테이킹하기</string>
+    <string name="pow_cost_time">        PoW 작업에 %1$sS를 사용했고, 보증되었으며, %2$sUT를 사용했습니다.
+    </string>
+    <string name="fast_buy_coin">바로 구매하기</string>
+    <string name="bugcoin_buyvite">VITE 구매하기</string>
+    <string name="bugcoin_record">구매 내역</string>
+    <string name="buy_coin_buy">매수</string>
+    <string name="buy_coin_price">비율：1 VITE = %1$s ETH</string>
+    <string name="bugcoin_failed">구매 실패(%1$s)</string>
+    <string name="buy_coin_exceed_quota_max">입력하신 금액이 불가합니다. 단일 거래는 최소
+        10 VITE, 최대 10,000 VITE 로 가능합니다. 일일 거래 한도는 500,000 VITE 입니다.
+    </string>
+    <string name="buy_coin_price_record">비율：%1$s ETH</string>
+    <string name="crosschain_main_notice">        이 서비스는 %1$s에서 제공됩니다. Vite 플랫폼은 %1$s에서 수행한 활동에 대해 책임을지지 않습니다.
+        또한
+        %1$s와 Vite 플랫폼 사용자 간의 관계에서 역할을 수행하지 않습니다.\n\n 
+        %1$s의 서비스를 이용함으로써
+        %1$s %2$s에 따름을 동의합니다. 이 약관에 동의하지 않을 경우, 다음 서비스 사용을 거절해주세요.
+        %1$s
+    </string>
+    <string name="crosschain_main_notice_official">        이 서비스는 %1$s에서 제공됩니다.
+        %1$s의 서비스를 이용함으로써
+        %1$s %2$s에 따름을 동의합니다. 이 약관에 동의하지 않을 경우, 다음 서비스 사용을 거절해주세요.
+        %1$s.
+    </string>
+    <string name="crosschain_term_link">서비스 약관</string>
+    <string name="crosschain_contact_us">        인증과 결제 과정에서 문제가 생길 경우, %2$s에서 %1$s로 연락해 주세요.
+    </string>
+    <string name="crosschain_next_notice">        다음을 클릭하시면, %1$s 사의 %2$s에 동의합니다.
+    </string>
+    <string name="next">다음</string>
+    <string name="get_support">고객 지원</string>
+    <string name="buy_coin_max_limit">단일 거래 한도：%1$s-%2$s VITE</string>
+    <string name="buy_coin_max_limit_oneday">일일 거래 한도：%1$s VITE；미이용 일일 한도：%2$s VITE</string>
+    <string name="buy_coin_vite_amount_hint">%1$s-%2$s</string>
+    <string name="close">닫기</string>
+    <string name="import_notice">중요 공지</string>
+    <string name="crosschain_deposit_labelDesc">%1$s를 입금 주소와 함께 사용해주세요. 그렇지 않으면 토큰을 잃어버릴 수 있습니다.
+    </string>
+    <string name="buy_coin_exceed_daily_quota_max">수량 한도를 초과했습니다. 내일 다시 시도해주세요.
+    </string>
+    <string name="crosschain_charge_scan_qrcode_desc">%1$s 코드를 스캔해주세요</string>
+    <string name="tx_confirm">거래 확인</string>
+    <string name="write_to_paper">종이에 니모닉 단어를 적어서 안전한 곳에 보관해주세요</string>
+    <string name="user_another_to_backup">다른 기기 장치에 Vite 지갑을 다운 받으신 후, 아래 QR 코드를 스캔해주세요.</string>
+    <string name="backup_known_first">주의! 니모닉 단어를 잃어버리면 지갑 내 모든 디지털 자산을 잃어버릴 수 있습니다.</string>
+    <string name="backup_known_second">니모닉 단어 불러오기는 어플을 삭제하거나 다시 설치하신 후에 계정을 복구하기 위해 사용됩니다.</string>
+    <string name="backup_known_third">니모닉 단어를 안전한 곳에 보관해주세요</string>
+    <string name="address">주소</string>
+    <string name="sign_transaction">서명된 거래</string>
+    <string name="autoSignTransaction">자동 서명</string>
+    <string name="please_confirm_to_gen_account">다음의 니모닉 단어들로 계정 생성을 확인하시겠습니까?</string>
+    <string name="wait_sign">서명 대기중</string>
+    <string name="sign_processing">서명중</string>
+    <string name="success">성공</string>
+    <string name="password_confirm">비밀번호</string>
+    <string name="crosschain_token">크로스체인</string>
+    <string name="raw_token">네이티브</string>
+    <string name="official_net_title">웹사이트</string>
+    <string name="white_paper_title">백서</string>
+    <string name="token_type">토큰 유형</string>
+    <string name="github_title">Github</string>
+    <string name="social_medium_title">SNS</string>
+    <string name="gateway_info_activity_title">게이트웨이 세부사항</string>
+    <string name="gateway_name_title">게이트웨이 이름</string>
+    <string name="gateway_official_web">게이트에이 공식 사이트</string>
+    <string name="gateway_overview">게이트웨이 소개</string>
+    <string name="commit_ticket">고객지원</string>
+    <string name="gateway_policy_title">서비스 약관</string>
+    <string name="gateway_link_title">게이트웨이 링크</string>
+    <string name="wallet_assets">지갑 자산</string>
+    <string name="available">이용 가능:</string>
+    <string name="withdraw_to_wallet">출금하기</string>
+    <string name="transfer">전송하기</string>
+    <string name="transferTitle">전송하기</string>
+    <string name="from">보내는 사람</string>
+    <string name="wallet_account">지갑 계정</string>
+    <string name="to">받는 사람</string>
+    <string name="exchange_account">거래 지갑</string>
+    <string name="amount">수량</string>
+    <string name="please_input_transfer_amount">전송 수량을 입력하세요</string>
+    <string name="available_balance">이용 가능 잔액</string>
+    <string name="all_balance">총 잔액</string>
+    <string name="exchange_balance_not_enough">거래소 잔액 부족</string>
+    <string name="explorer">둘러보기</string>
+    <string name="exchange_tag">Dex</string>
+    <string name="exchange_hangqing">마켓</string>
+    <string name="goto_vitex_exchange">ViteX 거래 가이드</string>
+    <string name="transactions">거래</string>
+    <string name="we_advice_backup">다음 방법으로 니모닉 단어를 백업하기를 권장합니다</string>
+    <string name="exchange_fav">즐겨찾기</string>
+    <string name="newest_price">종가</string>
+    <string name="change_price_percent">변경하기</string>
+    <string name="search_exchange_pair">검색하기</string>
+    <string name="search_history">기록 검색하기</string>
+    <string name="switch_market_pair">거래소</string>
+    <string name="operator_name_tag">오퍼레이터</string>
+    <string name="eth_send_last_failed">네트워크 실패, 다시 시도하기 전에 거래 내역을 확인해주세요</string>
+    <string name="log_back_txt">업로드 중</string>
+    <string name="delete_account">현재 계정 삭제하기</string>
+    <string name="invite_cost_hint">。</string>
+    <string name="fill_invite_code">초대코드(선택 사항)</string>
+    <string name="why_fill_invite_code">초대코드를 입력하거나, 초대 QR코드를 스캔하여 거래수수료 10%할인받고 프리미어 채굴을 즐겨보세요!</string>
+    <string name="invite_friend_to_mining">채굴 추천인</string>
+    <string name="invite_code_error">잘못된 초대코드</string>
+    <string name="delete_account_hint">계정 삭제 후에는 니모닉 단어로만 복구가 가능합니다. 계정을 삭제하시겠습니까?</string>
+    <string name="send_file">거래내역 파일 보내기</string>
+    <string name="fees">수수료</string>
+    <string name="eth_transfer_type">전송하기</string>
+    <string name="eth_miner_fee">가스 수수료</string>
+    <string name="detail">상세정보</string>
+    <string name="fromAddress">보내는 주소</string>
+    <string name="transactionHash">트랜젝션 해시</string>
+    <string name="block">블럭</string>
+    <string name="see_eth_on_block_exploer">이더스캔에서 자세한 정보 보기</string>
+    <string name="add_address_dialog_message">지정된 숫자만큼의 주소 대량생성</string>
+    <string name="add_address_dialog_hint">1에서 100 사이의 숫자를 넣어주세요</string>
+    <string name="add_address_toast_exist">이미 동일 주소가 존재합니다</string>
+    <string name="about_focus_wechat">QR코드를 스캔하고 Vite WeChat 공식 계정을 팔로우하세요</string>
+    <string name="add_address_over_limit">최대 100개의 주소를 추가해주세요</string>
+    <string name="order">오더북</string>
+    <string name="recently_traded">마지막 거래</string>
+    <string name="token">토큰</string>
+    <string name="operactor">오퍼레이터</string>
+    <string name="exchange_buy">매수</string>
+    <string name="exchange_sell">매도</string>
+    <string name="operator_address">오퍼레이터 주소</string>
+    <string name="intro">소개</string>
+    <string name="trade_pair">거래쌍</string>
+    <string name="total_supply">전체 발행</string>
+    <string name="crosschain_gateway">크로스체인 게이트웨이</string>
+    <string name="browser">둘러보기</string>
+    <string name="kline_time_interval_minute">1분</string>
+    <string name="kline_time_interval_minute30">30분</string>
+    <string name="kline_time_interval_hour">1시간</string>
+    <string name="kline_time_interval_hour2">2시간</string>
+    <string name="kline_time_interval_hour4">4시간</string>
+    <string name="kline_time_interval_hour6">6시간</string>
+    <string name="kline_time_interval_hour12">12시간</string>
+    <string name="kline_time_interval_day">1일</string>
+    <string name="kline_time_interval_week">1주</string>
+    <string name="coin2coin">스팟</string>
+    <string name="mining">채굴</string>
+    <string name="bonus">배당</string>
+    <string name="limit_commission">지정가 주문</string>
+    <string name="buyPrice">가격</string>
+    <string name="buyAmount">수량</string>
+    <string name="sellPrice">가격</string>
+    <string name="sellAmount">수량</string>
+    <string name="price">가격</string>
+    <string name="current_commission">미체결 주문</string>
+    <string name="history_commission">기록</string>
+    <string name="openVip">VIP되기</string>
+    <string name="cancelVip">VIP 취소</string>
+    <string name="buy">매수</string>
+    <string name="sell">매도</string>
+    <string name="quantity_is">수량: </string>
+    <string name="price_is">가격: </string>
+    <string name="deal_is">완료됨: </string>
+    <string name="av_price_is">평균가: </string>
+    <string name="can_find_order">이 주문을 찾을 수 없습니다</string>
+    <string name="trade_warning">현재 거래쌍은 %1$s입니다. 암호화폐 투자는 높은 시장 위험과 변동성이 존재합니다. 잠재적인 위험을 감안하여 신중하게 거래하세요.\"</string>
+    <string name="wallet">지갑</string>
+    <string name="tickers">마켓</string>
+    <string name="exchange">거래하기</string>
+    <string name="nut">찾기</string>
+    <string name="exchange_balance_lower_than_min">전체 금액는 최소 %1$s %2$s(이)여야 합니다</string>
+    <string name="deal_amount">전체：</string>
+    <string name="can_buy">최대 매수：</string>
+    <string name="can_sell">최대 매도：</string>
+    <string name="create_api">API 생성하기</string>
+    <string name="cant_cancel_vip">스테이킹은 최소 30일간 취소가 불가합니다</string>
+    <string name="exchange_balance">거래소 거래가능 잔액</string>
+    <string name="vip_stake_amount">VIP가 되기위한 스테이킹 수량</string>
+    <string name="open_vip_notice">VIP는 0.1%의 거래수수료 할인 혜택을 누릴 수 있습니다. 10,000 VITE를 스테이킹하여 VIP가 되보세요(최소 스테이킹 기간 : 30일)</string>
+    <string name="vip_amount_not_enough">거래소 잔액 부족, 10,000 VITE 스테이킹 하고 VIP 되기</string>
+    <string name="transfer_type">거래 유형</string>
+    <string name="response">응답</string>
+    <string name="request">요청</string>
+    <string name="see_on_vite_block_exploer">Vite 둘러보기에서 더 자세한 정보 보기</string>
+    <string name="contract_call_success">콜 컨트렉트 성공</string>
+    <string name="contract_call_failed">콜 컨트렉트 실패</string>
+    <string name="contract">콜</string>
+    <string name="contract_call_pending">스마트 계약 응답 대기중</string>
+    <string name="transfer_failed">거래 실패</string>
+    <string name="transfer_success">거래 완료</string>
+    <string name="mining_notice_sell">가격이 %1$s 이하일 때, 채굴이 가능합니다</string>
+    <string name="mining_notice_buy">가격이 %1$s 이상일 때, 채굴이 가능합니다</string>
+    <string name="dont_tell_me_again_24h">24시간 후에 다시 요청해주세요</string>
+    <string name="anonymous_operator">익명</string>
+    <string name="withdraw_amount">출금 수량</string>
+    <string name="crosschain_withdraw_withdraw_amount_limit_title">크로스체인 출금 한도</string>
+    <string name="crosschain_withdraw_withdraw_amount_limit_content">단일 크로스체인 출금의 최소 수량: %1$s %2$s\n단일 크로스체인 출금의 최대 수량: %3$s %4$s</string>
+    <string name="trade_suspended">거래 중지</string>
+    <string name="cant_send_zero">수량은 음수가 될 수 없습니다</string>
+    <string name="need_storage_permission">저장 권한 필요</string>
+    <string name="token_symbol">토큰 심볼</string>
+    <string name="please_input_token_name">토큰명을 입력하세요</string>
+    <string name="dex_tab_fund_account_title">메인</string>
+    <string name="dex_tab_dex_account_title">거래</string>
+    <string name="dex_assets_header_show_micro_balance">적은 잔액 숨기기</string>
+    <string name="dex_assets_button0">전송하기</string>
+    <string name="dex_assets_button1">입금하기</string>
+    <string name="dex_assets_button2">출금하기</string>
+    <string name="dex_all_assets_title">전체 금액(BTC)</string>
+    <string name="dex_assets_title">금액(BTC)</string>
+    <string name="dex_tab_title">Dex 자산</string>
+    <string name="asset_detail_title">잔액</string>
+    <string name="all_assets_tab">전체</string>
+    <string name="internal_transfer_record_tag">전송 내역</string>
+    <string name="transfer_in">가져오기</string>
+    <string name="transfer_out">내보내기</string>
+    <string name="bottom_asset_title">자산</string>
+    <string name="dex_detail_group_button_deposit">입금하기</string>
+    <string name="dex_asset_detail_quota_key">쿼타를 위해 스테이킹 됨</string>
+    <string name="dex_asset_detail_quota_sbp_key">SBP를 위해 스테이킹 됨</string>
+    <string name="dex_asset_detail_quota_full_node_key">풀노드를 위해 스테이킹 됨</string>
+    <string name="dex_token_detail_deposit">입금하기</string>
+    <string name="dex_token_detail_withdraw">출금하기</string>
+    <string name="dex_token_detail_transfer">전송하기</string>
+    <string name="dex_token_detail_inner_transfer">보내기</string>
+    <string name="dex_avaliable_balance">이용 가능</string>
+    <string name="dex_order_locked_balance">주문중</string>
+    <string name="dex_token_detail_exchange">거래하기</string>
+    <string name="dex_vip_lock">VIP 락업</string>
+    <string name="dex_mine_lock">스테이킹 됨</string>
+    <string name="dex_unlocking">회수 중</string>
+    <string name="dex_dividen_lock">스테이킹 됨</string>
+    <string name="choose_exchange_pair">거래쌍 선택하기</string>
+    <string name="grin_is_removed">Grin 주소가 일시적으로 이용 불가합니다. 복구 문구를 이용해 Grin이 있는 다른 지갑 어플에서 귀하의 계정을 접속해주세요.</string>
+    <string name="grin_net_title">GRIN 네트워크</string>
+    <string name="quota_not_enough_messgage">락업된 쿼타가 없습니다. VITE를 락업해주세요, 혹은 원하는 경우 POW를 실행하여 쿼타를 얻을 수 있습니다.</string>
+    <string name="go_to_get_quota">VITE 락업하기</string>
+    <string name="not_to_get_quota">PoW 운영하기</string>
+    <string name="quota_exceed_limit_message">스테이킹한 VITE가 없으면 주소 당 하루에 %1$d 만 거래 할 수 있습니다. 귀하의 주소는 모든 %1$d 거래를 소진했습니다. 더 많은 거래를 수행하려면 쿼타 페이지로 이동하여 VITE를 스테이킹 해주세요.</string>
+    <string name="vite_node_setting">%1$s 노드 설정</string>
+    <string name="node_setting_entry_title">노드 설정</string>
+    <string name="add_node_title">올바른 이메일 주소를 입력하세요</string>
+    <string name="invalid_node">유효하지 않은 노드</string>
+    <string name="choose_mainnet_title">네트워크 선택</string>
+    <string name="crosschain_deposit_byother_hint3">올바른 메인넷을 입력하세요, 그렇지 않으면 토큰을 잃어버릴 수도 있습니다.</string>
+    <string name="add_custom_node_btn">커스텀 노드 추가</string>
+    <string name="delete">삭제하기</string>
+    <string name="modify_passphrase">비밀번호 변경</string>
+    <string name="my_acc_balance_in_quota">지갑 자산</string>
+</resources>

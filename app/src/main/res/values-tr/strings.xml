@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">Çince</string>
+    <string name="create_account">Hesap Oluştur</string>
+    <string name="recover_account">Hesabı İçe Aktar</string>
+    <string name="account_name_tag">Hesap Adı</string>
+    <string name="please_input_password_tag">Lütfen parolayı girin</string>
+    <string name="login">Giriş Yap</string>
+    <string name="create_wallet_account">Hesap Oluştur</string>
+    <string name="repeat_input_txt">Lütfen parolanızı yeniden girin</string>
+    <string name="create">Oluştur</string>
+    <string name="please_input_mnemonic">Lütfen kurtarma kelimelerinizi girin</string>
+    <string name="password_not_equal">Lütfen aynı parolayı girin!</string>
+    <string name="backup_mnemonic">Kurtarma Kelimelerini Yedekle</string>
+    <string name="memorized_mnemonic">Yedeklendi</string>
+    <string name="regenerate_mnemonic">Yeniden Oluştur</string>
+    <string name="me_tag">Ben</string>
+    <string name="manage_wallet">Cüzdan Yönetimi</string>
+    <string name="tx_record_tag">İşlem Geçmişi</string>
+    <string name="get_quota_tag">Quota Al</string>
+    <string name="using_setup">Ayarlar</string>
+    <string name="reward_query">Ödül Sorgulama</string>
+    <string name="about_us">Hakkımızda</string>
+    <string name="copy_success">Kopyalama başarılı!</string>
+    <string name="password_error">Yanlış parola!</string>
+    <string name="acc_name_can_not_blank">Kullanıcı adı boş bırakılamaz</string>
+    <string name="recover_success">içe aktarma başarılı</string>
+    <string name="undefined_error">Bilinmeyen hata</string>
+    <string name="error_mnemonic">Hatalı kurtarma kelimeleri!</string>
+    <string name="already_exist_same_account">Girdiğiniz kurtarma kelimeleri, mevcut cihazda zaten \"%1$s\" hesap adına sahip
+        mevcut
+        hesabın üzerine yazmak istediğinizden emin misiniz
+    </string>
+    <string name="cancel">İptal</string>
+    <string name="replace">Değiştir</string>
+    <string name="account_name_duplicate">Bu hesap adı zaten kullanılmış</string>
+    <string name="address_manage">Adres Yönetimi</string>
+    <string name="eth_address_manage">ETH adresim</string>
+    <string name="address_list">Adresler</string>
+    <string name="add_address">Adres Ekle</string>
+    <string name="addr_list_infor_text">Bir hesap en fazla 100 adres oluşturabilir!</string>
+    <string name="choose_wallet_account">Cüzdan hesabı seçin</string>
+    <string name="switch_to_12">12 anımsatıcı kelimeye geç</string>
+    <string name="switch_to_24">24 anımsatıcı kelimeye geç</string>
+    <string name="logoutandswitch">Çıkış/cüzdan değiştir</string>
+    <string name="receive_token">Alma</string>
+    <string name="transfer_token">Gönder</string>
+    <string name="my_address">Adres</string>
+    <string name="my_acc_balance">Bakiye</string>
+    <string name="receive_address">Alıcı Adresi</string>
+    <string name="money_amount">Miktar</string>
+    <string name="pledge_amount_min_134_vite">Lütfen miktarı girin, minimum 134 VITE</string>
+    <string name="pledge_amount_must_bigger_134">Stake miktarı 134\'ten az olmamalıdır</string>
+    <string name="remark_memo">Memo</string>
+    <string name="input_address_not_valid">Yanlış adres, lütfen formatı kontrol edin</string>
+    <string name="please_input_correct_amount">Lütfen doğru miktarı girin</string>
+    <string name="balance_not_enough">Yetersiz Bakiye</string>
+    <string name="this_token_max_input_number_decimal">%1$s maksimum %2$d ondalık sayıyı destekler</string>
+    <string name="remark_text_too_long">Notların uzunluğu sınırlara ulaştı</string>
+    <string name="pay">Ödeme</string>
+    <string name="confirm">Onayla</string>
+    <string name="confirm_pay">Onayla</string>
+    <string name="viteaddress_digits">vite_1234567890abcdef</string>
+    <string name="quota_not_enough">Yetersiz Quota</string>
+    <string name="get_quota_title">Quota Al</string>
+    <string name="run_pow">Quota\'yı Korumak İçin PoW Hesaplanıyor…</string>
+    <string name="pledge_vite">VITE Stake et</string>
+    <string name="transfer_token_success">Başarılı</string>
+    <string name="quota_benifit_address">Quota Yararlanıcısı</string>
+    <string name="pledge_time">Kilit dönemi</string>
+    <string name="about_3_day">Yaklaşık 3 gün</string>
+    <string name="confirm_pledge">Kilitlemek için gönder</string>
+    <string name="pledge_quota_success">Başarılı</string>
+    <string name="empty_tx_list">Boş</string>
+    <string name="tx_type_register">Kayıt</string>
+    <string name="tx_type_register_update">Kaydı Güncelle</string>
+    <string name="tx_type_cancel_register">Kaydı İptal Et</string>
+    <string name="tx_type_extract_reward">Ödülleri Al</string>
+    <string name="tx_type_vote">Oylama</string>
+    <string name="tx_type_cancel_vote">Oylamayı İptal Et</string>
+    <string name="tx_type_pledge_quota">TPS quota al</string>
+    <string name="tx_type_cancel_pledge">Stake edilmiş quota çekimi</string>
+    <string name="tx_type_mintage">Token Yayınlama</string>
+    <string name="tx_type_cancel_mintage">Stake edilmiş tokenların çekimi</string>
+    <string name="scan">Tara</string>
+    <string name="wallet_name_tag">Hesap Adı</string>
+    <string name="failed">Başarısız</string>
+    <string name="complete">Tamam</string>
+    <string name="extract_mnemonic">Kurtarma Kelimelerini Dışa Aktar</string>
+    <string name="current_sb_height">Mevcut Yükseklik</string>
+    <string name="version">Sürüm</string>
+    <string name="contact_us">Bizimle İletişime Geçin</string>
+    <string name="vite_org">Vite.org</string>
+    <string name="vite_net">Vite.net</string>
+    <string name="geting">Yükleniyor</string>
+    <string name="pledge_record">Kilitleme Kaydı</string>
+    <string name="my_pledge_list">Kilitleme Kaydı</string>
+    <string name="withdrawTime_suffix">Kilidi açmak için kullanılabilir süre</string>
+    <string name="assign_token">Miktar Girin</string>
+    <string name="input_money_amount">Miktar Girin</string>
+    <string name="change_success">Başarılı</string>
+    <string name="net_work_error">Ağda bir sorun oluştu, lütfen daha sonra tekrar deneyin</string>
+    <string name="vm_id_collsion">Bir kimlik karmaşası meydana geldi, lütfen daha sonra yeniden gönderin</string>
+    <string name="vm_method_not_found">Sözleşme içi yöntem bulunamadı, lütfen daha sonra tekrar deneyin(-35006)</string>
+    <string name="tx_send_too_frequent">İşlemler çok sık gönderiliyor, lütfen daha sonra tekrar deneyin</string>
+    <string name="need_reveive_a_tx_before_send">Bir işlem gerçekleşmeden başka transfer yapamazsınız.</string>
+    <string name="need_reveive_a_tx_before_vote">Bir işlem alana kadar oy kullanamazsınız.</string>
+    <string name="invalid_sb_height">Blok kayıt yüksekliği illegal, lütfen daha sonra tekrar deneyin</string>
+    <string name="verify_failed_by">Sistem doğrulaması başarısız oldu, lütfen daha sonra tekrar deneyiniz</string>
+    <string name="backup_wallet">Cüzdan Hesabını Yedekle</string>
+    <string name="share_qr_code">QR kodu paylaş</string>
+    <string name="confirm_menmonic">Onayla</string>
+    <string name="input_mnemonic_in_order">Lütfen Anımsatıcı Kelimeleri doğru sırayla seçin.</string>
+    <string name="check_mnemonic_failed">Hatalı kurtarma kelimeleri!</string>
+    <string name="input_password_to_open_app">Parola ile Kilidi Aç</string>
+    <string name="backup_later">sonra yedekle</string>
+    <string name="back_regenerate_mnemonic_alert">Bu eylem kurtarma kelimelerini yeniden oluşturacak, geri dönmeye hazır mısın?</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    <string name="forum">Resmi Forum</string>
+    <string name="password_must_at_least_8_char">Parola en az 8 karakterden oluşmalıdır</string>
+    <string name="change_name_title">Adı Düzenle</string>
+    <string name="update">güncelle</string>
+    <string name="check_update">Güncellemeleri Kontrol Et</string>
+    <string name="this_is_laster_version">Bu en son sürüm</string>
+    <string name="my_vote">Oylamam</string>
+    <string name="recall">İptal et</string>
+    <string name="candidate_sbp_list">Aday Düğümler</string>
+    <string name="empty_vote_info">Oy Yok</string>
+    <string name="last_turn_vote_num">Oylar</string>
+    <string name="snapshot_addr">Adres</string>
+    <string name="vote">Oy</string>
+    <string name="search_sbp_hint">Ada veya adrese göre ara</string>
+    <string name="candidate_valid">Etkin</string>
+    <string name="candidate_invalid">Etkin değil</string>
+    <string name="unknown">Bilinmeyen</string>
+    <string name="voteing">Oylama devam ediyor</string>
+    <string name="vote_success">Başarılı Oy</string>
+    <string name="vote_invalid">Geçersiz Oy</string>
+    <string name="node_name_tag">Düğüm Adı</string>
+    <string name="vote_req_send_success">Oylama talebi başarıyla gönderildi</string>
+    <string name="vote_to_same_sbp">Bu düğüme zaten oy verdiniz</string>
+    <string name="make_sure_replace_vote_node">%1$s için oy verdiniz, mevcut oylama sonucunun üzerine yazılmasını
+        istediğinizden emin misiniz?
+    </string>
+    <string name="recall_vote">Oylamayı İptal Et</string>
+    <string name="recalling_vote">İptal Ediliyor</string>
+    <string name="recall_vote_req_send_success">İptal talebi başarıyla gönderildi</string>
+    <string name="my_vote_num">Oylarım</string>
+    <string name="tx_send_success">Başarılı</string>
+    <string name="share">paylaş</string>
+    <string name="downloading">indiriliyor</string>
+    <string name="contract_address">Adres</string>
+    <string name="contract_tx_title">İşlemler</string>
+    <string name="warning_of_jump_to_third">Üçüncü taraf sayfasına atlayın. Üçüncü taraf sayfasını kullanımınız, üçüncü
+        şahıs uygulamasının kullanıcı sözleşmesi ve gizlilik politikası için geçerli olacaktır. Vite Labs herhangi bir
+        sorumluluk kabul etmeyecektir.
+    </string>
+    <string name="nut_discover">Keşfet</string>
+    <string name="nut_airdrop_can_get">Şimdi Al</string>
+    <string name="nut_help">yardım</string>
+    <string name="nut_opreation_center_title">Etkinlik Merkezi</string>
+    <string name="nut_operation_activity_empty">Etkinlik Yok</string>
+    <string name="nut_game_title">VITE Oyunları</string>
+    <string name="nut_new_title">VITE Haberleri</string>
+    <string name="nut_why_need_phone_state">Hileden kaçınmak için bazı cihaz parametrelerinizi toplamamız
+        gerekiyor. Lütfen ilgili izinleri açmak için sistem ayarlarına gidin ve tekrar deneyin.
+    </string>
+    <string name="nut_google_net_work_error">Google sunucusuna erişilemiyor, Lütfen daha sonra tekrar deneyin.</string>
+    <string name="nut_register_device_failed">Kayıt başarısız oldu.</string>
+    <string name="nut_check_google">        \n1. Lütfen Google Play Store\'dan APK aracılığıyla Vite App yükleyin (Önceki kurulumu geçersiz kılmama
+         gibi sorunlarla karşılaşırsanız, lütfen anımsatıcı sözcüklerinizi yedekleyin ve bu Uygulamanın mevcut 
+        sürümünü kaldırdıktan sonra Google Play Store\'dan yeniden yükleyin).
+        \n\n2. Lütfen Google Hizmet Çerçevenizin kullanılabilir ve güncel olduğundan emin olun.\n\n(%1$s)
+    </string>
+    <string name="use_password">Parola kullan</string>
+    <string name="fingerprint_not_recognized">Parmak izi tanınmadı. Tekrar deneyin</string>
+    <string name="fingerprint_auth">Parmak izi kimlik doğrulaması</string>
+    <string name="use_fp">Parmak izi ödemesini kullan</string>
+    <string name="not_support_fp">Cihazınız parmak izi kimlik doğrulamasını desteklemiyor</string>
+    <string name="please_add_fp_in_system">Lütfen telefonunuzun sistem ayarlarına parmak izinizi ekleyin.</string>
+    <string name="check_identity">Doğrulama</string>
+    <string name="nut_official_txt">Vite</string>
+    <string name="remark_contract_invalid">Transfer ettiğiniz hedef adres bir sözleşme adresidir, not onaltılık
+        karakterlerle yazılmalıdır
+    </string>
+    <string name="contacts">Kişiler</string>
+    <string name="menmonic_tag">Anımsatıcı Kelimeler</string>
+    <string name="currency_unit">Para Birimi</string>
+    <string name="search_token_hint">Lütfen token adı veya sözleşme adresi girin</string>
+    <string name="vite_net_title">VITE Ağı</string>
+    <string name="eth_net_title">ETH Ağı</string>
+    <string name="default_address">Varsayılan</string>
+    <string name="unname">Başlıksız</string>
+    <string name="change_address_name_title">Adres Başlıklarını Düzenle</string>
+    <string name="address_name_title_tag">ad</string>
+    <string name="address_name_can_not_blank">Adres adı boş bırakılamaz</string>
+    <string name="transfer_token_with_coin">%1$s Gönder</string>
+    <string name="eth_gas_tag">Gas Ücreti</string>
+    <string name="slow_tag">Yavaş</string>
+    <string name="quick_tag">Hızlı</string>
+    <string name="eth_transfer_req_commited">Transfer talebi başarıyla gönderildi, ethereum ağ onayı için
+        bekleyin
+    </string>
+    <string name="add_your_first_contact">İlk kişinizi ekleyin</string>
+    <string name="add">Ekle</string>
+    <string name="all">Tümü</string>
+    <string name="name">Ad</string>
+    <string name="inputAddress">Lütfen adres girin</string>
+    <string name="delete_contact">sil</string>
+    <string name="save">Kaydet</string>
+    <string name="confirm_delete_contact">Bu adresi silmek istediğinizden emin misiniz</string>
+    <string name="name_must_not_be_blank">Ad boş bırakılamaz</string>
+    <string name="already_exist_same_contact">Aynı adres adı (%1$s) var, üzerine yazılsın mı?</string>
+    <string name="add_contact_success">Başarıyla Eklendi</string>
+    <string name="add_contact">Yeni Kişi</string>
+    <string name="edit_contact">Kişiyi Düzenle</string>
+    <string name="none_contact_platform">Henüz %1$s adresi yoktur</string>
+    <string name="vite_contact_address">VITE Kişileri</string>
+    <string name="eth_contact_address">ETH Kişileri</string>
+    <string name="grin_contact_address">GRIN Kişileri</string>
+    <string name="cannot_find_token">Böyle bir token bulunamadı</string>
+    <string name="please_send_me_this">Tara ve %1$s gönder</string>
+    <string name="gas_info">Geri kalan gas ücretini hesabınıza iade edeceğiz</string>
+    <string name="nut_winners">Kazananlar</string>
+    <string name="view_creation_record">Genesis Blok Kayıtlarını Kontrol Edin</string>
+    <string name="my_eth_address">ETH Adresi</string>
+    <string name="my_vite_address">VITE Adresi</string>
+    <string name="net_error_view_info">Hesap ayrıntılarını kontrol etmek için tıklayın</string>
+    <string name="remember_check1">Anımsatıcı kelimeleri kaybedersem, varlığımı asla geri bulamayacağımı anlıyorum.
+    </string>
+    <string name="remember_check2">Anımsatıcı kelimeleri unutursam veya kaybedersem, kimsenin düzeltmeye yardım edemeyeceğini anlıyorum.
+    </string>
+    <string name="remember_check3">Şartlar ve Koşulları okudum, anladım ve kabul ediyorum.</string>
+    <string name="user_term">Şartlar ve Koşullar</string>
+    <string name="you_must_check_all">Lütfen dikkatlice okuyun ve işaretleyin</string>
+    <string name="convert_vite">VITE Dönüşümü</string>
+    <string name="convert_vite_record">Dönüşüm Geçmişi</string>
+    <string name="convert_tag">Dönüştür</string>
+    <string name="convert_failed_by_bind">Dönüştürme Başarısız  (Bind Hatası)</string>
+    <string name="convert_all">Tümü</string>
+    <string name="info4convert">ERC20 VITE\'i VITE Pre-Mainnet\'te VITE dönüşümü aracılığıyla VITE\'e dönüştürebilirsiniz.
+        Dönüştürme sırasında, ERC20 VITE\'iniz Ethereum kara delik adresine transfer edilecektir:
+        0x11111111111111111111111111111111111111 ve Ethereum kara delik adresine işlem tamamlandıktan
+        sonra Vite adresinizde aynı miktarda VITE alacaksınız. Dönüştürme sırasında, Ethereum kara delik adresine işlem
+         ücreti mevcut ETH adresinizden gelir. Dönüşümü gönderdikten sonra, lütfen Ethereum ağında en az 30 onay bekleyin, 
+        işlem geçmişini dönüşüm geçmişinde bulabilirsiniz.
+    </string>
+    <string name="quick_understand_exchage">VITE Dönüşümünü Anlayın</string>
+    <string name="i_see">Biliyorum</string>
+    <string name="update_your_os">Lütfen android işletim sisteminizi güncelleyin.</string>
+    <string name="token_detail">Token Ayrıntıları</string>
+    <string name="not_support_your_device">Cihazınızı geçici olarak desteklemiyor.</string>
+    <string name="detail_token_id">Token Kimliği</string>
+    <string name="detail_token_name">Token Adı</string>
+    <string name="detail_gateway">Forge Ağ geçidi</string>
+    <string name="detail_total">Toplam Yayınlama</string>
+    <string name="detail_can_issue">Evet</string>
+    <string name="detail_can_not_issue">Hayır</string>
+    <string name="detail_token_overview">Açıklama</string>
+    <string name="languageTitle">Dil</string>
+    <string name="lang_chinese">中文</string>
+    <string name="lang_english">İngilizce</string>
+    <string name="crosschain_charge">Cross-Chain Yatırma</string>
+    <string name="crosschain_withdraw">Cross-Chain Çekme</string>
+    <string name="crosschain_charge_by_vite">Vite Cüzdanından Yatırma</string>
+    <string name="crosschain_charge_record">Yatırma Geçmişi</string>
+    <string name="crosschain_charge_address">Yatırma Adresi</string>
+    <string name="crosschain_charge_scan_qrcode">Lütfen adres QR kodunu tarayın</string>
+    <string name="crosschain_about_deposit_title">Cross-Chain Yatırma Hakkında</string>
+    <string name="crosschain_deposit_what_is_by_vite">Cross-chain yatırma işlemi yapmak, %1$s\'nin Vite ağına 
+        eşlenmesini sağlar.
+        Bundan sonra, cross-chain yatırma işlemi de yapabileceksiniz. Vite cüzdanınızdan cross-chain yatırma
+        işlemi yaptığınızda, Vite cüzdanınızdaki %2$s bakiyesi buna göre azalacaktır.
+    </string>
+    <string name="crosschain_tx_record_tag">Yatırma Geçmişi</string>
+    <string name="crosschain_opposite_processing">Onaylanmayan Zincir %1$s</string>
+    <string name="crosschain_opposite_confirmed">Ağ Geçidi tarafından alındı</string>
+    <string name="crosschain_tot_processing">VITE Zinciri Onaylanmadı</string>
+    <string name="crosschain_tot_confirmed">Onaylandı</string>
+    <string name="crosschain_deposit_amount_hint">En az %1$s yatırın</string>
+    <string name="deposit">Yatırma</string>
+    <string name="deposit_all">Tümü</string>
+    <string name="deposit_amount_too_low">Yatırma miktarı %1$s \'den az olamaz</string>
+    <string name="crosschain_gw_meta_closed">Özellik ağ geçidi tarafından kapatıldı</string>
+    <string name="crosschain_gw_meta_maintain">Bu özellik şu an bakımdadır</string>
+    <string name="crosschain_gw_meta_unknown">Kanal yanlış durumda</string>
+    <string name="crosschain_withdraw_record">Çekim Geçmişi</string>
+    <string name="crosschain_withdraw_fee">Komisyon</string>
+    <string name="withdraw">Çekme</string>
+    <string name="withdraw_amount_too_low">Çekim miktarı %1$s \'den az olamaz</string>
+    <string name="withdraw_amount_too_high">Miktar %1$s-%2$s limitini aşıyor, lütfen gateway@vite.org ile iletişime geçin</string>
+    <string name="crosschain_withdraw_amount_hint">En az %1$s%2$s çekin</string>
+    <string name="request_server_error">Talep başarısız, lütfen daha sonra tekrar deneyin. \n%1$s</string>
+    <string name="crosschain_withdraw_fee_what_is_no_fee">Bu komisyon ağ geçidi tarafından alınır </string>
+    <string name="crosschain_withdraw_fee_what_is">Bu komisyon, ağ geçidi tarafından alınır\nCross-chain çekme işlem komisyonu: </string>
+    <string name="crosschain_tot_exceed_the_limit">Limit aşıldı</string>
+    <string name="crosschain_wrong_withdraw_address">Yanlış çekim adresi</string>
+    <string name="crosschain_withdraw_tx_record_tag">Çekim Geçmişi</string>
+    <string name="notice">Uyarı</string>
+    <string name="crosschain_deposit_byother_hint">        Aşağıdaki adres yalnızca %2$s kabul ediyor ve minimum miktar %1$s\'den az olmamalıdır.
+    </string>
+    <string name="crosschain_deposit_confirm_hint">        İşlem %1$s onay almalı, lütfen bekleyin.
+    </string>
+    <string name="crosschain_below_minimum">Çok düşük Miktar</string>
+    <string name="crosschain_deposit_failed">Yatırma Başarısız</string>
+    <string name="http_service_error">        Hizmet istisnası(%1$s), lütfen daha sonra tekrar deneyin.
+    </string>
+    <string name="net_work_timeout">Bağlantı zaman aşımına uğradı, lütfen daha sonra tekrar deneyin</string>
+    <string name="wc_connecting">ViteConnect Bağlandı</string>
+    <string name="wc_connecting_hint">Henüz işleminiz yok</string>
+    <string name="wc_connected">ViteX &amp; Web Cüzdanında değişiklik yapıyorsunuz</string>
+    <string name="wc_connected_hint">Lütfen aşağıdaki işlem bilgilerini onaylayın</string>
+    <string name="warm_notice">Uyarı</string>
+    <string name="vitebifrost_connected_qr_notice_content">Lütfen aşağıdaki linki onaylayın\n%1$s</string>
+    <string name="wallet_connect_in">ViteConnect Bağlandı</string>
+    <string name="wc_kill_confirm_msg">ViteConnect\'ten çıkış yaptığınızdan emin misiniz?</string>
+    <string name="dex_sell">Sat</string>
+    <string name="dex_buy">Al</string>
+    <string name="vitebirost_already_connected_change_address">ViteConnect bağlandı, adres değişimi ağ bağlantısını kesecek.
+        Adres değiştirdiğinizden emin olun
+    </string>
+    <string name="vitebifrost_connected_address_not_same">Şu anda taradığınız adres web platformundaki adresle tutarlı değil.
+        Uygulama adresiyle giriş yapmaya devam edilsin mi?
+    </string>
+    <string name="wc_changeaddr_notice">ViteConnect bağlandı, adres değişimi ağ bağlantısını kesecek.
+        Adres değiştirdiğinizden emin olun
+    </string>
+    <string name="mnemonic_not_backup">Anımsatıcı Kelimeler Yedeklenmedi</string>
+    <string name="please_input_password_to_backup">Anımsatıcı Kelimeleri yedeklemek için lütfen parolayı girin.</string>
+    <string name="temprory_not_backup">Daha Sonra Yedekle</string>
+    <string name="goto_backup">Şimdi Yedekle</string>
+    <string name="retrieve_quota">Çekme</string>
+    <string name="retrieve_pledge_viteing">Çekiliyor</string>
+    <string name="gas_not_enough">ETH bakiyesi Gas\'dan daha az</string>
+    <string name="button_ok">TAMAM</string>
+    <string name="my_vite_contacts_tag">VITE İletişim Adresi</string>
+    <string name="my_vite_address_tag">VITE Adresim</string>
+    <string name="my_eth_contacts_tag">ETH İletişim Adresi</string>
+    <string name="my_eth_address_tag">ETH Adresim</string>
+    <string name="quota_is_congestion">Ağ şu anda Dinamik Quota modunda. Bu, Quota Limitinizin düşürüldüğü ve saniyede
+        daha az işlem gönderebileceğiniz anlamına gelir. Hala bir işlem gerçekleştirmek istiyor
+musunuz?
+    </string>
+    <string name="tx_congestion">Şimdi İşlem Yapın</string>
+    <string name="tx_later">Daha Sonra İşlem Yapın</string>
+    <string name="dialog_pledge_quota_notice">Lütfen mevcut adresten 134 VITE stake ederek quota almak istediğinizi
+        onaylayın. Stake miktarını 3 gün sonra Stake Geçmişi bölümünden çekebilirsiniz.
+    </string>
+    <string name="dialog_pledge_quota_hint">        Ayrıca %1$s ile başka herhangi bir adres için quota alabilirsiniz.
+    </string>
+    <string name="click_here">buraya tıklayın</string>
+    <string name="dialog_pledge_quota_title">Anında Quota Alımı</string>
+    <string name="acquired_staking">Kilitli Miktar</string>
+    <string name="quota_cost_tag">Quota</string>
+    <string name="title_already_pledge">Stake Edilmiş</string>
+    <string name="title_unreceived">Alınmadı</string>
+    <string name="unreceived_quota_cost">(%1$d UT) Alınmadı</string>
+    <string name="quota_avaliable_limit">Kullanılabilir Quota/Quota Limiti</string>
+    <string name="benefit_address">Yararlanıcı</string>
+    <string name="ut_cost_in_powdialog">Bu İşlemin maliyeti %1$s UT</string>
+    <string name="tx_already_sent">İşlem Gönderildi</string>
+    <string name="how_to_skip_quota_dialog">Stake ettiğiniz VITE\'inizi 3 gün sonra çekebilirsiniz. Stake yoluyla aldığınız
+        quota bir işlem için yeterliyse, PoW\'un bu adımını atlayabilirsiniz.
+    </string>
+    <string name="pledge_to_speedup">Hızlandırmak için Stake et</string>
+    <string name="pow_cost_time">        Bu PoW hesaplamasında %1$sS harcadınız ve %2$sUT\'u güvence altına alıp kullandınız
+    </string>
+    <string name="fast_buy_coin">Anında Satın Alma</string>
+    <string name="bugcoin_buyvite">VITE Al</string>
+    <string name="bugcoin_record">Ödeme Geçmişi</string>
+    <string name="buy_coin_buy">Al</string>
+    <string name="buy_coin_price">Oran：1 VITE = %1$s ETH</string>
+    <string name="bugcoin_failed">Satın Alma Başarısız(%1$s)</string>
+    <string name="buy_coin_exceed_quota_max">Girdiğiniz miktar geçersiz. Tek bir işlem en az
+        10 VITE ve en fazla 10.000 VITE olmalıdır ve günlük işlem limiti 500.000 VITE\'tir.
+    </string>
+    <string name="buy_coin_price_record">Oran：%1$s ETH</string>
+    <string name="crosschain_main_notice">        Bu Hizmet %1$s tarafından sağlanmaktadır. Vite Platformu, %1$s tarafından gerçekleştirilen etkinlikler için
+        hiçbir
+        sorumluluk kabul etmez ve %1$s ile Vite Platform kullanıcıları arasındaki ilişkide rol oynamaz.\n\n %1$s
+        tarafından
+        sağlanan hizmetleri kullanarak, %1$s %2$s tarafından bağlanmayı kabul etmiş olursunuz. Bu şartları kabul etmiyorsanız, lütfen %1$s hizmetlerini kullanmaktan
+        kaçının.
+    </string>
+    <string name="crosschain_main_notice_official">        Bu Hizmet %1$s tarafından sağlanmaktadır.
+        %1$s tarafından sağlanan hizmetleri kullanarak,
+        %1$s %2$s  tarafından bağlanmayı kabul etmiş olursunuz. Bu şartları kabul etmiyorsanız, lütfen %1$s tarafından
+        sağlanan hizmetleri kullanmaktan kaçının.
+    </string>
+    <string name="crosschain_term_link">Hizmet Şartları.</string>
+    <string name="crosschain_contact_us">        Doğrulama veya ödeme işlemiyle ilgili bir problem yaşandığında, lütfen %1$s adresinden %2$s destek
+    ekibiyle iletişime geçin</string>
+    <string name="crosschain_next_notice">        İleri\'ye tıkladığınızda, %1$s Şirketinin %2$s\'sini kabul etmiş oluyorsunuz.
+    </string>
+    <string name="next">İleri</string>
+    <string name="get_support">Destek Al</string>
+    <string name="buy_coin_max_limit">Tek İşlem Limiti：%1$s-%2$s VITE</string>
+    <string name="buy_coin_max_limit_oneday">Günlük İşlem Limiti ：%1$s VITE ； Kullanılmayan Günlük Limit ：%2$s VITE</string>
+    <string name="buy_coin_vite_amount_hint">%1$s-%2$s</string>
+    <string name="close">Kapat</string>
+    <string name="import_notice">Önemli Uyarı</string>
+    <string name="crosschain_deposit_labelDesc">Lütfen Yatırma Adresi ile birlikte %1$s kullanın, aksi takdirde token(lar)ınızı kaybedebilirsiniz.
+    </string>
+    <string name="buy_coin_exceed_daily_quota_max">Miktar limiti aşıldı, lütfen yarın tekrar deneyin    </string>
+    <string name="crosschain_charge_scan_qrcode_desc">Lütfen %1$s kodunu tarayın</string>
+    <string name="tx_confirm">İşlem Onayı</string>
+    <string name="write_to_paper">Anımsatıcı kelimeleri bir kağıda not edin, ardından güvenli bir yerde saklayın.</string>
+    <string name="user_another_to_backup">Başka bir cihazda yüklü olan Vite cüzdanını kullanarak aşağıdaki QR kodunu tarayın.。</string>
+    <string name="backup_known_first">Dikkat! Anımsatıcı kelimelerin kaybı, cüzdandaki tüm dijital varlıkların kaybına neden olacaktır.</string>
+    <string name="backup_known_second">Anımsatıcı kelimeleri içe aktarmak, uygulamayı sildikten veya yeniden yükledikten sonra bir hesabı almanın tek yoludur.</string>
+    <string name="backup_known_third">Lütfen anımsatıcı kelimelerinizi güvenli bir yerde saklayın.</string>
+    <string name="address">Adres</string>
+    <string name="sign_transaction">İmzalanan İşlemler</string>
+    <string name="autoSignTransaction">Otomatik İmza</string>
+    <string name="please_confirm_to_gen_account">Aşağıdaki anımsatıcı kelimelerle hesap oluşturmayı onaylıyor musunuz?</string>
+    <string name="wait_sign">İmza bekleniyor</string>
+    <string name="sign_processing">İmzalama</string>
+    <string name="success">Başarılı</string>
+    <string name="password_confirm">Parola</string>
+    <string name="crosschain_token">Cross-Chain</string>
+    <string name="raw_token">Yerel</string>
+    <string name="official_net_title">Web Sitesi</string>
+    <string name="white_paper_title">Teknik inceleme</string>
+    <string name="token_type">Token Türü</string>
+    <string name="github_title">GitHub</string>
+    <string name="social_medium_title">Sosyal Medya</string>
+    <string name="gateway_info_activity_title">Ağ Geçidi Ayrıntıları</string>
+    <string name="gateway_name_title">Ağ Geçidi Adı</string>
+    <string name="gateway_official_web">Ağ Geçidi Resmi Sitesi</string>
+    <string name="gateway_overview">Ağ Geçidi Tanıtımı</string>
+    <string name="commit_ticket">Müşteri Hizmetleri</string>
+    <string name="gateway_policy_title">Hizmet Şartları</string>
+    <string name="gateway_link_title">Ağ Geçidi Linki</string>
+    <string name="wallet_assets">Cüzdan Varlığı</string>
+    <string name="available">Kullanılabilir:</string>
+    <string name="withdraw_to_wallet">Çekme</string>
+    <string name="transfer">Transfer</string>
+    <string name="transferTitle">Transfer</string>
+    <string name="from">Gönderici</string>
+    <string name="wallet_account">Cüzdan Hesabı</string>
+    <string name="to">Alıcı</string>
+    <string name="exchange_account">Alım Satım Cüzdanı</string>
+    <string name="amount">Miktar</string>
+    <string name="please_input_transfer_amount">Lütfen transfer miktarını girin</string>
+    <string name="available_balance">Kullanılabilir Bakiye</string>
+    <string name="all_balance">Toplam Bakiye</string>
+    <string name="exchange_balance_not_enough">Yetersiz exchange bakiyesi</string>
+    <string name="explorer">Explorer</string>
+    <string name="exchange_tag">Dex</string>
+    <string name="exchange_hangqing">Marketler</string>
+    <string name="goto_vitex_exchange">ViteX Alım Satım Rehberi</string>
+    <string name="transactions">İşlem</string>
+    <string name="we_advice_backup">Anımsatıcıları aşağıdaki şekillerde yedeklemenizi öneririz</string>
+    <string name="exchange_fav">Favoriler</string>
+    <string name="newest_price">Son Fiyat</string>
+    <string name="change_price_percent">Değiştir</string>
+    <string name="search_exchange_pair">Arama</string>
+    <string name="search_history">Arama Geçmişi</string>
+    <string name="switch_market_pair">Exchange</string>
+    <string name="operator_name_tag">Operatör</string>
+    <string name="eth_send_last_failed">Ağ hatası, tekrar denemeden önce lütfen işlem geçmişini kontrol edin.</string>
+    <string name="log_back_txt">Kaydı Yükle</string>
+    <string name="delete_account">Mevcut Hesabı Sil</string>
+    <string name="invite_cost_hint">。</string>
+    <string name="fill_invite_code">Davet Kodu(İsteğe Bağlı)</string>
+    <string name="why_fill_invite_code">Alım satım komisyonlarında ve birinci sınıf madencilikte kullanabileceğiniz %10 indirimden yararlanmak için davetiye kodunu girin veya davetiye QR kodunu tarayın</string>
+    <string name="invite_friend_to_mining">Madencilik Referansları</string>
+    <string name="invite_code_error">Yanlış Davet Kodu</string>
+    <string name="delete_account_hint">Bir hesabı sildikten sonra hesabınızı ancak anımsatıcı kelime ile kurtarabilirsiniz, bu hesabı silmeyi onaylıyor musunuz?</string>
+    <string name="send_file">İşlem Dosyasını Gönder</string>
+    <string name="fees">Komisyonlar</string>
+    <string name="eth_transfer_type">Transfer</string>
+    <string name="eth_miner_fee">Gas Ücreti</string>
+    <string name="detail">Ayrıntılar</string>
+    <string name="fromAddress">Gönderim Adresi</string>
+    <string name="transactionHash">İşlem Hash\'i</string>
+    <string name="block">Blok</string>
+    <string name="see_eth_on_block_exploer">Etherscan\'de Daha Fazla Ayrıntı Göster</string>
+    <string name="add_address_dialog_message">Toplu olarak belirli sayıda adres oluştur</string>
+    <string name="add_address_dialog_hint">1 ile 100 arasında bir sayı girin</string>
+    <string name="add_address_toast_exist">Adres zaten var</string>
+    <string name="about_focus_wechat">Vite WeChat Resmi Hesabına ulaşmak için QR kodu tarayın.</string>
+    <string name="add_address_over_limit">En fazla 100 adres ekleyin!</string>
+    <string name="order">Emir defteri</string>
+    <string name="recently_traded">Son Alım Satımlar</string>
+    <string name="token">Token</string>
+    <string name="operactor">Operatör</string>
+    <string name="exchange_buy">Al</string>
+    <string name="exchange_sell">Sat</string>
+    <string name="operator_address">Operatör adresi</string>
+    <string name="intro">Giriş</string>
+    <string name="trade_pair">Alım Satım paritesi</string>
+    <string name="total_supply">Toplam Yayınlama</string>
+    <string name="crosschain_gateway">Cross-Chain ağ geçidi</string>
+    <string name="browser">Explorer</string>
+    <string name="kline_time_interval_minute">1dk</string>
+    <string name="kline_time_interval_minute30">30dk</string>
+    <string name="kline_time_interval_hour">1S</string>
+    <string name="kline_time_interval_hour2">2S</string>
+    <string name="kline_time_interval_hour4">4S</string>
+    <string name="kline_time_interval_hour6">6S</string>
+    <string name="kline_time_interval_hour12">12S</string>
+    <string name="kline_time_interval_day">1G</string>
+    <string name="kline_time_interval_week">1H</string>
+    <string name="coin2coin">Spot</string>
+    <string name="mining">Madencilik</string>
+    <string name="bonus">Kar payı</string>
+    <string name="limit_commission">Limit Emri</string>
+    <string name="buyPrice">Fiyat</string>
+    <string name="buyAmount">Miktar</string>
+    <string name="sellPrice">Fiyat</string>
+    <string name="sellAmount">Miktar</string>
+    <string name="price">Fiyat</string>
+    <string name="current_commission">Açık Emirler</string>
+    <string name="history_commission">Geçmiş</string>
+    <string name="openVip">VIP olun</string>
+    <string name="cancelVip">VIP\'i iptal et</string>
+    <string name="buy">Al</string>
+    <string name="sell">Sat</string>
+    <string name="quantity_is">Miktar: </string>
+    <string name="price_is">Fiyat: </string>
+    <string name="deal_is">Tamamlanan: </string>
+    <string name="av_price_is">Ort.: </string>
+    <string name="can_find_order">Bu emir bulunamıyor</string>
+    <string name="trade_warning">Mevcut alım satım paritesi %1$s, Kripto para yatırımı yüksek piyasa riskine ve fiyat oynaklığına tabidir. Lütfen potansiyel risklerle başa çıkma yeteneğinizi dikkatlice değerlendirin ve tedbirli alım satım kararları verin.\"</string>
+    <string name="wallet">Cüzdan</string>
+    <string name="tickers">Marketler</string>
+    <string name="exchange">Alım Satım</string>
+    <string name="nut">Keşfet</string>
+    <string name="exchange_balance_lower_than_min">Toplam değer en az %1$s %2$s olmalıdır</string>
+    <string name="deal_amount">Toplam：</string>
+    <string name="can_buy">Maksimum Alım：</string>
+    <string name="can_sell">Maksimum Satış：</string>
+    <string name="create_api">API Oluştur</string>
+    <string name="cant_cancel_vip">Stake süresi 30 günden azdır ve geri alınamaz</string>
+    <string name="exchange_balance">Kullanılabilir Exchange Bakiyesi</string>
+    <string name="vip_stake_amount">VIP Olmak İçin Gereken Stake Miktarı</string>
+    <string name="open_vip_notice">%0.1 alım satım komisyonu indirimi VIP ayrıcalıklarından yararlanın. VIP olmak için 10.000 VITE stake edin (Minimum Stake Süresi: 30 gündür)</string>
+    <string name="vip_amount_not_enough">Yetersiz exchange bakiyesi, VIP olabilmek için 10.000 VITE stake edin</string>
+    <string name="transfer_type">İşlem Türü</string>
+    <string name="response">Yanıt</string>
+    <string name="request">Talep</string>
+    <string name="see_on_vite_block_exploer">Vite Explorer\'da Daha Fazla Ayrıntı Görüntüle</string>
+    <string name="contract_call_success">Sözleşme Talebi Başarılı</string>
+    <string name="contract_call_failed">Sözleşme Talebi Başarısız Oldu</string>
+    <string name="contract">Ara</string>
+    <string name="contract_call_pending">Akıllı Sözleşme Yanıtı bekleniyor</string>
+    <string name="transfer_failed">İşlem Başarısız</string>
+    <string name="transfer_success">İşlem Tamamlandı</string>
+    <string name="mining_notice_sell">Fiyat %1$s\'den düşük olduğu zaman madencilik için uygundur</string>
+    <string name="mining_notice_buy">Fiyat %1$s\'den yüksek olduğu zaman madencilik için uygundur</string>
+    <string name="dont_tell_me_again_24h">24 saat içinde tekrar sorma</string>
+    <string name="anonymous_operator">Anonim</string>
+    <string name="withdraw_amount">Çekim Miktarı</string>
+    <string name="crosschain_withdraw_withdraw_amount_limit_title">Cross-chain çekim limiti</string>
+    <string name="crosschain_withdraw_withdraw_amount_limit_content">Tek seferde minimum cross-chain çekim miktarı: %1$s %2$s\nTek seferde maksimum cross-chain çekim miktarı: %3$s %4$s</string>
+    <string name="trade_suspended">Alım Satım Askıya Alındı</string>
+    <string name="cant_send_zero">Miktar pozitif olmalıdır</string>
+    <string name="need_storage_permission">Depolama izni gerekli</string>
+    <string name="token_symbol">Token Sembolü</string>
+    <string name="please_input_token_name">Lütfen token adı girin</string>
+    <string name="dex_tab_fund_account_title">Temel</string>
+    <string name="dex_tab_dex_account_title">Alım Satım</string>
+    <string name="dex_assets_header_show_micro_balance">Düşük Bakiyeleri Gizle</string>
+    <string name="dex_assets_button0">Transfer</string>
+    <string name="dex_assets_button1">Yatırma</string>
+    <string name="dex_assets_button2">Çekme</string>
+    <string name="dex_all_assets_title">Toplam Değer (BTC)</string>
+    <string name="dex_assets_title">Değer(BTC)</string>
+    <string name="dex_tab_title">Dex Varlıkları</string>
+    <string name="asset_detail_title">Bakiye</string>
+    <string name="all_assets_tab">Toplam</string>
+    <string name="internal_transfer_record_tag">Transfer Geçmişi</string>
+    <string name="transfer_in">İçe Transfer</string>
+    <string name="transfer_out">Dışa Transfer</string>
+    <string name="bottom_asset_title">Varlık</string>
+    <string name="dex_detail_group_button_deposit">Yatırma</string>
+    <string name="dex_asset_detail_quota_key">Quota için Stake Edilmiş</string>
+    <string name="dex_asset_detail_quota_sbp_key">SBP için Stake Edilmiş</string>
+    <string name="dex_asset_detail_quota_full_node_key">Tam Düğüm için Stake Edilmiş</string>
+    <string name="dex_token_detail_deposit">Yatırma</string>
+    <string name="dex_token_detail_withdraw">Çekme</string>
+    <string name="dex_token_detail_transfer">Transfer</string>
+    <string name="dex_token_detail_inner_transfer">Gönder</string>
+    <string name="dex_avaliable_balance">Kullanılabilir</string>
+    <string name="dex_order_locked_balance">Emirde</string>
+    <string name="dex_token_detail_exchange">Alım Satım</string>
+    <string name="dex_vip_lock">VIP Kilitli</string>
+    <string name="dex_mine_lock">Stake Edilmiş</string>
+    <string name="dex_unlocking">Geri alınıyor</string>
+    <string name="dex_dividen_lock">Stake Edilmiş</string>
+    <string name="choose_exchange_pair">Alım Satım Paritesi Seçin</string>
+    <string name="grin_is_removed">Grin cüzdanı geçici olarak kullanılamıyor. Kurtarma Kelimeleriniz ile hesabınıza Grin destekli başka bir cüzdan uygulamasından erişin.</string>
+    <string name="grin_net_title">GRIN Ağı</string>
+    <string name="quota_not_enough_messgage">Quota için kilitli VITE\'e sahip olmadığınızı fark ettik. Lütfen VITE\'i kilitleyin veya tercih ederseniz, Quota almak için POW\'u çalıştırabilirsiniz.</string>
+    <string name="go_to_get_quota">VITE Kilitle</string>
+    <string name="not_to_get_quota">POW\'u çalıştır</string>
+    <string name="quota_exceed_limit_message">VITE stake edilmeden adres başına günde yalnızca %1$d işlem yapılabilir. Adresiniz %1$d işlemin tümünü tüketti. Lütfen quota sayfasına gidin ve daha fazla işlem gerçekleştirmek için VITE\'inizi stake edin.</string>
+    <string name="vite_node_setting">%1$s Düğüm Ayarı</string>
+    <string name="node_setting_entry_title">Düğüm Ayarları</string>
+    <string name="add_node_title">Lütfen geçerli bir düğüm adresi girin</string>
+    <string name="invalid_node">geçersiz düğüm</string>
+    <string name="choose_mainnet_title">Ağ Seçin</string>
+    <string name="crosschain_deposit_byother_hint3">Lütfen doğru mainneti seçin, yoksa kaybolan tokenları geri alamazsınız.</string>
+    <string name="add_custom_node_btn">Özel Düğüm Ekle</string>
+    <string name="delete">sil</string>
+    <string name="modify_passphrase">Parolayı değiştir</string>
+    <string name="my_acc_balance_in_quota">Cüzdan Bakiyesi</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:background="@drawable/widget_balance_quota_bg">
+
+    <TextView
+        android:id="@+id/quotaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/quota_avaliable_limit"
+        android:textColor="#b53e4a59"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/getQuota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:drawableEnd="@mipmap/blue_right_arrow"
+        android:text="@string/get_quota_tag"
+        android:textColor="#ff007aff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/quotaTitle" />
+
+    <ProgressBar
+        android:id="@+id/quotaIncProgress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
+        android:progressDrawable="@drawable/progress_quota"
+        app:layout_constraintTop_toBottomOf="@+id/getQuota"
+        tools:max="100"
+        tools:progress="90" />
+
+    <TextView
+        android:id="@+id/utProgressStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#ff3e4a59"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quotaIncProgress"
+        tools:text="0 Quota" />
+
+    <TextView
+        android:id="@+id/utProgressEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
+        android:textColor="#ff3e4a59"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/utProgressStart"
+        app:layout_constraintTop_toBottomOf="@+id/quotaIncProgress"
+        tools:text="110 Quota" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/progressIncGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="quotaIncProgress,utProgressStart,utProgressEnd"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/valueOfQuotaAvailableAndMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="11dp"
+        android:text="0 Quota/0 Quota"
+        android:textColor="#ff3e4a59"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quotaTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="open_camera_failed">打开相机失败，请检查权限</string>
+</resources>

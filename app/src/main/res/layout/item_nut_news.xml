@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemRoot"
+    android:layout_width="match_parent"
+    android:layout_height="95dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="24dp">
+
+
+    <ImageView
+        android:id="@+id/newsIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="1dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/white_rect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/newTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/newsIcon"
+        app:layout_constraintTop_toTopOf="@+id/newsIcon"
+        tools:text="小游戏" />
+
+    <TextView
+        android:id="@+id/isOfficialTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/nut_official_corner_mark"
+        android:elevation="1dp"
+        android:gravity="center_horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="4dp"
+        android:text="@string/nut_official_txt"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/newsIcon"
+        app:layout_constraintTop_toTopOf="@+id/newsIcon" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="12dp"
+        android:elevation="2dp"
+        android:src="@mipmap/ic_news_time_icon"
+        app:layout_constraintStart_toStartOf="@+id/newTitle"
+        app:layout_constraintTop_toBottomOf="@+id/newTitle" />
+
+    <TextView
+        android:id="@+id/newsTimeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:elevation="2dp"
+        android:textColor="#9c3e4a59"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:layout_constraintTop_toTopOf="@+id/imageView17"
+        tools:text="1231232121" />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#b0d3dfef"
+        app:layout_constraintEnd_toEndOf="@id/newTitle"
+        app:layout_constraintStart_toStartOf="@id/imageView17"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

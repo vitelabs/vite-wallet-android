@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomBigBtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:translationZ">2dp</item>
+    </style>
+
+    <style name="BlueBottomBigBtn" parent="BottomBigBtn">
+        <item name="android:background">@drawable/blue_big_rec</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="WhiteBottomBigBtn" parent="BottomBigBtn">
+        <item name="android:background">@drawable/white_big_rec</item>
+        <item name="android:textColor">@color/viteblue</item>
+    </style>
+
+    <style name="GreyBottomBigBtn" parent="BottomBigBtn">
+        <item name="android:background">@drawable/white_big_rec</item>
+        <item name="android:textColor">@color/viteblue</item>
+    </style>
+
+    <style name="PrimaryBlueBottomBigBtn" parent="BottomBigBtn">
+        <item name="android:background">@drawable/primary_blue_big_rec</item>
+        <item name="android:textColor">@color/viteblue</item>
+    </style>
+
+    <style name="LightBlueBottomBigBtn" parent="BottomBigBtn">
+        <item name="android:background">@drawable/light_blue_big_rec</item>
+        <item name="android:textColor">@color/viteblue</item>
+    </style>
+
+    <style name="TopMainTitleWithoutOutline">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#ff24272b</item>
+    </style>
+
+    <style name="TopMainTitle" parent="TopMainTitleWithoutOutline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">24dp</item>
+    </style>
+
+    <style name="TopMainTitleWithBack" parent="TopMainTitle">
+        <item name="android:layout_marginTop">14dp</item>
+    </style>
+
+    <style name="TransferSelfTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#77808a</item>
+    </style>
+
+    <style name="TransferSelfTextStyleBold" parent="TransferSelfTextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

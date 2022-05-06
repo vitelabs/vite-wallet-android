@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".balance.txsend.ViteTxActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <net.vite.wallet.ui.widget.BackButton
+            android:id="@+id/backIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/fullscreen_top_margin"
+            android:src="@drawable/ic_arrow_back_grey_28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewtitle"
+            style="@style/TopMainTitleWithBack"
+            android:text="@string/crosschain_charge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+        <ImageView
+            android:id="@+id/infor"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="6dp"
+            android:src="@mipmap/infor"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewtitle"
+            app:layout_constraintStart_toEndOf="@+id/textViewtitle"
+            app:layout_constraintTop_toTopOf="@+id/textViewtitle" />
+
+
+        <TextView
+            android:id="@+id/overchainChargeRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crosschain_charge_record"
+            android:textColor="#ff007aff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/backIcon"
+            app:layout_constraintEnd_toEndOf="@+id/tokenWidget"
+            app:layout_constraintTop_toTopOf="@+id/backIcon" />
+
+        <ImageView
+            android:id="@+id/tokenWidget"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="24dp"
+            android:src="@mipmap/crosschain_charge_rt_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewtitle" />
+
+        <ProgressBar
+            android:id="@+id/cycleProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="3dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:background="@color/viteblueprimary"
+            app:layout_constraintBottom_toBottomOf="@+id/currentAccDetail"
+            app:layout_constraintEnd_toStartOf="@+id/currentAccDetail"
+            app:layout_constraintTop_toTopOf="@+id/currentAccDetail" />
+
+        <LinearLayout
+            android:id="@+id/currentAccDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/white_rect_2dp_radius"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:translationZ="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewtitle">
+
+            <TextView
+                style="@style/TransferSelfTextStyle"
+                android:text="@string/my_eth_address" />
+
+            <TextView
+                android:id="@+id/sourceChainAddress"
+                style="@style/TransferSelfTextStyleBold"
+                android:layout_marginTop="8dp"
+                tools:text="0x390837a891E637271AcBd54F7A1DdD7412345566" />
+
+            <TextView
+                style="@style/TransferSelfTextStyle"
+                android:layout_marginTop="16dp"
+                android:text="@string/my_acc_balance" />
+
+            <TextView
+                android:id="@+id/sourceChainBalance"
+                style="@style/TransferSelfTextStyleBold"
+                android:layout_marginTop="8dp"
+                tools:text="10000000.87" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/chooseMainNetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/choose_mainnet_title"
+            android:textColor="#FF3E4A59"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentAccDetail" />
+
+        <HorizontalScrollView
+            android:id="@+id/chooseMainNetContentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chooseMainNetTitle" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/primary_blue_rect_4_addr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chooseMainNetContentContainer" />
+
+        <TextView
+            android:id="@+id/myViteAddressTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/my_vite_address"
+            android:textColor="#b33e4a59"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/myViteAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="#b324272b"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myViteAddressTag"
+            tools:text="vite_980b2ac5cff8f8c4d1cc28117b02ac12dd9902afc12517dd2f" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/moneyAmountEditTxtC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <net.vite.wallet.ui.widget.RightTextEditText
+                android:id="@+id/moneyAmountEditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="none"
+                android:imeActionLabel="@string/complete"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:textColor="#ff24272b"
+                tools:hint="@string/crosschain_deposit_amount_hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/transferValueTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/moneyAmountEditTxtC"
+            app:layout_constraintStart_toStartOf="@+id/moneyAmountEditTxtC"
+            tools:text="1234123"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/eth_gas_tag"
+            android:textColor="#ff3e4a59"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/moneyAmountEditTxtC"
+            app:layout_constraintTop_toBottomOf="@+id/moneyAmountEditTxtC" />
+
+        <ImageView
+            android:id="@+id/gasInfo"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/infor"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="@+id/moneyAmountEditTxtC"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/gasCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:textColor="#ff24272b"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/gasInfo"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            tools:text="0.0004ether ≈￥0.31" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/gasPriceSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="24dp"
+            android:max="100"
+            android:min="1"
+            android:thumbTint="@color/viteblue"
+            app:layout_constraintTop_toBottomOf="@+id/gasInfo"
+            tools:progress="20" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/slow_tag"
+            android:textColor="#ff5e6875"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/gasPriceSeekBar" />
+
+        <TextView
+            android:id="@+id/gasCostInGwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#993e4a59"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView5"
+            tools:text="6.0000gwei" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/quick_tag"
+            android:textColor="#ff5e6875"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/gasInfo"
+            app:layout_constraintTop_toBottomOf="@+id/gasPriceSeekBar" />
+
+
+        <TextView
+            android:id="@+id/transferBtn"
+            style="@style/BlueBottomBigBtn"
+            android:layout_marginTop="27dp"
+            android:text="@string/deposit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gasCostInGwei" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

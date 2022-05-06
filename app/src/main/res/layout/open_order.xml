@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="6dp">
+
+    <TextView
+        android:id="@+id/buyOrSellTxt"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="#1A01D764"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#01D764"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tradeTokenName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="买" />
+
+    <TextView
+        android:id="@+id/tradeTokenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="#24272B"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/buyOrSellTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="BTC" />
+
+    <TextView
+        android:id="@+id/quoteTokenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4D3E4A59"
+        app:layout_constraintStart_toEndOf="@+id/tradeTokenName"
+        app:layout_constraintTop_toTopOf="@+id/tradeTokenName"
+        tools:text="/VITE" />
+
+    <View
+        android:id="@+id/view24"
+        android:layout_width="1dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:background="#FFD3DFEF"
+        app:layout_constraintBottom_toBottomOf="@+id/quoteTokenName"
+        app:layout_constraintStart_toEndOf="@+id/quoteTokenName"
+        app:layout_constraintTop_toTopOf="@+id/quoteTokenName" />
+
+    <TextView
+        android:id="@+id/orderTimeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textColor="#4D3E4A59"
+        app:layout_constraintBottom_toBottomOf="@+id/quoteTokenName"
+        app:layout_constraintStart_toEndOf="@+id/view24"
+        app:layout_constraintTop_toTopOf="@+id/quoteTokenName"
+        tools:text="2018.09.01 10:10:10" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#993E4A59"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tradeTokenName"
+        tools:text="数量：0.023456 BTC " />
+
+    <TextView
+        android:id="@+id/deal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="#993E4A59"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount"
+        tools:text="成交：0.01 BTC " />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"
+        android:textColor="#993E4A59"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/amount"
+        app:layout_constraintTop_toTopOf="@+id/amount"
+        tools:text="价格：0.0234567890 BTC " />
+
+    <TextView
+        android:id="@+id/avPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#993E4A59"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/price"
+        app:layout_constraintTop_toTopOf="@+id/deal"
+        tools:text="均价：0.013456 BTC " />
+
+    <TextView
+        android:id="@+id/recall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/order_recall_bg"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="2dp"
+        android:text="@string/recall"
+        android:textAlignment="center"
+        android:textColor="#007AFF"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="6dp"
+        android:background="#ffd3dfef"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avPrice" />
+</androidx.constraintlayout.widget.ConstraintLayout>

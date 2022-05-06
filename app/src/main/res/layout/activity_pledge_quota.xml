@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".balance.txsend.ViteTxActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <net.vite.wallet.ui.widget.BackButton
+            android:id="@+id/backIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/fullscreen_top_margin"
+            android:src="@drawable/ic_arrow_back_grey_28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pledgeList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@string/pledge_record"
+            android:textColor="#ff007aff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/backIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backIcon" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/TopMainTitleWithBack"
+            android:text="@string/get_quota_tag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+
+        <LinearLayout
+            android:id="@+id/currentAccDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/white_rect_2dp_radius"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:translationZ="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+            <TextView
+                style="@style/TransferSelfTextStyle"
+                android:text="@string/my_address" />
+
+            <TextView
+                android:id="@+id/myAddress"
+                style="@style/TransferSelfTextStyleBold"
+                android:layout_marginTop="8dp"
+                tools:text="vite_980b2ac5cff8f8c4d1cc28117b02ac12dd9902afc12517dd2f" />
+
+            <TextView
+                style="@style/TransferSelfTextStyle"
+                android:layout_marginTop="16dp"
+                android:text="@string/my_acc_balance_in_quota" />
+
+            <TextView
+                android:id="@+id/myBalance"
+                style="@style/TransferSelfTextStyleBold"
+                android:layout_marginTop="8dp"
+                tools:text="10000000.87" />
+
+            <TextView
+                style="@style/TransferSelfTextStyle"
+                android:layout_marginTop="16dp"
+                android:text="@string/acquired_staking" />
+
+            <TextView
+                android:id="@+id/myAcquiredStaking"
+                style="@style/TransferSelfTextStyleBold"
+                android:layout_marginTop="8dp"
+                tools:text="10000000.87" />
+
+            <TextView
+                style="@style/TransferSelfTextStyle"
+                android:layout_marginTop="16dp"
+                android:text="@string/quota_avaliable_limit" />
+
+            <TextView
+                android:id="@+id/myQuota"
+                style="@style/TransferSelfTextStyleBold"
+                android:layout_marginTop="8dp"
+                tools:text="10000000.87" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:background="@color/viteblueprimary"
+            app:layout_constraintBottom_toBottomOf="@+id/currentAccDetail"
+            app:layout_constraintEnd_toStartOf="@+id/currentAccDetail"
+            app:layout_constraintTop_toTopOf="@+id/currentAccDetail" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/toAddrEditTxtC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="55"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentAccDetail">
+
+            <net.vite.wallet.ui.widget.RightDrawableEditText
+                android:id="@+id/toAddrEditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="none"
+                android:digits="@string/viteaddress_digits"
+                android:drawableEnd="@mipmap/add"
+                android:drawablePadding="6dp"
+                android:hint="@string/quota_benifit_address"
+                android:imeOptions="actionNext"
+                android:maxLength="55"
+                android:nextFocusForward="@+id/moneyAmountEditTxt"
+                android:textColor="#ff24272b" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/moneyAmountEditTxtC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toAddrEditTxtC">
+
+            <net.vite.wallet.ui.widget.RightTextEditText
+                android:id="@+id/moneyAmountEditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="none"
+                android:hint="@string/pledge_amount_min_134_vite"
+                android:imeActionLabel="@string/complete"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:textColor="#ff24272b" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <net.vite.wallet.widget.QuotaUseWidget
+            android:id="@+id/quotaCostContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/moneyAmountEditTxtC" />
+
+
+        <net.vite.wallet.ui.widget.TextRightIconEditText
+            android:id="@+id/stakeFreezeTimeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:enabled="false"
+            android:text="@string/pledge_time"
+            app:layout_constraintTop_toBottomOf="@+id/quotaCostContainer" />
+
+
+        <TextView
+            android:id="@+id/transferBtn"
+            style="@style/BlueBottomBigBtn"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/confirm_pledge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stakeFreezeTimeContainer" />
+
+        <TextView
+            android:id="@+id/contactBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/white_semicircle_rect"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/my_vite_contacts_tag"
+            android:textColor="#ff007aff"
+            android:textSize="17sp"
+            android:translationZ="3dp"
+            app:layout_constraintBottom_toTopOf="@+id/myAddressBtn"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/myAddressBtn"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/white_semicircle_rect"
+            android:gravity="center"
+            android:text="@string/my_vite_address_tag"
+            android:textColor="#ff007aff"
+            android:textSize="17sp"
+            android:translationZ="3dp"
+            app:layout_constraintBottom_toTopOf="@+id/scanBtn"
+            app:layout_constraintEnd_toEndOf="@+id/contactBtn"
+            app:layout_constraintStart_toStartOf="@+id/contactBtn"
+
+            />
+
+        <TextView
+            android:id="@+id/scanBtn"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/white_semicircle_rect"
+            android:gravity="center"
+            android:text="@string/scan"
+            android:textColor="#ff007aff"
+            android:textSize="17sp"
+            android:translationZ="3dp"
+            app:layout_constraintBottom_toTopOf="@+id/toAddrEditTxtC"
+            app:layout_constraintEnd_toEndOf="@+id/contactBtn"
+            app:layout_constraintStart_toStartOf="@+id/contactBtn" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/transferToExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="scanBtn,myAddressBtn, contactBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

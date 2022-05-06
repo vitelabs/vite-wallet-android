@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/tabAppbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="16dp">
+
+
+                    <net.vite.wallet.ui.widget.BackButton
+                        android:id="@+id/backIcon"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="@dimen/fullscreen_top_margin"
+                        android:src="@drawable/ic_arrow_back_grey_28dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/TopMainTitle"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="@string/asset_detail_title"
+                        app:layout_constraintBottom_toBottomOf="@+id/backIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/backIcon" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/overview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="24dp"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="14dp"
+                        app:layout_constraintTop_toBottomOf="@+id/title">
+
+                        <net.vite.wallet.widget.TokenIconWidget
+                            android:id="@+id/tokenWidget"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tokenName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textColor="#ff24272b"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/tokenWidget"
+                            app:layout_constraintStart_toEndOf="@+id/tokenWidget"
+                            app:layout_constraintTop_toTopOf="@+id/tokenWidget"
+                            tools:text="VITE" />
+
+                        <View
+                            android:id="@+id/line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginTop="16dp"
+                            android:background="#ffd3dfef"
+                            app:layout_constraintTop_toBottomOf="@+id/tokenWidget" />
+
+                        <TextView
+                            android:id="@+id/allAssetKey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/all_assets_tab"
+                            android:textColor="#B33E4A59"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/line" />
+
+                        <TextView
+                            android:id="@+id/allAssetAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF24272B"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/allAssetKey"
+                            tools:text="12131weqewe" />
+
+                        <TextView
+                            android:id="@+id/allAssetAmountValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:textColor="#CC3E4A59"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/allAssetKey"
+                            tools:text="≈¥800.00" />
+
+                        <LinearLayout
+                            android:id="@+id/keyValueContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/allAssetAmountValue">
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="#FFF3F5F9"
+                        app:layout_constraintTop_toBottomOf="@+id/overview" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/listContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:paddingStart="24dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="24dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:id="@+id/listTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+
+                android:paddingBottom="4dp"
+                android:text="@string/internal_transfer_record_tag"
+                android:textColor="#ff3e4a59"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#fff"
+                app:layoutManager="LinearLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/listTitleText"
+                tools:listitem="@layout/dex_assets_details_token_item_view" />
+
+
+            <LinearLayout
+                android:id="@+id/emptyGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_behavior="@string/bottom_sheet_behavior"
+                app:layout_constraintTop_toBottomOf="@+id/listTitleText"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/emptyImg"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@mipmap/tx_list_empty_icon" />
+
+
+                <TextView
+                    android:id="@+id/emptyTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/empty_tx_list"
+                    android:textColor="#733e4a59"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/radioButtonsGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#fff"
+            android:elevation="21dp"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
+
+            <net.vite.wallet.dexassets.widget.DexDetailGroupButton
+
+                android:id="@+id/dexDeposit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <net.vite.wallet.dexassets.widget.DexDetailGroupButton
+                android:id="@+id/dexWithdraw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <net.vite.wallet.dexassets.widget.DexDetailGroupButton
+                android:id="@+id/dexTransfer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+
+            <net.vite.wallet.dexassets.widget.DexDetailGroupButton
+                android:id="@+id/dexInnerTransfer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <net.vite.wallet.dexassets.widget.DexDetailGroupButton
+                android:id="@+id/dexExchange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/cycleProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:translationZ="3dp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+

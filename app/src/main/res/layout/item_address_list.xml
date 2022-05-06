@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="111dp">
+
+
+    <TextView
+            android:id="@+id/addressName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="13dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="#ff007aff"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/view3"
+            app:layout_constraintStart_toEndOf="@+id/addressOrder"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="投票专用投票专用投票专用投票专用投票专用投票专用投票专用" />
+
+    <TextView
+            android:id="@+id/addressTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="13dp"
+            android:text="vite_980b2ac5cff8f8c4d1cc28117b02ac12dd9902afc12517dd2f"
+            android:textColor="#ff24272b"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/view3"
+            app:layout_constraintStart_toEndOf="@+id/checkoutRadio"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+            android:id="@+id/checkoutRadio"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:checked="false"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+            android:id="@+id/view3"
+            android:layout_width="1dp"
+            android:layout_height="72dp"
+            android:layout_marginEnd="16dp"
+            android:background="#E5E5EA"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/pasteAddr"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="#ffd3dfef"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="93dp" />
+
+    <ImageView
+            android:id="@+id/pasteAddr"
+            android:layout_width="28dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="24dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/paste_grey" />
+
+    <TextView
+            android:id="@+id/addressOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#0F007AFF"
+            android:textColor="#733E4A59"
+            app:layout_constraintStart_toStartOf="@+id/addressTxt"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="#1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

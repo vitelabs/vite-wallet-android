@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <net.vite.wallet.ui.widget.BackButton
+        android:id="@+id/backIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/fullscreen_top_margin"
+        android:src="@drawable/ic_arrow_back_grey_28dp" />
+
+    <TextView
+        android:id="@+id/textViewtitle"
+        style="@style/TopMainTitleWithBack"
+        tools:text="@string/vite_node_setting" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viteEntry"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <TextView
+            android:id="@+id/viteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VITE"
+            android:textColor="#ff24272b"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/currentViteNodeIp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableEnd="@mipmap/right_grep_arrow"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textAlignment="textEnd"
+            android:textColor="#ff24272b"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/viteTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="http://abbbbbb.abbbbbssssssbabbbbbbccccsc" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ethEntry"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <TextView
+            android:id="@+id/ethTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ETHEREUM"
+            android:textColor="#ff24272b"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/currentETHNodeIp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableEnd="@mipmap/right_grep_arrow"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textAlignment="textEnd"
+            android:textColor="#ff24272b"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ethTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="http://abbbbbb.abbbbbbabbbbbbccccsc" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

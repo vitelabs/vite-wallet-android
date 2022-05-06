@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingBottom="24dp"
+    tools:context=".account.register.RememberMnemonicActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <net.vite.wallet.ui.widget.BackButton
+            android:id="@+id/backIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/fullscreen_top_margin"
+            android:src="@drawable/ic_arrow_back_grey_28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/backupLater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@string/backup_later"
+            android:textColor="#ff007aff"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/backIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backIcon" />
+
+
+        <TextView
+            android:id="@+id/switchLenText"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/switch_to_12"
+            android:textColor="#ff007aff"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/switchLenIcon"
+            app:layout_constraintTop_toTopOf="@+id/mnemonicLang" />
+
+        <ImageView
+            android:id="@+id/switchLenIcon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="24dp"
+            android:src="@mipmap/switch_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/switchLenText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/switchLenText" />
+
+
+        <TextView
+            android:id="@+id/mnemonicTitle"
+            style="@style/TopMainTitleWithBack"
+            android:text="@string/backup_mnemonic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+
+        <Switch
+            android:id="@+id/mnemonicLang"
+            android:layout_width="96dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:thumb="@drawable/mnemonic_switch_selector"
+            android:track="@drawable/mnemonic_switch_track_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mnemonicTitle" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mnemonicList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/mnemonic_input_big_rect"
+            android:padding="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchLenText">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/hintTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="22dp"
+            android:text="@string/we_advice_backup"
+            android:textColor="#ff24272b"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mnemonicList" />
+
+
+        <TextView
+            android:id="@+id/writeToPaperNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/hint_blue_cycle"
+            android:drawablePadding="6dp"
+            android:text="@string/write_to_paper"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hintTitle"
+
+            />
+
+
+        <TextView
+
+            android:id="@+id/userQrCodeNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="6dp"
+            android:drawableStart="@drawable/hint_blue_cycle"
+            android:drawablePadding="6dp"
+            android:text="@string/user_another_to_backup"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/writeToPaperNotice"
+
+            />
+
+
+        <ImageView
+            android:id="@+id/qrImg"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userQrCodeNotice" />
+
+
+        <TextView
+            android:id="@+id/memorizedMnemonicBtn"
+            style="@style/BlueBottomBigBtn"
+            android:layout_marginTop="22dp"
+            android:text="@string/memorized_mnemonic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/regenerateM"
+            app:layout_constraintTop_toBottomOf="@+id/qrImg" />
+
+        <TextView
+            android:id="@+id/regenerateM"
+            style="@style/WhiteBottomBigBtn"
+            android:text="@string/regenerate_mnemonic"
+            app:layout_constraintEnd_toStartOf="@+id/memorizedMnemonicBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/memorizedMnemonicBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

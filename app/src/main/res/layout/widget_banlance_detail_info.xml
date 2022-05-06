@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/widget_balance_detail_vite_bg">
+
+
+    <LinearLayout
+        android:id="@+id/addressInfoContainer"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/goViewAddrInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="14dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_contact" />
+
+        <TextView
+            android:id="@+id/addressNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:singleLine="true"
+            android:textColor="#ffffffff"
+            android:textSize="12sp"
+            tools:text="零用钱零用钱零用钱零用钱" />
+
+        <TextView
+            android:id="@+id/addressTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="#b3ffffff"
+            android:textSize="12sp"
+            tools:text="vite_5e1290asdaasdasdasdsa4a05ee" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/goViewAddrInfo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="14dp"
+        android:src="@mipmap/right_white_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/addressInfoContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/middleDashLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="5dp"
+        android:background="@mipmap/dash_line_vote"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressInfoContainer" />
+
+    <TextView
+        android:id="@+id/balanceAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="11dp"
+        android:textColor="#ffffffff"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middleDashLine"
+        tools:text="750000000.0007" />
+
+    <TextView
+        android:id="@+id/balanceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balanceAmount"
+        tools:text="≈¥100,000.00" />
+
+
+    <TextView
+        android:id="@+id/unreceivedAmountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:textColor="#ccffffff"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balanceValue"
+        tools:text="!2321412"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/unreceivedAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="6dp"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unreceivedAmountTitle"
+        app:layout_goneMarginTop="20dp"
+        tools:text="!2321412"
+        tools:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/titleAlreadyPledge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:text="@string/title_already_pledge"
+        android:textColor="#ccffffff"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/unreceivedAmountTitle"
+        app:layout_constraintTop_toTopOf="@+id/unreceivedAmountTitle"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/alreadyPledgeAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/titleAlreadyPledge"
+        app:layout_constraintTop_toBottomOf="@+id/titleAlreadyPledge"
+        tools:text="!2321412"
+        tools:visibility="visible" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:background="#37ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/unreceivedAmount" />
+
+    <View
+        android:id="@+id/bmLine"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="7dp"
+        android:background="#26ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/receiveBtn"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:text="@string/receive_token"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/bmLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unreceivedAmount" />
+
+    <TextView
+        android:id="@+id/transferBtn"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:text="@string/transfer_token"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/receiveBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bmLine" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

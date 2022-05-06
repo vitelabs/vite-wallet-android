@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".account.register.RecoverMnemonicActivity">
+
+            <net.vite.wallet.ui.widget.BackButton
+                android:id="@+id/backIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="@dimen/fullscreen_top_margin"
+                android:src="@drawable/ic_arrow_back_grey_28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/qrCodeScan"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/backIcon"
+                app:srcCompat="@mipmap/scan" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/TopMainTitleWithBack"
+                android:text="@string/please_input_mnemonic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+            <EditText
+                android:id="@+id/recoverEditText"
+                android:layout_width="0dp"
+                android:layout_height="142dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/mnemonic_input_big_rect"
+                android:gravity="top"
+                android:inputType="textVisiblePassword|textMultiLine|textNoSuggestions|textShortMessage"
+                android:lineSpacingExtra="1dp"
+                android:padding="14dp"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/accountNameEditTxtCLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recoverEditText">
+
+                <EditText
+                    android:id="@+id/accountNameEditTxtC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/account_name_tag"
+                    android:imeActionLabel="@string/confirm"
+                    android:imeOptions="actionNext"
+                    android:paddingTop="20dp"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordEditTxtLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="24dp"
+                app:counterEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/accountNameEditTxtCLayout"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/passwordEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/please_input_password_tag"
+                    android:imeActionLabel="@string/confirm"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:paddingTop="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/repeatPasswordEditTxtLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="24dp"
+                app:counterEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordEditTxtLayout"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/repeatPasswordEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/repeat_input_txt"
+                    android:imeActionLabel="@string/confirm"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:paddingTop="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/whyFillInviteCodeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/why_fill_invite_code"
+                android:textColor="#ff3e4a59"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/repeatPasswordEditTxtLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fillInviteCodeC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="24dp"
+                app:counterEnabled="true"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/whyFillInviteCodeText">
+
+                <net.vite.wallet.ui.widget.RightDrawableEditText
+                    android:id="@+id/fillInviteCodeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="none"
+                    android:inputType="number"
+                    android:drawableEnd="@mipmap/scan"
+                    android:drawablePadding="6dp"
+                    android:hint="@string/fill_invite_code"
+                    android:imeOptions="actionNext"
+                    android:nextFocusForward="@+id/moneyAmountEditTxt"
+                    android:textColor="#ff24272b" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/createAccBtn"
+                style="@style/BlueBottomBigBtn"
+
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/recover_account"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fillInviteCodeC" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/mnemonicHintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:background="#eff0f4"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/hint0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/mnemonic_hint_white_rect"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textColor="#3E4A59"
+            android:textSize="18sp"
+            tools:text="abcdefada" />
+
+        <TextView
+            android:id="@+id/hint1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/mnemonic_hint_white_rect"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textColor="#3E4A59"
+            android:textSize="18sp"
+            tools:text="abcdefada" />
+
+        <TextView
+            android:id="@+id/hint2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/mnemonic_hint_white_rect"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textColor="#3E4A59"
+            android:textSize="18sp"
+            tools:text="abcdefada" />
+    </LinearLayout>
+
+
+</RelativeLayout>

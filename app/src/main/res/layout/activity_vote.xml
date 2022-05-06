@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/vote_big_white_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/TopMainTitle"
+        android:layout_marginTop="@dimen/fullscreen_title_top_margin"
+        android:background="#fff"
+        android:text="@string/my_vote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/voteInfo"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="4dp"
+        android:src="@mipmap/infor"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/currentVoteContainerCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:background="@drawable/vote_blue_container_rect">
+
+
+            <TextView
+                android:id="@+id/sbpStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:text="@string/candidate_valid"
+                android:textColor="@color/status_text"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/info4SbpStatus"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="5dp"
+                android:src="@mipmap/info_grey"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/sbpStatus"
+                app:layout_constraintStart_toEndOf="@+id/sbpStatus"
+                app:layout_constraintTop_toTopOf="@+id/sbpStatus" />
+
+
+            <TextView
+                android:id="@+id/voteProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/voting"
+                android:padding="2dp"
+                android:textColor="@color/status_text"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/sbpStatus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/sbpStatus"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="@string/voteing" />
+
+
+            <ImageView
+                android:id="@+id/middleDashLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="5dp"
+                android:background="@mipmap/dash_line_vote"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/sbpName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sbpStatus" />
+
+            <ImageView
+                android:id="@+id/rightHalfCycle"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/white_cycle"
+                app:layout_constraintBottom_toTopOf="@+id/sbpName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sbpStatus" />
+
+            <TextView
+                android:id="@+id/sbpName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="14dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/sbpStatus"
+                app:layout_constraintTop_toBottomOf="@id/sbpStatus"
+                tools:text="SBP2SBP2SBPSBP2SBP2SBP2SBP2SBP2SBP2SBP2SBP2SBP2SBP22SBP2SBP2" />
+
+            <ImageView
+                android:id="@+id/voteIcon"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@mipmap/tx_vote"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/sbpName"
+                app:layout_constraintTop_toBottomOf="@id/sbpName" />
+
+            <TextView
+                android:id="@+id/myVoteAmountTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/my_vote_num"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/voteIcon"
+                app:layout_constraintStart_toEndOf="@id/voteIcon"
+                app:layout_constraintTop_toTopOf="@id/voteIcon" />
+
+            <TextView
+                android:id="@+id/myVoteAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/voteIcon"
+                app:layout_constraintStart_toEndOf="@id/myVoteAmountTag"
+                app:layout_constraintTop_toTopOf="@id/voteIcon"
+                tools:text="21001000" />
+
+            <TextView
+                android:id="@+id/recallBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/deep_blue_rect_h22_w57"
+                android:gravity="center"
+                android:text="@string/recall"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/myVoteAmount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myVoteAmount" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupHasVote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="myVoteAmountTag,rightHalfCycle,myVoteAmount,sbpStatus,voteIcon,recallBtn,middleDashLine,voteProgress,sbpName" />
+
+
+            <TextView
+                android:id="@+id/emptyVoteTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/empty_vote_info"
+                android:textColor="#d7e4ff"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/emptyVoteImg"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:src="@mipmap/never_vote_img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/candidateSbpListTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/candidate_sbp_list"
+        android:textColor="#ff3e4a59"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currentVoteContainerCard" />
+
+
+    <ImageView
+        android:id="@+id/searchBoxBg"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="18dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/vote_search_box"
+        app:layout_constraintTop_toBottomOf="@+id/candidateSbpListTag" />
+
+    <ImageView
+        android:id="@+id/searchBoxIcon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="15dp"
+        android:src="@mipmap/find"
+        app:layout_constraintBottom_toBottomOf="@+id/searchBoxBg"
+        app:layout_constraintStart_toStartOf="@+id/searchBoxBg"
+        app:layout_constraintTop_toTopOf="@+id/searchBoxBg" />
+
+    <EditText
+        android:id="@+id/filterEditText"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@null"
+        android:hint="@string/search_sbp_hint"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/searchBoxBg"
+        app:layout_constraintEnd_toEndOf="@+id/searchBoxBg"
+        app:layout_constraintStart_toEndOf="@+id/searchBoxIcon"
+        app:layout_constraintTop_toTopOf="@+id/searchBoxBg" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBoxBg">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/candidateSbpList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="LinearLayoutManager"
+            tools:itemCount="15"
+            tools:listitem="@layout/item_sbp_list"
+            tools:scrollbars="vertical" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

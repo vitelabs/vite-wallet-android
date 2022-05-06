@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".me.ViteAddressManagementActivity">
+
+    <net.vite.wallet.ui.widget.BackButton
+        android:id="@+id/backIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/fullscreen_top_margin"
+        android:src="@drawable/ic_arrow_back_grey_28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewtitle"
+        style="@style/TopMainTitleWithBack"
+        android:text="@string/address_manage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="102dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/primary_blue_rect_4_addr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtitle" />
+
+    <TextView
+        android:id="@+id/defaultAddressTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="#dfeeff"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/default_address"
+        android:textColor="#ff007aff"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/defaultReceiverAddress"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtitle" />
+
+    <TextView
+        android:id="@+id/addressName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/unname"
+        android:textColor="#b43e4a59"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/defaultAddressTag"
+        app:layout_constraintStart_toStartOf="@+id/textViewtitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtitle"
+        tools:text="sadad" />
+
+
+    <TextView
+        android:id="@+id/defaultReceiverAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="24dp"
+        android:lines="2"
+        android:textColor="#b424272b"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/addressName"
+        app:layout_constraintTop_toBottomOf="@+id/addressName"
+        tools:text="vite_980b2ac5cff8f8c4d1cc28117b02ac12dd9902afc12517dd2f" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/address_list"
+        android:textColor="#ff3e4a59"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewtitle"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/inforImg"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="6dp"
+        android:src="@mipmap/infor"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/inforBubbleTxt"
+        android:layout_width="191dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/infor_bubble"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:text="@string/addr_list_infor_text"
+        android:textColor="#ff3e4a59"
+        android:textSize="12sp"
+        android:translationZ="5dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintStart_toEndOf="@+id/inforImg"
+        app:layout_constraintTop_toTopOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.459" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addressMainList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_address_list"
+        tools:scrollbars="vertical" />
+
+    <LinearLayout
+        android:id="@+id/addAddressBtn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/white_semicircle_rect"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@mipmap/add" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/add_address"
+            android:textColor="#ff007aff"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

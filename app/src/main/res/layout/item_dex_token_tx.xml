@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="17dp">
+
+    <ImageView
+        android:id="@+id/txTypeIcon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/grin_transfer_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/dex_token_detail_tx_type_transfer_in" />
+
+    <TextView
+        android:id="@+id/txTypeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="#77808A"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txTypeIcon"
+        app:layout_constraintStart_toEndOf="@id/txTypeIcon"
+        app:layout_constraintTop_toTopOf="@id/txTypeIcon"
+        tools:text="@string/transfer_out" />
+
+    <TextView
+        android:id="@+id/txTokenSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#993E4A59"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txTypeTxt"
+        tools:text="VITE" />
+
+    <TextView
+        android:id="@+id/txAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:lines="1"
+        android:textColor="#77808A"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txTokenSymbol"
+        app:layout_constraintEnd_toStartOf="@+id/txTokenSymbol"
+        app:layout_constraintTop_toTopOf="@+id/txTypeTxt"
+        tools:text="8000000000000003.123456" />
+
+    <TextView
+        android:id="@+id/txTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="#993e4a59"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/txTypeIcon"
+        app:layout_constraintTop_toBottomOf="@+id/txTypeIcon"
+        tools:text="2018.09.01" />
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="16dp"
+        android:background="#ffd3dfef"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

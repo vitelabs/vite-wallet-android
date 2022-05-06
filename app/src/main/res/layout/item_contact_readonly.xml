@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+    <ImageView
+            android:id="@+id/contactIcon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/contact_item_icon"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/contactName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/addressOrder"
+            android:layout_width="28dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="24dp"
+            android:background="#0F007AFF"
+            android:textAlignment="center"
+            android:textColor="#733E4A59"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/contactName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="#1" />
+
+    <TextView
+            android:id="@+id/contactName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="20dp"
+            android:singleLine="true"
+            android:textColor="#ff24272b"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addressOrder"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="镇魂街昂啊说的空间" />
+
+    <TextView
+            android:id="@+id/familyName"
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
+            android:background="#F2F8FF"
+            android:padding="2dp"
+            android:textAlignment="center"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/address"
+            app:layout_constraintEnd_toEndOf="@+id/addressOrder"
+            app:layout_constraintStart_toStartOf="@+id/addressOrder"
+            app:layout_constraintTop_toTopOf="@+id/address"
+            tools:text="VITE" />
+
+    <TextView
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="#ff3e4a59"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/contactName"
+            app:layout_constraintTop_toBottomOf="@+id/contactName"
+            tools:text="0x390837a891E637271AcBd54F7670A477DdD74190" />
+
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3DFEF"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

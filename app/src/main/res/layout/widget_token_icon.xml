@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/tokenIcon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@mipmap/vite_balance_icon" />
+
+    <ImageView
+        android:id="@+id/tokenFooter"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tokenIcon"
+        app:layout_constraintEnd_toEndOf="@id/tokenIcon"
+        app:srcCompat="@mipmap/eth_token_footer" />
+
+    <ImageView
+        android:id="@+id/tokenOutline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/token_icon_grey_cirle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

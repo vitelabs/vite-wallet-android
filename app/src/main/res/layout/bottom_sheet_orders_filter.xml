@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="24dp">
+
+    <ImageView
+        android:id="@+id/closeBtn"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/close" />
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/title_order_filter"
+        android:textColor="#ff000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/date_filter_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/filter_date_title"
+        android:textColor="#3E4A59"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTxt" />
+
+    <HorizontalScrollView
+        android:id="@+id/date_filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@+id/date_filter_title">
+
+        <LinearLayout
+            android:id="@+id/date_filters_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/date_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="5dp"
+                android:text="@string/order_filter_data_all"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/date_3_months"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="5dp"
+                android:text="@string/order_filter_data_3_months"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/date_1_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="5dp"
+                android:text="@string/order_filter_data_1_month"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/date_1_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="5dp"
+                android:text="@string/order_filter_data_1_week"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/date_1_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="5dp"
+                android:text="@string/order_filter_data_1_day"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/coin_filter_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/filter_coin_title"
+        android:textColor="#3E4A59"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_filters" />
+
+
+    <LinearLayout
+        android:id="@+id/coin_filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="#0D007AFF"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coin_filter_title">
+
+        <TextView
+            android:id="@+id/coin_filter_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#B33E4A59"
+            android:textSize="14sp"
+            tools:text="All" />
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@mipmap/ic_orders_filter_right_chevron" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/trade_type_filter_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/filter_trade_type"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coin_filter" />
+
+    <LinearLayout
+        android:id="@+id/filter_types"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trade_type_filter_title">
+
+        <TextView
+            android:id="@+id/filter_type_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+
+            android:paddingHorizontal="17dp"
+            android:paddingVertical="5dp"
+            android:text="@string/order_filter_data_all"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/filter_type_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:paddingHorizontal="17dp"
+            android:paddingVertical="5dp"
+            android:text="@string/order_filter_type_buy"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/filter_type_sell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+
+            android:paddingHorizontal="17dp"
+            android:paddingVertical="5dp"
+            android:text="@string/order_filter_type_sell"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/order_state_filter_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/filter_status_title"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_types" />
+
+    <HorizontalScrollView
+        android:id="@+id/filter_status_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_state_filter_title">
+
+        <LinearLayout
+            android:id="@+id/filter_status_list_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/filter_status_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="5dp"
+                android:text="@string/order_filter_data_all"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/filter_status_ongoing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="5dp"
+                android:text="@string/order_filter_status_ongoing"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/filter_status_completed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="5dp"
+                android:text="@string/order_filter_status_completed"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/filter_status_cancelled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="5dp"
+                android:text="@string/order_filter_status_cancelled"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/filter_status_failed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="5dp"
+                android:text="@string/order_filter_status_failed"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/clear"
+        style="@style/WhiteBottomBigBtn"
+        android:layout_width="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/trader_orders_filter_panel_item_unselect_bg"
+        android:text="@string/clear"
+        android:textColor="#3E4A59"
+        app:layout_constraintEnd_toStartOf="@+id/confirm"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_status_list" />
+
+
+    <TextView
+        android:id="@+id/confirm"
+        style="@style/BlueBottomBigBtn"
+        android:layout_width="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/trader_orders_filter_panel_item_select_bg"
+        android:text="@string/confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clear"
+        app:layout_constraintTop_toBottomOf="@+id/filter_status_list" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="236dp"
+                android:src="@drawable/buycoin_top_layout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <net.vite.wallet.ui.widget.BackButton
+                android:id="@+id/backIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="@dimen/fullscreen_top_margin"
+                android:src="@drawable/ic_arrow_back_white_28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/textViewtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/fast_buy_coin"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+        <ImageView
+                android:id="@+id/infor4FastBuyCoin"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="6dp"
+                android:src="@mipmap/info_white"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewtitle"
+                app:layout_constraintStart_toEndOf="@+id/textViewtitle"
+                app:layout_constraintTop_toTopOf="@+id/textViewtitle" />
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/makeTxCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="24dp"
+                android:elevation="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewtitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <RelativeLayout
+                        android:id="@+id/topCardLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/buycoin_card_top_bg"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="17dp"
+                            android:drawableStart="@mipmap/buycoin_card_lt_icon"
+                            android:drawablePadding="7dp"
+                            android:text="@string/bugcoin_buyvite"
+                            android:textColor="#3E4A59"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:id="@+id/bugCoinRecord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginEnd="17dp"
+                            android:drawableEnd="@mipmap/goforward_blue"
+                            android:text="@string/bugcoin_record"
+                            android:textColor="#007AFF"
+                            android:textSize="13sp" />
+                </RelativeLayout>
+
+                <net.vite.wallet.widget.TokenIconWidget
+                        android:id="@+id/ethCoinIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="22dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/topCardLayout" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="ETH-000"
+                        android:textColor="#3E4A59"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ethCoinIcon"
+                        app:layout_constraintStart_toEndOf="@+id/ethCoinIcon"
+                        app:layout_constraintTop_toTopOf="@+id/ethCoinIcon" />
+
+                <TextView
+                        android:id="@+id/ethCoinBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="#733E4A59"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ethCoinIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/ethCoinIcon"
+                        tools:text="12313213.213123121221" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/ethAmountEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:autoLink="none"
+                        android:inputType="numberDecimal"
+                        android:textColor="#FF24272B"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@+id/ethCoinIcon"
+                        tools:text="1231" />
+
+
+                <ImageView
+                        android:id="@+id/middleDashLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="42dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@mipmap/buy_coin_dash_line"
+                        app:layout_constraintTop_toBottomOf="@+id/ethAmountEditText" />
+
+                <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/bugcoin_buyin_icon"
+                        app:layout_constraintBottom_toBottomOf="@id/middleDashLine"
+                        app:layout_constraintEnd_toEndOf="@id/middleDashLine"
+                        app:layout_constraintStart_toStartOf="@id/middleDashLine"
+                        app:layout_constraintTop_toTopOf="@id/middleDashLine" />
+
+
+                <net.vite.wallet.widget.TokenIconWidget
+                        android:id="@+id/viteCoinIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="35dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/middleDashLine" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="VITE"
+                        android:textColor="#3E4A59"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/viteCoinIcon"
+                        app:layout_constraintStart_toEndOf="@+id/viteCoinIcon"
+                        app:layout_constraintTop_toTopOf="@+id/viteCoinIcon" />
+
+                <TextView
+                        android:id="@+id/viteCoinBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="#733E4A59"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/viteCoinIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/viteCoinIcon"
+                        tools:text="12313213.213123121221" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/viteAmountEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:autoLink="none"
+                        android:hint="10-10,000"
+                        android:inputType="numberDecimal"
+                        android:textColor="#FF24272B"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@+id/viteCoinIcon" />
+
+
+                <TextView
+                        android:id="@+id/ethVitePrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="#fff3f5f9"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10sp"
+                        android:textColor="#733E4A59"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viteAmountEditText"
+                        tools:text="价格：1 VITE = 0.0003812 ETH" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+                android:id="@+id/buyBtn"
+                style="@style/BlueBottomBigBtn"
+                android:layout_width="match_parent"
+                android:layout_marginTop="24dp"
+                android:text="@string/buy_coin_buy"
+                app:layout_constraintTop_toBottomOf="@+id/makeTxCard" />
+
+
+        <TextView
+                android:id="@+id/singleBugLimit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:drawableStart="@drawable/hint_blue_cycle"
+                android:drawablePadding="5dp"
+                android:textColor="#cc3e4a59"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/buyBtn"
+                tools:text="@string/buy_coin_max_limit" />
+
+
+        <TextView
+                android:id="@+id/oneDayLimit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:drawableStart="@drawable/hint_blue_cycle"
+                android:drawablePadding="5dp"
+                android:textColor="#cc3e4a59"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/singleBugLimit"
+                tools:text="@string/buy_coin_max_limit_oneday" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

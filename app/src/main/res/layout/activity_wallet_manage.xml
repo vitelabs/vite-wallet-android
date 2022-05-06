@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".me.WalletManageActivity">
+
+    <net.vite.wallet.ui.widget.BackButton
+        android:id="@+id/backIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/fullscreen_top_margin"
+        android:src="@drawable/ic_arrow_back_grey_28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/TopMainTitleWithBack"
+        android:text="@string/manage_wallet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/wallet_name_tag"
+        android:textColor="#ff3e4a59"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/walletNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="24dp"
+        android:background="@null"
+        android:imeActionLabel="@string/complete"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="#ff24272b"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:text="王通的钱包" />
+
+    <View
+        android:id="@+id/firstLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="24dp"
+        android:background="#ffd3dfef"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walletNameEditText" />
+
+    <TextView
+        android:id="@+id/addressManage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:text="@string/address_manage"
+        android:textColor="#ff24272b"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/secondLine"
+        app:layout_constraintEnd_toEndOf="@+id/firstLine"
+        app:layout_constraintStart_toStartOf="@+id/firstLine"
+        app:layout_constraintTop_toBottomOf="@+id/firstLine" />
+
+    <View
+        android:id="@+id/secondLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:background="#ffd3dfef"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstLine" />
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="13dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toTopOf="@+id/secondLine"
+        app:layout_constraintEnd_toEndOf="@+id/firstLine"
+        app:layout_constraintTop_toBottomOf="@+id/firstLine"
+        app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+
+    <View
+        android:id="@+id/thirdLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:background="#ffd3dfef"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondLine" />
+
+    <TextView
+        android:id="@+id/extractMnemonic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:text="@string/extract_mnemonic"
+        android:textColor="#ff24272b"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/thirdLine"
+        app:layout_constraintEnd_toEndOf="@+id/firstLine"
+        app:layout_constraintStart_toStartOf="@+id/firstLine"
+        app:layout_constraintTop_toBottomOf="@+id/secondLine" />
+
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="13dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toTopOf="@+id/thirdLine"
+        app:layout_constraintEnd_toEndOf="@+id/firstLine"
+        app:layout_constraintTop_toBottomOf="@+id/secondLine"
+        app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

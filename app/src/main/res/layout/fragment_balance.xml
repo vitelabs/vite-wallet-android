@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/topContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/fragment_balance_topbg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/meFragmentIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/accountName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/accountName"
+            app:srcCompat="@mipmap/me_tab_icon" />
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="@+id/meFragmentIcon"
+            app:layout_constraintEnd_toEndOf="@+id/meFragmentIcon"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/redDot"
+            android:src="@drawable/red_dot"
+            />
+
+        <TextView
+            android:id="@+id/accountName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:textColor="#b424272b"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/qrCodeScan"
+            app:layout_constraintStart_toEndOf="@+id/meFragmentIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Charles的钱包" />
+
+        <ImageView
+            android:id="@+id/qrCodeScan"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/accountName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/accountName"
+            app:srcCompat="@mipmap/scan" />
+
+
+        <TextView
+            android:id="@+id/titleAllAssets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/dex_all_assets_title"
+            android:textColor="#B33E4A59"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meFragmentIcon" />
+
+        <TextView
+            android:id="@+id/totalAssetsBtcTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="28dp"
+            android:textColor="#ff3e4a59"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/titleAllAssets"
+            app:layout_constraintTop_toBottomOf="@+id/titleAllAssets"
+            tools:text="¥ 750000000.0007" />
+
+        <TextView
+            android:id="@+id/totalAssetsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="28dp"
+            android:paddingBottom="14dp"
+            android:textColor="#B33E4A59"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/titleAllAssets"
+            app:layout_constraintTop_toBottomOf="@+id/totalAssetsBtcTxt"
+            tools:text="¥ 750000000.0007" />
+
+        <ImageView
+            android:id="@+id/viewMoney"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:padding="4dp"
+            android:src="@mipmap/view_detail"
+            app:layout_constraintBottom_toBottomOf="@+id/titleAllAssets"
+            app:layout_constraintStart_toEndOf="@+id/titleAllAssets"
+            app:layout_constraintTop_toTopOf="@+id/titleAllAssets" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/wcStatus"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#fff5faff"
+        android:gravity="center"
+        android:textColor="#b3007aff"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/topContainer"
+        tools:text="123" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wcStatus">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/wallet_assets"
+            android:textColor="#FF3E4A59"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/addToken"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addToken" />
+
+
+        <ImageView
+            android:id="@+id/addToken"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="24dp"
+            android:src="@mipmap/add_token"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mainListWallet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addToken"
+            tools:listitem="@layout/item_balance_wallet" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressCycle"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:indeterminateDrawable="@drawable/progress_cycle_rotate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

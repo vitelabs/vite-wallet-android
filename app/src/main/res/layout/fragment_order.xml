@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="24dp">
+
+    <View
+            android:id="@+id/centerPoint"
+            android:layout_width="0.001dp"
+            android:layout_height="0.001dp"
+            android:background="#FFfafafa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/buyAmount"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="#24272B"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="88888" />
+
+    <TextView
+            android:id="@+id/buyPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAlignment="viewEnd"
+            android:textColor="#00D764"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/centerPoint"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0.00021233" />
+
+    <ImageView
+            android:id="@+id/buyMyAvatar"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+
+            android:layout_marginEnd="2dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/buyPrice"
+            app:layout_constraintEnd_toStartOf="@+id/buyPrice"
+            app:layout_constraintTop_toTopOf="@+id/buyPrice"
+            app:srcCompat="@mipmap/my_order_avatar2"
+            tools:visibility="visible" />
+
+    <TextView
+            android:id="@+id/sellPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="#E5494D"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/centerPoint"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0.00021233" />
+
+    <ImageView
+            android:id="@+id/sellMyAvatar"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="2dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/sellPrice"
+            app:layout_constraintStart_toEndOf="@+id/sellPrice"
+            app:layout_constraintTop_toTopOf="@+id/sellPrice"
+            app:srcCompat="@mipmap/my_order_avatar2"
+            tools:visibility="visible" />
+
+    <TextView
+            android:id="@+id/sellAmount"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAlignment="viewEnd"
+            android:textColor="#24272B"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0.00021233" />
+
+
+    <View
+            android:id="@+id/buyMiningBG"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:background="#0d4b74ff"
+            android:scaleX="1"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/centerPoint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    <View
+            android:id="@+id/buyPercentBG"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:background="#1400d764"
+            android:scaleX="1"
+            app:layout_constraintEnd_toStartOf="@+id/centerPoint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:scaleX="0.5" />
+
+    <View
+            android:id="@+id/sellMiningBG"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:background="#0d4b74ff"
+            android:scaleX="1"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/centerPoint"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    <View
+            android:id="@+id/sellPercentBG"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:background="#14ed5158"
+            android:scaleX="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/centerPoint"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:scaleX="0.5" />
+
+    <ImageView
+            android:id="@+id/buyDashLine"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:src="@mipmap/order_dash_line"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/centerPoint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buyMiningBG"
+            tools:visibility="visible" />
+
+    <ImageView
+            android:id="@+id/sellDashLine"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:src="@mipmap/order_dash_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/centerPoint"
+            app:layout_constraintTop_toBottomOf="@+id/sellMiningBG"
+            tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

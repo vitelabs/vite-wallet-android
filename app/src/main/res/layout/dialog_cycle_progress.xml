@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/transparent"
+    android:gravity="center">
+
+
+    <ProgressBar
+        android:id="@+id/progressCycle"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:indeterminateDrawable="@drawable/progress_cycle_rotate" />
+
+
+</LinearLayout>

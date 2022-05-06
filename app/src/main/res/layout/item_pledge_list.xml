@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/benefit_address_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="@string/benefit_address"
+        android:textColor="#ff77808a"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/benefitAddr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="11dp"
+        android:background="#fff3f5f9"
+        android:ellipsize="end"
+        android:paddingStart="5dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="3dp"
+        android:singleLine="true"
+        android:textColor="#ff3e4a59"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/benefit_address_tag"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="My Address: vite_0000000000000000000000000000000000000003f6af7459b9" />
+
+
+    <TextView
+        android:id="@+id/pledgeTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#733e4a59"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pledgeAmount"
+        app:layout_constraintBottom_toBottomOf="@+id/pledgeAmount"
+        tools:text="2018.09.01 10:10:10" />
+
+    <TextView
+        android:id="@+id/pledgeTimeSuffix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#733e4a59"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/retrieveQuota"
+        app:layout_constraintBottom_toBottomOf="@+id/retrieveQuota"
+        tools:text="到期" />
+
+
+
+    <TextView
+        android:id="@+id/pledgeAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="#ff3e4a59"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tokenSymbolTxt"
+        app:layout_constraintTop_toBottomOf="@+id/benefitAddr"
+        tools:text="300" />
+
+    <TextView
+        android:id="@+id/tokenSymbolTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VITE"
+        android:textColor="#ff3e4a59"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pledgeAmount" />
+
+    <TextView
+        android:id="@+id/retrieveQuota"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/retrieve_quota"
+        android:paddingStart="10dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="2dp"
+        android:text="@string/retrieve_quota"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tokenSymbolTxt" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="11dp"
+        android:background="#ffd3dfef"
+        app:layout_constraintTop_toBottomOf="@+id/retrieveQuota" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

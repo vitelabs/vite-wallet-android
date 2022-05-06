@@ -1,0 +1,162 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/valueTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/dex_assets_title"
+        android:textColor="#B33E4A59"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/valueBtc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#FF24272B"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valueTextTitle"
+        tools:text="750000.12345000" />
+
+    <TextView
+        android:id="@+id/valueLegend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textColor="#B33E4A59"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/valueBtc"
+        app:layout_constraintStart_toEndOf="@+id/valueBtc"
+        app:layout_constraintTop_toTopOf="@+id/valueBtc"
+        tools:text="≈¥49694790451" />
+
+    <LinearLayout
+        android:id="@+id/addressContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/dex_assets_blue_rect"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/valueBtc">
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="#733E4A59"
+            android:textSize="14sp"
+            tools:text="vite_980b2ac5cff8f8c4d1cc28vite_980b2ac5cff8f8c4d1cc28117b0223117b0223…" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:padding="4dp"
+            android:src="@mipmap/right_grep_arrow" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/button0"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/blue_outline_rect_r2"
+        android:gravity="center"
+        android:paddingVertical="4dp"
+        tools:text="充值"
+        android:textColor="#FF007AFF"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressContainer" />
+
+    <TextView
+        android:id="@+id/button1"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/blue_outline_rect_r2"
+        android:gravity="center"
+        android:paddingVertical="4dp"
+        tools:text="充值"
+        android:textColor="#FF007AFF"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/button0"
+        app:layout_constraintTop_toBottomOf="@+id/addressContainer" />
+
+    <TextView
+        android:id="@+id/button2"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/blue_outline_rect_r2"
+        android:gravity="center"
+        android:paddingVertical="4dp"
+        tools:text="充值"
+        android:textColor="#FF007AFF"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressContainer" />
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFF3F5F9"
+        app:layout_constraintTop_toBottomOf="@+id/button0" />
+
+    <Button
+        android:id="@+id/isShowMicroBalance"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/dex_micro_balance_checkbox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+
+    <TextView
+        android:id="@+id/isShowMicroBalanceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="@string/dex_assets_header_show_micro_balance"
+        android:textColor="#733E4A59"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/isShowMicroBalance"
+        app:layout_constraintStart_toEndOf="@+id/isShowMicroBalance"
+        app:layout_constraintTop_toTopOf="@+id/isShowMicroBalance" />
+
+
+    <ImageView
+        android:id="@+id/sort"
+        android:layout_width="30dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

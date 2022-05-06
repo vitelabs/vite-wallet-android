@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="net.vite.wallet.balance.InternalTransferActivity">
+
+    <ProgressBar
+            android:id="@+id/progressCycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    <net.vite.wallet.ui.widget.BackButton
+            android:id="@+id/backIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/fullscreen_top_margin"
+            android:src="@drawable/ic_arrow_back_grey_28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/tokenShowNameTxt"
+            style="@style/TopMainTitleWithBack"
+            android:text="@string/transfer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="157dp"
+            android:layout_marginTop="24dp"
+            android:background="#f3f5f9"
+            android:minWidth="30dp"
+            android:minHeight="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tokenShowNameTxt">
+
+        <ImageView
+                android:id="@+id/imageViewGreenCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="42dp"
+                android:src="@drawable/circle_green"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+                android:id="@+id/imageViewGreyCircle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/circle_grey"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewGreenCircle"
+                app:layout_constraintStart_toStartOf="@+id/imageViewGreenCircle"
+                app:layout_constraintTop_toBottomOf="@id/imageViewGreenCircle" />
+
+        <ImageView
+                android:id="@+id/imageViewGreyCircle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/circle_grey"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewGreenCircle"
+                app:layout_constraintStart_toStartOf="@+id/imageViewGreenCircle"
+                app:layout_constraintTop_toBottomOf="@id/imageViewGreyCircle1" />
+
+        <ImageView
+                android:id="@+id/imageViewGreyCircle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/circle_grey"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewGreenCircle"
+                app:layout_constraintStart_toStartOf="@+id/imageViewGreenCircle"
+                app:layout_constraintTop_toBottomOf="@id/imageViewGreyCircle2" />
+
+        <ImageView
+                android:id="@+id/imageViewGreyCircle4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/circle_grey"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewGreenCircle"
+                app:layout_constraintStart_toStartOf="@+id/imageViewGreenCircle"
+                app:layout_constraintTop_toBottomOf="@id/imageViewGreyCircle3" />
+
+        <ImageView
+                android:id="@+id/imageViewGreyCircle5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/circle_grey"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewGreenCircle"
+                app:layout_constraintStart_toStartOf="@+id/imageViewGreenCircle"
+                app:layout_constraintTop_toBottomOf="@id/imageViewGreyCircle4" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/circle_red"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewGreenCircle"
+                app:layout_constraintStart_toStartOf="@+id/imageViewGreenCircle"
+                app:layout_constraintTop_toBottomOf="@id/imageViewGreyCircle5" />
+
+        <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/from"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/walletAccountTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="@string/wallet_account"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="2dp"
+                android:background="#D3DFEF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/walletAccountTxt"
+                app:layout_constraintTop_toBottomOf="@+id/walletAccountTxt" />
+
+        <View
+            android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="2dp"
+                android:background="#D3DFEF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/walletAccountTxt"
+                app:layout_constraintTop_toBottomOf="@+id/walletAccountTxt" />
+
+        <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/to"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/walletAccountTxt"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+        <TextView
+                android:id="@+id/exchangeAccountTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="@string/exchange_account"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <ImageView
+                android:id="@+id/switchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:src="@mipmap/internal_transfer_switch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/view5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+            android:id="@+id/transferBtn"
+            style="@style/BlueBottomBigBtn"
+            android:layout_marginBottom="24dp"
+            android:text="@string/transfer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/amount"
+            android:textColor="#3E4A59"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view25" />
+
+
+    <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/token_symbol"
+            android:textColor="#3E4A59"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <ImageView
+            android:id="@+id/itTokenIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="11dp"
+            app:layout_constraintStart_toStartOf="@+id/textView23"
+            app:layout_constraintTop_toBottomOf="@+id/textView23"
+            tools:srcCompat="@mipmap/alert" />
+
+    <TextView
+            android:id="@+id/tokenSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="6dp"
+            android:textColor="#24272B"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/itTokenIcon"
+            app:layout_constraintStart_toEndOf="@+id/itTokenIcon"
+            app:layout_constraintTop_toTopOf="@+id/itTokenIcon"
+            tools:text="GRIN" />
+
+    <ImageView
+            android:id="@+id/changeTokenSymbol"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView23"
+            app:srcCompat="@mipmap/pull_down" />
+
+    <View
+            android:id="@+id/view25"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="24dp"
+            android:background="#ffd3dfef"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tokenSymbol" />
+
+    <net.vite.wallet.ui.widget.RightTextEditText
+            android:id="@+id/moneyAmountEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="24dp"
+            android:autoLink="none"
+            android:hint="@string/please_input_transfer_amount"
+            android:inputType="numberDecimal"
+            android:textColor="#ff24272b"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+            android:id="@+id/moneyAllTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/dashed_line"
+            android:text="@string/all"
+            android:textColor="#007AFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView18"
+            tools:text="全部" />
+
+    <TextView
+            android:id="@+id/availableBalanceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#723E4A59"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moneyAmountEditTxt"
+            tools:text="可用1000亿 ETH" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

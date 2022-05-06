@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="viteblue">#ff007aff</color>
+    <color name="vitebluedeep">#ff007fff</color>
+    <color name="viteblueprimary">#ff759bfa</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="warning_color">#f4511e</color>
+</resources>

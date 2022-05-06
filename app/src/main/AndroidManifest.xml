@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="net.vite.wallet"
+    tools:ignore="LockedOrientationActivity">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".ViteApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/main_icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="false"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".kline.market.activity.KLineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.ethtxlist.EthTxDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.InternalTransferActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="net.vite.wallet.buycoin.BuyCoinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.register.CreateAccountEntryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="viteapp" />
+                <data
+                    android:host="app.vite.net"
+                    android:pathPrefix="/native_app"
+                    android:scheme="https" />
+                <data
+                    android:host="app.vite.net"
+                    android:path="/webview"
+                    android:scheme="https" />
+                <data
+                    android:host="vite-wallet-test2.netlify.com"
+                    android:path="/webview"
+                    android:scheme="https" />
+                <data
+                    android:host="vite-wallet-test2.netlify.com"
+                    android:path="/native_app"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".account.register.CreateAccountActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustPan" />
+        <activity
+            android:name=".account.register.RememberMnemonicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.register.RecoverMnemonicActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".me.ViteAddressManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.EthAddressManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.conversion.EthViteTokenBalanceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.conversion.EthViteConversionTxActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.ViteTokenBalanceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.ViteTxDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.txsend.ViteTxActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".balance.quota.PledgeQuotaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".balance.ethtxlist.EthTxListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.txlist.TxListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.WalletManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".setup.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.quota.PledgeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.QrShareActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".account.register.MnemonicNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.register.CheckMnemonicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.SystemSetupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".setup.CurrencyListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".setup.LanguageSetupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vitebridge.H5WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.tokenselect.TokenSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.tokenselect.LocalTokenSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.vote.VoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.txsend.EthTxActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".balance.EthTokenBalanceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contacts.ContactsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contacts.ContactEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.walletconnect.record.VCSignListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contacts.readonly.ReadOnlyContactListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.TokenInfoDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.crosschain.deposit.NewDepositByOtherAppActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.crosschain.deposit.DepositActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".balance.crosschain.withdraw.NewWithdrawActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".balance.crosschain.deposit.list.DepositRecordsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.crosschain.withdraw.list.WithdrawRecordsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.walletconnect.ViteConnectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".buycoin.list.BuyCoinRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.crosschain.CrosschainNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.uritx.UriTxActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.ExportMnemonicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".balance.GatewayInfoDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".exchange.search.MarketPairSearchActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".me.MeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".setup.NodeSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".setup.NodeSettingEntryActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".account.register.ModifyAccountPasswordActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".dexassets.ViteDexTokenDetailActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".setup.PoWSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".exchange.history.TradeHistoryDetailsTabActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemRoot"
+    android:layout_width="327dp"
+    android:layout_height="114dp"
+    android:layout_gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/itemBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:elevation="1dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/white_rect"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/gameIcon"
+        android:layout_width="106dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="8dp"
+        android:elevation="2dp"
+        android:src="@mipmap/airdrop_big_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/gameTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="14dp"
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/itemBg"
+        app:layout_constraintStart_toEndOf="@+id/gameIcon"
+        app:layout_constraintTop_toTopOf="@+id/itemBg"
+        tools:text="小游戏" />
+
+
+    <TextView
+        android:id="@+id/gameSynopsis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="14dp"
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="#9c3e4a59"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/itemBg"
+        app:layout_constraintStart_toEndOf="@+id/gameIcon"
+        app:layout_constraintTop_toBottomOf="@+id/gameTitle"
+        tools:text="aaaa" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

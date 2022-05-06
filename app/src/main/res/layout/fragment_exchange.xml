@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:statusBarScrim="#fff"
+                app:titleEnabled="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/topContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_collapseMode="parallax">
+
+                <TextView
+                        android:id="@+id/title"
+                        style="@style/TopMainTitle"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="@dimen/fullscreen_title_top_margin"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxWidth="249dp"
+                        android:text="@string/exchange_tag"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                        android:id="@+id/exchangeFind1"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="20dp"
+                        android:padding="4dp"
+                        android:src="@mipmap/exchange_find"
+                        app:layout_constraintBottom_toBottomOf="@+id/title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/title" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/exchangeBannerList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="24dp"
+                        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+                <ImageView
+                        android:id="@+id/guideBgImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="94dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="24dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/exchange_top_bg"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/goto_vitex_exchange"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@id/guideBgImg"
+                        app:layout_constraintTop_toTopOf="@+id/guideBgImg" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                app:layout_collapseMode="pin"
+                tools:visibility="visible">
+
+            <TextView
+                    android:id="@+id/topTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/exchange_hangqing"
+                    android:textColor="#ff24272b"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                    android:id="@+id/exchangeFind"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="4dp"
+                    android:src="@mipmap/exchange_find"
+                    app:layout_constraintBottom_toBottomOf="@+id/topTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/topTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topToolBar"
+                app:tabIndicatorFullWidth="false"
+                app:tabMinWidth="56dp"
+                app:tabMode="scrollable"
+                app:tabPaddingStart="12dp"
+                app:tabPaddingTop="10dp"
+                app:tabRippleColor="@color/transparent"
+                app:tabTextAppearance="@style/MyCustomTextAppearance">
+
+            <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exchange_fav" />
+
+            <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BTC" />
+
+            <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ETH" />
+
+            <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VITE" />
+
+            <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="USDT" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp">
+
+            <TextView
+                    android:id="@+id/tokenSymbolTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/exchange_order_default"
+                    android:paddingBottom="9dp"
+                    android:text="@string/name"
+                    android:textColor="#4d3e4a59"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/priceOrderText"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="150dp"
+                    android:drawableEnd="@mipmap/exchange_order_default"
+                    android:drawablePadding="2dp"
+                    android:paddingBottom="9dp"
+                    android:text="@string/newest_price"
+                    android:textColor="#4D3E4A59"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/changeOrderText"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/exchange_order_default"
+                    android:drawablePadding="2dp"
+                    android:paddingBottom="9dp"
+                    android:text="@string/change_price_percent"
+                    android:textColor="#4D3E4A59"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:background="#fff"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemRoot"
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    android:layout_marginBottom="4dp">
+
+    <TextView
+        android:id="@+id/sbpName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="#ff3e4a59"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="SBP2SBP2SBP2" />
+
+    <ImageView
+        android:id="@+id/txTypeIcon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sbpName"
+        app:srcCompat="@mipmap/tx_vote" />
+
+
+    <TextView
+        android:id="@+id/txTypeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/last_turn_vote_num"
+        android:textColor="#ff77808a"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txTypeIcon"
+        app:layout_constraintStart_toEndOf="@+id/txTypeIcon"
+        app:layout_constraintTop_toTopOf="@+id/txTypeIcon" />
+
+    <TextView
+        android:id="@+id/voteNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="24dp"
+        android:ellipsize="middle"
+        android:paddingLeft="6dp"
+        android:paddingTop="2dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="2dp"
+        android:singleLine="true"
+        android:textColor="#ff3e4a59"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txTypeTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txTypeTxt"
+        app:layout_constraintTop_toTopOf="@+id/txTypeTxt"
+        tools:text="2,010,2102,010,2102," />
+
+    <ImageView
+        android:id="@+id/snapshotIcon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txTypeIcon"
+        app:srcCompat="@mipmap/vote_addr_icon" />
+
+    <TextView
+        android:id="@+id/snapshotAddrTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="@string/snapshot_addr"
+        android:textColor="#993e4a59"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/snapshotIcon"
+        app:layout_constraintStart_toEndOf="@+id/snapshotIcon"
+        app:layout_constraintTop_toTopOf="@+id/snapshotIcon" />
+
+    <TextView
+        android:id="@+id/voteAddr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="#fff3f5f9"
+        android:ellipsize="middle"
+        android:paddingLeft="6dp"
+        android:paddingTop="2dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="2dp"
+        android:singleLine="true"
+        android:textColor="#733e4a59"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/snapshotAddrTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/voteBtn"
+        app:layout_constraintStart_toEndOf="@+id/snapshotAddrTag"
+        app:layout_constraintTop_toTopOf="@+id/snapshotAddrTag"
+        tools:text="vite_328aecc858abe80f4d9530cfdf15536082e51f4ef8cb870f33" />
+
+    <TextView
+        android:id="@+id/voteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/vite_blue_rect_h22_w47"
+        android:gravity="center"
+        android:text="@string/vote"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/snapshotAddrTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/snapshotAddrTag" />
+
+
+    <ImageView
+        android:id="@+id/digitNumBg"
+        android:layout_width="25dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:src="@mipmap/vote_rank_digit_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sbpRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff3093ff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/digitNumBg"
+        app:layout_constraintEnd_toEndOf="@+id/digitNumBg"
+        app:layout_constraintStart_toStartOf="@+id/digitNumBg"
+        app:layout_constraintTop_toTopOf="@+id/digitNumBg"
+        tools:text="99" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:background="#d3dfef"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/snapshotAddrTag" />
+</androidx.constraintlayout.widget.ConstraintLayout>
