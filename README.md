@@ -1,2 +1,2 @@
-## Android-Vite-Wallet
+## Vite-Wallet-Android
 
